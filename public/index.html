@@ -22,3 +22,10 @@
     <br>
     <input type="submit" value="Tallenna kirja">
 </form>
+
+{% if book_list %}
+<p>Lisäämäsi lähteet:</p>
+    {% for book in book_list %}
+        <p>{{ book }}</p>
+    {% endfor %}
+{% endif %}
