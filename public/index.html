@@ -1,7 +1,7 @@
 <h1>Etusivu</h1>
 <hr>
 <p>Lisää kirja lähteeksi tällä lomakkeella:</p>
-<form action="/save_book" method="POST">
+<form action="/" method="POST">
     Tunniste:<br>
     <input type="text" name="identifier" minlength="1">
     <br> Kirjoittaja:
@@ -25,7 +25,9 @@
 
 {% if book_list %}
 <p>Lisäämäsi lähteet:</p>
+    <br>
     {% for book in book_list %}
         <p>{{ book }}</p>
+        <hr>
     {% endfor %}
 {% endif %}
