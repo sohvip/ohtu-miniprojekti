@@ -71,3 +71,12 @@ def get_books_raw():
     sql = "SELECT identifier, author, editor, title, publisher, year FROM books"
     result = db.session.execute(sql)
     return result
+
+
+# aux
+
+def books_size():
+    sql = "SELECT COUNT(*) FROM books"
+    result = db.session.execute(sql)
+
+    return result.fetchone()
