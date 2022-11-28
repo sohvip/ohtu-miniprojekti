@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 Library  ../AppLibrary.py
 
 *** Variables ***
-${SERVER}  green-water-3233.fly.dev
+${SERVER}  green-water-3233
 ${BROWSER}  headlesschrome
 ${DELAY}  0 seconds
 ${HOME URL}  http://${SERVER}
