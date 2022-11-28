@@ -42,3 +42,8 @@ def already_exists_book(author, editor, title, publisher, year):
         return result
 
     return None
+
+def get_books_raw():
+    sql = "SELECT identifier, author, editor, title, publisher, year FROM books"
+    result = db.session.execute(sql)
+    return result
