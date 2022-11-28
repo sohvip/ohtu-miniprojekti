@@ -6,7 +6,7 @@ Library  ../AppLibrary.py
 ${SERVER}  green-water-3233
 ${BROWSER}  headlesschrome
 ${DELAY}  0 seconds
-${HOME URL}  http://${SERVER}
+${HOME URL}  http://${SERVER}.fly.dev
 
 *** Keywords ***
 Open And Configure Browser
