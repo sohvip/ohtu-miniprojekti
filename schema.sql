@@ -1,6 +1,6 @@
 CREATE TABLE books (
 	id SERIAL PRIMARY KEY,
-	ref_type TEXT,
+	ref_type TEXT, -- no args for this
 	identifier TEXT,
 	author TEXT,
 	editor TEXT,
