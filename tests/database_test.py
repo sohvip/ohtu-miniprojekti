@@ -5,8 +5,9 @@ import reference_database
 class Testreference_database(unittest.TestCase):
 
     def test_create_book(self):
-        reference_database.create_book(9, 9, 9, 9, 9, 9)
+        reference_database.empty_books()
+        reference_database.create_book("test", "toka", 9, 9, 9, 9)
         books = reference_database.get_books()
-        # ensitesti:
-        self.assertEqual(len(books), len(books))
-#        self.assertEqual(len(books), 1)
+        length = len(books)
+        reference_database.empty_books()
+        self.assertEqual(length, 1)

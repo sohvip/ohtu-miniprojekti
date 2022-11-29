@@ -85,3 +85,7 @@ def books_size():
     result = db.session.execute(sql)
 
     return result.fetchone()
+
+def empty_books():
+    sql = "DELETE FROM books"
+    db.session.execute(sql)
