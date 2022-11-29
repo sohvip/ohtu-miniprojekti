@@ -7,7 +7,7 @@ Avaa sovellus verkossa:
 
 [Backlog](https://docs.google.com/spreadsheets/d/1Otvn0MgeJhJgBoKedaaNOIOoLDglO9RI1a-f7RCdokQ/edit?usp=sharing)
 
-![GHA workflow badge](https://github.com/sohvip/ohtu-miniprojekti/workflows/CI/badge.svg) )
+![GHA workflow badge](https://github.com/sohvip/ohtu-miniprojekti/workflows/CI/badge.svg)
 ## Definition of Done
 
 - User storyille on määritelty hyväksymiskriteerit
