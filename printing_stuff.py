@@ -1,4 +1,4 @@
-'''Parses database data to wanted forms'''
+'''Parses database data to desired forms'''
 import reference_database
 
 def get_books_human_readable():
