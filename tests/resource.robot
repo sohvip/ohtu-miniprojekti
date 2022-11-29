@@ -3,10 +3,10 @@ Library  SeleniumLibrary
 Library  ../AppLibrary.py
 
 *** Variables ***
-${SERVER}  green-water-3233
+${SERVER}  localhost:5000
 ${BROWSER}  headlesschrome
-${DELAY}  0 seconds
-${HOME URL}  http://${SERVER}.fly.dev
+${DELAY}  0.0 seconds
+${HOME URL}  http://${SERVER}
 
 *** Keywords ***
 Open And Configure Browser
