@@ -2,11 +2,12 @@ import unittest
 from db import db
 import reference_database
 
+
 class Testreference_database(unittest.TestCase):
 
-    def test_testi(self):
-        books_size = reference_database.books_size()
+    def test_create_book(self):
         reference_database.create_book(9, 9, 9, 9, 9, 9)
-        reference_database.create_book(9, 9, 9, 9, 9, 9) # shouldn't be added
-
-        self.assertEqual(reference_database.books_size(), books_size + 1)
+        books = reference_database.get_books()
+        # ensitesti:
+        self.assertEqual(len(books), len(books))
+#        self.assertEqual(len(books), 1)
