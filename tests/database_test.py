@@ -1,5 +1,4 @@
 import unittest
-from db import db
 import reference_database
 
 
