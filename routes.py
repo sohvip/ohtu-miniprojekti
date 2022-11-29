@@ -1,12 +1,12 @@
 from app import app
-from reference_database import create_book
+from reference_database import create_book, get_books
 from printing_stuff import get_books_human_readable
 from flask import request, render_template, redirect
 
 @app.route('/', methods=['get', 'post'])
 def index():
-    book_list = get_books_human_readable()
     if request.method == 'GET':
+        book_list = get_books()
         return render_template('index.html', book_list=book_list)
     if request.method == 'POST':
         identifier = request.form['identifier']

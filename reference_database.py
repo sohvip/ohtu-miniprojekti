@@ -8,16 +8,16 @@ def create_book(identifier, author, editor, title, publisher, year):
     RETURNS string describing how the insertion went
     '''
 
-    if identifier_already_exists(identifier):
-        return "Identifier already in use for another work"
+    # if identifier_already_exists(identifier):
+    #     return "Identifier already in use for another work"
 
-    book_exists = already_exists_book()
-    if book_exists is not None:
-        return "Identicial book already exists already with identifier " + book_exists
+    # book_exists = already_exists_book()
+    # if book_exists is not None:
+    #     return "Identicial book already exists already with identifier " + book_exists
 
 
-    sql = "INSERT INTO books (ref_type, identifier, author, editor, title, publisher, year) VALUES (book, :id, :auth, :edit, :title, :publ, :year)"
-    db.session.execute(sql, {"id":identifier, "auth":author, "edit":editor, "title":title, "publ":publisher, "year":year})
+    sql = "INSERT INTO books (ref_type, identifier, author, editor, title, publisher, year) VALUES (:book, :id, :auth, :edit, :title, :publ, :year)"
+    db.session.execute(sql, {"book":"book", "id":identifier, "auth":author, "edit":editor, "title":title, "publ":publisher, "year":year})
     db.session.commit()
 
     return "Lisääminen onnistui"
@@ -28,8 +28,8 @@ def identifier_already_exists(identifier):
     RETURNS True if identifier exists in any table
     '''
 
-    if identifier_already_exists_books(identifier):
-        return True
+    '''if identifier_already_exists_books(identifier):
+        return True'''
 
     return False
 
@@ -39,7 +39,7 @@ def identifier_already_exists_books(identifier):
     RETURNS True if exists
     '''
     
-    sql = "SELECT FROM * books WHERE identifier=:id"
+    sql = "SELECT * FROM books WHERE identifier=:id"
     result = db.session.execute(sql, {"id":identifier})
     result = result.fetchone()
 
@@ -54,7 +54,7 @@ def already_exists_book(author, editor, title, publisher, year):
     RETURN identifier
     '''
 
-    sql = "SELECT identifier FROM books WHERE author:=a, editor:=e, title:=t, publisher:=p, year=:y"
+    sql = "SELECT identifier FROM books WHERE author=:a, editor=:e, title=:t, publisher=:p, year=:y"
     result = db.session.execute(sql, {"a":author, "e":editor, "t":title, "p":publisher, "y":year})
     result = result.fetchone()[0]
 
@@ -70,8 +70,13 @@ def get_books_raw():
 
     sql = "SELECT identifier, author, editor, title, publisher, year FROM books"
     result = db.session.execute(sql)
-    return result
+    return result.fetchall()
 
+def get_books():
+    sql = "SELECT identifier, author, editor, title, publisher, year FROM books"
+    result = db.session.execute(sql)
+    result = result.fetchall()
+    return result
 
 # aux
 
