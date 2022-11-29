@@ -28,5 +28,5 @@ jobs:
       - name: Go to venv
         run: source venv/bin/activate
       - name: Run tests
-        run: python -m pytest
+        run: pytest tests
 
