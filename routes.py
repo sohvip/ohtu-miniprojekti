@@ -6,7 +6,7 @@ from flask import request, render_template, redirect
 @app.route('/', methods=['get', 'post'])
 def index():
     if request.method == 'GET':
-        book_list = get_books_human_readable()
+        book_list = reference_database.get_books()
         return render_template('index.html', book_list=book_list)
     if request.method == 'POST':
         identifier = request.form['identifier']
