@@ -26,7 +26,7 @@ jobs:
       - name: Install venv
         run: python3 -m venv venv
       - name: Go to venv
-        run: venv/bin/activate
+        run: source venv/bin/activate
       - name: Run tests
         run: python -m pytest
 
