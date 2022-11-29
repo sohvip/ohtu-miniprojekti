@@ -10,10 +10,11 @@ def get_books_human_readable():
     book_list = []
 
     i = 0
-    while raw_list[i] is not None:
-        add = "Book, identifier: ", raw_list[i][0] + '\n' + raw_list[i][3] + " by " + raw_list[i][1] + '\n' + raw_list[i][4] + ", " + raw_list[i][2] + '\n'
+    while i < reference_database.books_size()[0]:
+        add = "Book, identifier: " + raw_list[i][0] + '\n' + raw_list[i][3] + " by " + raw_list[i][1] + '\n' + raw_list[i][4] + ", " + raw_list[i][2] + '\n'
 
         book_list.append(add)
+        i += 1
 
 
 
