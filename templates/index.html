@@ -25,9 +25,13 @@
 
 {% if book_list %}
 <p>Lisäämäsi lähteet:</p>
-    <br>
     {% for book in book_list %}
-        <p>{{ book }}</p>
+        <p>Tunniste: {{ book[0] }}</p>
+        <p>Kirja: {{ book[3] }}</p>
+        <p>Kirjoittaja: {{ book[1] }}</p>
+        <p>Editori: {{ book[2] }}</p>
+        <p>Kustantaja: {{ book[4] }}</p>
+        <p>Julkaisuvuosi: {{ book[5] }}</p>
         <hr>
     {% endfor %}
 {% endif %}
