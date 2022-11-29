@@ -8,8 +8,8 @@ def create_book(identifier, author, editor, title, publisher, year):
     RETURNS string describing how the insertion went
     '''
 
-    # if identifier_already_exists(identifier):
-    #     return "Identifier already in use for another work"
+    if identifier_already_exists(identifier):
+       return "Identifier already in use for another work"
 
     # book_exists = already_exists_book()
     # if book_exists is not None:
@@ -28,8 +28,8 @@ def identifier_already_exists(identifier):
     RETURNS True if identifier exists in any table
     '''
 
-    '''if identifier_already_exists_books(identifier):
-        return True'''
+    if identifier_already_exists_books(identifier):
+        return True
 
     return False
 
