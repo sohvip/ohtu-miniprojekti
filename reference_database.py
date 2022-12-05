@@ -1,6 +1,10 @@
 '''Handles database operations'''
 from db import db
 
+def create_misc(identifier, title, editor, how_published, year, note): # create website
+    print()
+
+
 def create_book(identifier, author, editor, title, publisher, year):
     '''
     Inserts into books table, checks that identifier is not already in use and
