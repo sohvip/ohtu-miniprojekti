@@ -15,6 +15,6 @@ def index():
         title = request.form['title']
         publisher = request.form['publisher']
         year = request.form['year']
-        if year.isnumeric():
+        if identifier and author and editor and title and publisher and year and year.isnumeric():
             reference_database.create_book(identifier, author, editor, title, publisher, year)
         return redirect('/')
