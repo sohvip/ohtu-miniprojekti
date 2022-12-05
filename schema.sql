@@ -7,5 +7,17 @@ CREATE TABLE books (
 	title TEXT,
 	publisher TEXT,
 	year INTEGER
-)
+);
+
+-- Websites
+CREATE TABLE misc (
+	id SERIAL PRIMARY KEY,
+	ref_type TEXT, -- no args for this, misc
+	identifier TEXT,
+	title TEXT,
+	editor TEXT,
+	how_published TEXT, -- no _ in bibtex
+	year INTEGER,
+	note TEXT
+);
 
