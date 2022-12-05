@@ -2,6 +2,10 @@
 from db import db
 
 def create_misc(identifier, title, editor, how_published, year, note): # create website
+    '''
+    Inserts into misc table, checks that identifier is not already in use
+    RETURNS string describing how the insertion went
+    '''
 
     if identifier_already_exists(identifier):
        return "Identifier already in use for another work"
@@ -13,13 +17,12 @@ def create_misc(identifier, title, editor, how_published, year, note): # create 
                              "how_published":how_published, "year":year, "note":note})
     db.session.commit()
 
-    return "Miscin isääminen onnistui"
+    return "Misc (website) created successfully"
 
 
 def create_book(identifier, author, editor, title, publisher, year):
     '''
-    Inserts into books table, checks that identifier is not already in use and
-    that the added book is not a duplicate
+    Inserts into books table, checks that identifier is not already in use
     RETURNS string describing how the insertion went
     '''
 
@@ -31,11 +34,13 @@ def create_book(identifier, author, editor, title, publisher, year):
     #     return "Identicial book already exists already with identifier " + book_exists
 
 
-    sql = "INSERT INTO books (ref_type, identifier, author, editor, title, publisher, year) VALUES (:book, :id, :auth, :edit, :title, :publ, :year)"
-    db.session.execute(sql, {"book":"book", "id":identifier, "auth":author, "edit":editor, "title":title, "publ":publisher, "year":year})
+    sql = "INSERT INTO books (ref_type, identifier, author, editor, title, publisher, year)"\
+        " VALUES (:book, :id, :auth, :edit, :title, :publ, :year)"
+    db.session.execute(sql, {"book":"book", "id":identifier, "auth":author, "edit":editor, 
+                             "title":title, "publ":publisher, "year":year})
     db.session.commit()
 
-    return "Bookin lisääminen onnistui"
+    return "Book created successfully"
 
 def identifier_already_exists(identifier):
     '''
@@ -52,8 +57,8 @@ def identifier_already_exists(identifier):
 
 def identifier_already_exists_books(identifier):
     '''
-    Called by "parent" function identifier_already_exists, checks table books
-    RETURNS True if exists
+    Called by "parent" function identifier_already_exists(), checks table books
+    RETURNS True if identifier is used in this table
     '''
     
     sql = "SELECT * FROM books WHERE identifier=:id"
@@ -66,6 +71,10 @@ def identifier_already_exists_books(identifier):
     return False
 
 def identifier_already_exists_misc(identifier):
+    '''
+    Called by "parent" function identifier_already_exists(), checks table misc
+    RETURNS True if identifier is used in this table
+    '''
 
     sql = "SELECT * FROM misc WHERE identifier=:id"
     result = db.session.execute(sql, {"id":identifier})
@@ -111,6 +120,13 @@ def get_book(identifier):
     result = db.session.execute(sql, {'identifier':identifier})
     result = result.fetchone()
     return result
+
+def get_table_misc_raw():
+    sql = "SELECT identifier, title, editor, how_published, year, note FROM misc"
+    result = db.session.execute(sql)
+    result = result.fetchall()
+    return result
+
 
 # aux
 
