@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.9.9 on darwin)" generated="20221205 20:36:55.812" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.1 (Python 3.9.9 on darwin)" generated="20221205 21:21:05.404" rpa="false" schemaversion="3">
 <suite id="s1" name="Tests" source="/Users/nicolaskivimaki/ohtu-miniprojekti/src/tests">
 <suite id="s1-s1" name="Home" source="/Users/nicolaskivimaki/ohtu-miniprojekti/src/tests/home.robot">
 <kw name="Open And Configure Browser" library="resource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221205 20:36:56.346" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20221205 20:36:56.346" endtime="20221205 20:36:58.201"/>
+<msg timestamp="20221205 21:21:06.224" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221205 21:21:06.223" endtime="20221205 21:21:08.178"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221205 20:36:58.201" endtime="20221205 20:36:58.307"/>
+<status status="PASS" starttime="20221205 21:21:08.178" endtime="20221205 21:21:08.286"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221205 20:36:58.307" endtime="20221205 20:36:58.308"/>
+<status status="PASS" starttime="20221205 21:21:08.286" endtime="20221205 21:21:08.287"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:56.345" endtime="20221205 20:36:58.308"/>
+<status status="PASS" starttime="20221205 21:21:06.223" endtime="20221205 21:21:08.287"/>
 </kw>
 <test id="s1-s1-t1" name="Page is Open" line="9">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221205 20:36:58.310" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221205 20:36:58.310" endtime="20221205 20:36:58.542"/>
+<msg timestamp="20221205 21:21:08.289" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221205 21:21:08.289" endtime="20221205 21:21:08.560"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:58.310" endtime="20221205 20:36:58.542"/>
+<status status="PASS" starttime="20221205 21:21:08.289" endtime="20221205 21:21:08.560"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221205 20:36:58.605" level="INFO">Page title is 'Etusivu'.</msg>
-<status status="PASS" starttime="20221205 20:36:58.543" endtime="20221205 20:36:58.605"/>
+<msg timestamp="20221205 21:21:08.635" level="INFO">Page title is 'Etusivu'.</msg>
+<status status="PASS" starttime="20221205 21:21:08.561" endtime="20221205 21:21:08.636"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:58.543" endtime="20221205 20:36:58.605"/>
+<status status="PASS" starttime="20221205 21:21:08.560" endtime="20221205 21:21:08.636"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:58.308" endtime="20221205 20:36:58.606"/>
+<status status="PASS" starttime="20221205 21:21:08.287" endtime="20221205 21:21:08.636"/>
 </test>
 <test id="s1-s1-t2" name="Register A Book" line="12">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221205 20:36:58.606" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221205 20:36:58.606" endtime="20221205 20:36:58.627"/>
+<msg timestamp="20221205 21:21:08.637" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221205 21:21:08.636" endtime="20221205 21:21:08.655"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:58.606" endtime="20221205 20:36:58.628"/>
+<status status="PASS" starttime="20221205 21:21:08.636" endtime="20221205 21:21:08.656"/>
 </kw>
 <kw name="Set Identifier">
 <arg>kalle</arg>
@@ -57,10 +57,10 @@
 <arg>identifier</arg>
 <arg>${identifier}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221205 20:36:58.629" level="INFO">Typing text 'kalle' into text field 'identifier'.</msg>
-<status status="PASS" starttime="20221205 20:36:58.628" endtime="20221205 20:36:58.944"/>
+<msg timestamp="20221205 21:21:08.657" level="INFO">Typing text 'kalle' into text field 'identifier'.</msg>
+<status status="PASS" starttime="20221205 21:21:08.656" endtime="20221205 21:21:08.979"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:58.628" endtime="20221205 20:36:58.944"/>
+<status status="PASS" starttime="20221205 21:21:08.656" endtime="20221205 21:21:08.979"/>
 </kw>
 <kw name="Set Author">
 <arg>kalle</arg>
@@ -68,10 +68,10 @@
 <arg>author</arg>
 <arg>${author}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221205 20:36:58.945" level="INFO">Typing text 'kalle' into text field 'author'.</msg>
-<status status="PASS" starttime="20221205 20:36:58.945" endtime="20221205 20:36:59.005"/>
+<msg timestamp="20221205 21:21:08.980" level="INFO">Typing text 'kalle' into text field 'author'.</msg>
+<status status="PASS" starttime="20221205 21:21:08.980" endtime="20221205 21:21:09.041"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:58.944" endtime="20221205 20:36:59.005"/>
+<status status="PASS" starttime="20221205 21:21:08.980" endtime="20221205 21:21:09.041"/>
 </kw>
 <kw name="Set Editor">
 <arg>kalle</arg>
@@ -79,10 +79,10 @@
 <arg>editor</arg>
 <arg>${editor}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221205 20:36:59.005" level="INFO">Typing text 'kalle' into text field 'editor'.</msg>
-<status status="PASS" starttime="20221205 20:36:59.005" endtime="20221205 20:36:59.077"/>
+<msg timestamp="20221205 21:21:09.042" level="INFO">Typing text 'kalle' into text field 'editor'.</msg>
+<status status="PASS" starttime="20221205 21:21:09.042" endtime="20221205 21:21:09.122"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:59.005" endtime="20221205 20:36:59.077"/>
+<status status="PASS" starttime="20221205 21:21:09.041" endtime="20221205 21:21:09.123"/>
 </kw>
 <kw name="Set Title">
 <arg>kalle</arg>
@@ -90,10 +90,10 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221205 20:36:59.078" level="INFO">Typing text 'kalle' into text field 'title'.</msg>
-<status status="PASS" starttime="20221205 20:36:59.077" endtime="20221205 20:36:59.129"/>
+<msg timestamp="20221205 21:21:09.123" level="INFO">Typing text 'kalle' into text field 'title'.</msg>
+<status status="PASS" starttime="20221205 21:21:09.123" endtime="20221205 21:21:09.174"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:59.077" endtime="20221205 20:36:59.129"/>
+<status status="PASS" starttime="20221205 21:21:09.123" endtime="20221205 21:21:09.174"/>
 </kw>
 <kw name="Set Publisher">
 <arg>kalle</arg>
@@ -101,10 +101,10 @@
 <arg>publisher</arg>
 <arg>${publisher}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221205 20:36:59.130" level="INFO">Typing text 'kalle' into text field 'publisher'.</msg>
-<status status="PASS" starttime="20221205 20:36:59.129" endtime="20221205 20:36:59.180"/>
+<msg timestamp="20221205 21:21:09.175" level="INFO">Typing text 'kalle' into text field 'publisher'.</msg>
+<status status="PASS" starttime="20221205 21:21:09.175" endtime="20221205 21:21:09.224"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:59.129" endtime="20221205 20:36:59.180"/>
+<status status="PASS" starttime="20221205 21:21:09.175" endtime="20221205 21:21:09.224"/>
 </kw>
 <kw name="Set Year">
 <arg>2002</arg>
@@ -112,41 +112,41 @@
 <arg>year</arg>
 <arg>${year}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221205 20:36:59.181" level="INFO">Typing text '2002' into text field 'year'.</msg>
-<status status="PASS" starttime="20221205 20:36:59.180" endtime="20221205 20:36:59.232"/>
+<msg timestamp="20221205 21:21:09.225" level="INFO">Typing text '2002' into text field 'year'.</msg>
+<status status="PASS" starttime="20221205 21:21:09.225" endtime="20221205 21:21:09.271"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:59.180" endtime="20221205 20:36:59.233"/>
+<status status="PASS" starttime="20221205 21:21:09.225" endtime="20221205 21:21:09.271"/>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Tallenna kirja</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221205 20:36:59.233" level="INFO">Clicking button 'Tallenna kirja'.</msg>
-<status status="PASS" starttime="20221205 20:36:59.233" endtime="20221205 20:36:59.316"/>
+<msg timestamp="20221205 21:21:09.272" level="INFO">Clicking button 'Tallenna kirja'.</msg>
+<status status="PASS" starttime="20221205 21:21:09.271" endtime="20221205 21:21:09.363"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:59.233" endtime="20221205 20:36:59.316"/>
+<status status="PASS" starttime="20221205 21:21:09.271" endtime="20221205 21:21:09.363"/>
 </kw>
 <kw name="Registering A Book Should Succeed">
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221205 20:36:59.318" level="INFO">Page title is 'Etusivu'.</msg>
-<status status="PASS" starttime="20221205 20:36:59.316" endtime="20221205 20:36:59.318"/>
+<msg timestamp="20221205 21:21:09.366" level="INFO">Page title is 'Etusivu'.</msg>
+<status status="PASS" starttime="20221205 21:21:09.364" endtime="20221205 21:21:09.366"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:59.316" endtime="20221205 20:36:59.318"/>
+<status status="PASS" starttime="20221205 21:21:09.364" endtime="20221205 21:21:09.366"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:59.316" endtime="20221205 20:36:59.318"/>
+<status status="PASS" starttime="20221205 21:21:09.363" endtime="20221205 21:21:09.366"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:58.606" endtime="20221205 20:36:59.319"/>
+<status status="PASS" starttime="20221205 21:21:08.636" endtime="20221205 21:21:09.367"/>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221205 20:36:59.319" endtime="20221205 20:36:59.381"/>
+<status status="PASS" starttime="20221205 21:21:09.367" endtime="20221205 21:21:09.429"/>
 </kw>
-<status status="PASS" starttime="20221205 20:36:55.825" endtime="20221205 20:36:59.381"/>
+<status status="PASS" starttime="20221205 21:21:05.417" endtime="20221205 21:21:09.429"/>
 </suite>
-<status status="PASS" starttime="20221205 20:36:55.813" endtime="20221205 20:36:59.382"/>
+<status status="PASS" starttime="20221205 21:21:05.404" endtime="20221205 21:21:09.430"/>
 </suite>
 <statistics>
 <total>
