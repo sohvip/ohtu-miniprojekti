@@ -139,3 +139,7 @@ def books_size():
 def empty_books():
     sql = "DELETE FROM books"
     db.session.execute(sql)
+
+def empty_misc():
+    sql = "DELETE FROM misc"
+    db.session.execute(sql)
