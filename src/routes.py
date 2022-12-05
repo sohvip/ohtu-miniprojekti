@@ -36,6 +36,7 @@ def add_site():
             reference_database.create_misc(identifier, title, editor, how_published, year, note)
 
         return redirect('/')
+
 @app.route('/book_bibtex/<int:id>', methods=['get'])
 def book_bibtex(id):
     if request.method == 'GET':
