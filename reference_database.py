@@ -115,9 +115,9 @@ def get_books():
     result = result.fetchall()
     return result
 
-def get_book(identifier):
-    sql = "SELECT identifier, author, title, publisher, address, year FROM books WHERE identifier=:identifier"
-    result = db.session.execute(sql, {'identifier':identifier})
+def get_book(id):
+    sql = "SELECT identifier, author, title, publisher, address, year FROM books WHERE id=:id"
+    result = db.session.execute(sql, {'id':id})
     result = result.fetchone()
     return result
 

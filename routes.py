@@ -1,6 +1,6 @@
 from app import app
 import reference_database
-from printing_stuff import get_books_human_readable
+from bibtex_converter import book_to_bibtex
 from flask import request, render_template, redirect
 
 @app.route('/', methods=['get', 'post'])
@@ -18,3 +18,9 @@ def index():
         if year.isnumeric():
             reference_database.create_book(identifier, author, editor, title, publisher, year)
         return redirect('/')
+
+@app.route('/book_bibtex/<int:id>', methods=['get'])
+def book_bibtex(id):
+    if request.method == 'GET':
+        bibtex = book_to_bibtex(id)
+        return render_template('book_bibtex.html', bibtex=bibtex)
