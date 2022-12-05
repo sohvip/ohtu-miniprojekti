@@ -10,7 +10,7 @@ def create_misc(identifier, title, editor, how_published, year, note): # create 
     if identifier_already_exists(identifier):
        return "Identifier already in use for another work"
 
-    sql = "INSERT INTO misc (ref_type, identifier, author, editor, title, publisher, year)"\
+    sql = "INSERT INTO misc (ref_type, identifier, title, editor, how_published, year, note)"\
         " VALUES (:misc, :id, :title, :edit, :how_published, :year, :note)"
 
     db.session.execute(sql, {"misc":"misc", "id":identifier, "title":title, "edit":editor,
