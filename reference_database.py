@@ -118,7 +118,7 @@ def get_books():
 def get_table_misc_raw():
     '''
     RETRUNS table misc as a raw version, parsing done elsewhere
-    DOES NOT CONTAIN THE \url in column how_published
+    DOES NOT CONTAIN THE (OTHER WAY AROUND)/url in column how_published
     OR {}s in author or how_published
     '''
 
