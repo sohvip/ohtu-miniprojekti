@@ -1,0 +1,37 @@
+<h1>Etusivu</h1>
+<hr>
+<p>Lisää kirja lähteeksi tällä lomakkeella:</p>
+<form action="/" method="POST">
+    Tunniste:<br>
+    <input type="text" name="identifier" minlength="1">
+    <br> Kirjoittaja:
+    <br>
+    <input type="text" name="author" minlength="1">
+    <br> Editori:
+    <br>
+    <input type="text" name="editor" minlength="1">
+    <br> Nimi:
+    <br>
+    <input type="text" name="title" minlength="1">
+    <br> Kustantaja:
+    <br>
+    <input type="text" name="publisher" minlength="1">
+    <br> Julkaisuvuosi:
+    <br>
+    <input name="year" minlength="1">
+    <br>
+    <input type="submit" value="Tallenna kirja">
+</form>
+
+{% if book_list %}
+<p>Lisäämäsi lähteet:</p>
+    {% for book in book_list %}
+        <p>Tunniste: {{ book[0] }}</p>
+        <p>Kirja: {{ book[3] }}</p>
+        <p>Kirjoittaja: {{ book[1] }}</p>
+        <p>Editori: {{ book[2] }}</p>
+        <p>Kustantaja: {{ book[4] }}</p>
+        <p>Julkaisuvuosi: {{ book[5] }}</p>
+        <hr>
+    {% endfor %}
+{% endif %}
