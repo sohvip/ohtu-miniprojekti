@@ -29,13 +29,13 @@ def add_site():
         title = request.form['title']
         editor = request.form['editor']
         how_published = request.form['how_published']
-        year = int(request.form['year'])
+        year = request.form['year']
         note = request.form['note']
 
-        if year > 0:
+        if year.isnumeric():
             reference_database.create_misc(identifier, title, editor, how_published, year, note)
 
-        return redirect('/')
+        return redirect('/addSite')
 @app.route('/book_bibtex/<int:id>', methods=['get'])
 def book_bibtex(id):
     if request.method == 'GET':
