@@ -106,6 +106,12 @@ def get_books():
     result = result.fetchall()
     return result
 
+def get_book(identifier):
+    sql = "SELECT identifier, author, title, publisher, address, year FROM books WHERE identifier=:identifier"
+    result = db.session.execute(sql, {'identifier':identifier})
+    result = result.fetchone()
+    return result
+
 # aux
 
 def books_size():
