@@ -35,7 +35,7 @@
         <p>Editori: {{ book[2] }}</p>
         <p>Kustantaja: {{ book[4] }}</p>
         <p>Julkaisuvuosi: {{ book[5] }}</p>
+        <button><a href="/book_bibtex/{{ book[6] }}">Get bibtex</a></button>
         <hr>
-        <button><a href="/book_bibtex/{{ book[6] }}">S Get bibtex</a></button>
     {% endfor %}
 {% endif %}
