@@ -23,10 +23,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Install poetry 
         run: pip install poetry
-      - name: Run robot tests
-        run: bash run_robot_tests.sh
-        env:
-          DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
-          FLASK_ENV: development
+      - name: Run Robot Framework
+        run: poetry run invoke robot-test
 
 
