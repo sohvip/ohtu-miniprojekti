@@ -9,6 +9,8 @@ packages = [{include = "ohtu_miniprojekti"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 flask = "^2.2.2"
+robot = "^20071211"
+selenium = "^4.7.2"
 
 
 [tool.poetry.group.dev.dependencies]
