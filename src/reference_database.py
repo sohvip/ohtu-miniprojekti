@@ -110,7 +110,7 @@ def get_books_raw():
     return result.fetchall()
 
 def get_books():
-    sql = "SELECT identifier, author, editor, title, publisher, year FROM books"
+    sql = "SELECT identifier, author, editor, title, publisher, year, id FROM books"
     result = db.session.execute(sql)
     result = result.fetchall()
     return result
