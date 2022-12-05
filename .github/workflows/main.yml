@@ -25,6 +25,8 @@ jobs:
         run: poetry install
       - name: Install Robot Framework
         run: pip install robotframework-seleniumlibrary
+      - name: Run Application
+        run: poetry run invoke start
       - name: Run Robot Framework
         run: poetry run invoke robot
 
