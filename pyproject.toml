@@ -22,3 +22,6 @@ pylint = "^2.15.8"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.packages]
+ohtu_miniprojekti = {include = "src"}
