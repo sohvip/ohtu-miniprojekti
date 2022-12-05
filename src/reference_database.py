@@ -115,17 +115,18 @@ def get_books():
     result = result.fetchall()
     return result
 
-def get_table_misc_raw():
-    '''
-    RETRUNS table misc as a raw version, parsing done elsewhere
-    DOES NOT CONTAIN THE (OTHER WAY AROUND)/url in column how_published
-    OR {}s in author or how_published
-    '''
+def get_book(id):
+    sql = "SELECT identifier, author, title, publisher, address, year FROM books WHERE id=:id"
+    result = db.session.execute(sql, {'id':id})
+    result = result.fetchone()
+    return result
 
+def get_table_misc_raw():
     sql = "SELECT identifier, title, editor, how_published, year, note FROM misc"
     result = db.session.execute(sql)
     result = result.fetchall()
     return result
+
 
 # aux
 

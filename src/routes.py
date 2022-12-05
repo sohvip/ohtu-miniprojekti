@@ -1,6 +1,6 @@
 from app import app
 import reference_database
-from printing_stuff import get_books_human_readable
+from bibtex_converter import book_to_bibtex
 from flask import request, render_template, redirect
 
 @app.route('/', methods=['get', 'post'])
@@ -15,7 +15,7 @@ def index():
         title = request.form['title']
         publisher = request.form['publisher']
         year = request.form['year']
-        if year.isnumeric():
+        if identifier and author and editor and title and publisher and year and year.isnumeric():
             reference_database.create_book(identifier, author, editor, title, publisher, year)
         return redirect('/')
 
@@ -36,3 +36,8 @@ def add_site():
             reference_database.create_misc(identifier, title, editor, how_published, year, note)
 
         return redirect('/')
+@app.route('/book_bibtex/<int:id>', methods=['get'])
+def book_bibtex(id):
+    if request.method == 'GET':
+        bibtex = book_to_bibtex(id)
+        return render_template('book_bibtex.html', bibtex=bibtex)
