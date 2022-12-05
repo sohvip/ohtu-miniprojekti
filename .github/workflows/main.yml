@@ -23,11 +23,10 @@ jobs:
         run: pip install -r requirements.txt
       - name: Install poetry 
         run: pip install poetry
-      - name: Install venv
-        run: python3 -m venv venv
-      - name: Go to venv
-        run: source venv/bin/activate
-      - name: Run tests
-        run: pytest src  
-      - name: Run pylint
-        run: pylint src
+      - name: Run robot tests
+        run: bash run_robot_tests.sh
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
+          FLASK_ENV: development
+
+
