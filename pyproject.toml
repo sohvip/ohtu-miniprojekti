@@ -11,7 +11,11 @@ python = "^3.8"
 flask = "^2.2.2"
 robot = "^20071211"
 selenium = "^4.7.2"
+<<<<<<< HEAD
 tasks = "^2.8.0"
+=======
+pytest = "^7.2.0"
+>>>>>>> 87d702df0bcead506e5e68c43342f791c992cbcf
 
 
 [tool.poetry.group.dev.dependencies]
