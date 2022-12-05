@@ -2,7 +2,18 @@
 from db import db
 
 def create_misc(identifier, title, editor, how_published, year, note): # create website
-    print()
+
+    if identifier_already_exists(identifier):
+       return "Identifier already in use for another work"
+
+    sql = "INSERT INTO misc (ref_type, identifier, author, editor, title, publisher, year)"\
+        " VALUES (:misc, :id, :title, :edit, :how_published, :year, :note)"
+
+    db.session.execute(sql, {"misc":"misc", "id":identifier, "title":title, "edit":editor,
+                             "how_published":how_published, "year":year, "note":note})
+    db.session.commit()
+
+    return "Miscin isääminen onnistui"
 
 
 def create_book(identifier, author, editor, title, publisher, year):
@@ -24,7 +35,7 @@ def create_book(identifier, author, editor, title, publisher, year):
     db.session.execute(sql, {"book":"book", "id":identifier, "auth":author, "edit":editor, "title":title, "publ":publisher, "year":year})
     db.session.commit()
 
-    return "Lisääminen onnistui"
+    return "Bookin lisääminen onnistui"
 
 def identifier_already_exists(identifier):
     '''
@@ -33,6 +44,8 @@ def identifier_already_exists(identifier):
     '''
 
     if identifier_already_exists_books(identifier):
+        return True
+    if identifier_already_exists_misc(identifier):
         return True
 
     return False
@@ -44,6 +57,17 @@ def identifier_already_exists_books(identifier):
     '''
     
     sql = "SELECT * FROM books WHERE identifier=:id"
+    result = db.session.execute(sql, {"id":identifier})
+    result = result.fetchone()
+
+    if result:
+        return True
+
+    return False
+
+def identifier_already_exists_misc(identifier):
+
+    sql = "SELECT * FROM misc WHERE identifier=:id"
     result = db.session.execute(sql, {"id":identifier})
     result = result.fetchone()
 
