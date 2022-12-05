@@ -13,7 +13,7 @@ class Testreference_database(unittest.TestCase):
         length = len(books)
         reference_database.empty_books()
         self.assertEqual(length, 1)
-    
+
     def test_create_misc(self):
         reference_database.empty_misc()
         reference_database.create_misc("test", "toka", 9, 9, 9, 9)
@@ -35,6 +35,3 @@ class Testreference_database(unittest.TestCase):
         reference_database.create_book("test", "toka", 9, 9, 9, 9)
         return_value = reference_database.create_book("test", "eka", 9, 9, 9, 9)
         self.assertEqual(return_value, "Identifier already in use for another work")
-
-
-
