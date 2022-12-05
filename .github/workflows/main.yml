@@ -27,6 +27,5 @@ jobs:
         run: python3 -m venv venv
       - name: Go to venv
         run: source venv/bin/activate
-      - name: Run tests
-        run: pytest tests
-
+      - name: Run pylint
+        run: pylint src
