@@ -1,0 +1,41 @@
+<a href="/">Lisää kirja</a><br><br>
+
+
+
+<h1>Nettisivun lisääminen</h1>
+<hr>
+<p>Lisää nettisivu lähteeksi tällä lomakkeella:</p>
+<form action="/addSite" method="POST">
+    Tunniste:<br>
+    <input type="text" name="identifier" minlength="1">
+    <br> Otsikko:
+    <br>
+    <input type="text" name="title" minlength="1">
+    <br> Editori:
+    <br>
+    <input type="text" name="editor" minlength="1">
+    <br> URL:
+    <br>
+    <input type="text" name="how_published" minlength="1">
+    <br> Julkaisuvuosi:
+    <br>
+    <input type="text" name="year" minlength="1">
+    <br> Huomioita (esim. accessed: 1.1.2000):
+    <br>
+    <input type="text" name="note" minlength="1">
+    <br>
+    <input type="submit" value="Tallenna kirja">
+</form>
+
+{% if misc_list %}
+<p>Lisäämäsi lähteet:</p>
+    {% for misc in misc_list %}
+        <p>Tunniste: {{ misc[0] }}</p>
+        <p>Sivun otsikko: {{ misc[1] }}</p>
+        <p>Editori: {{ misc[2] }}</p>
+        <p>Sivun URL: {{ misc[3] }}</p>
+        <p>Julkaisuvuosi: {{ misc[4] }}</p>
+        <p>Muuta tietoa: {{ misc[5] }}</p>
+        <hr>
+    {% endfor %}
+{% endif %}
