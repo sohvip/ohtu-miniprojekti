@@ -24,6 +24,6 @@ jobs:
       - name: Install poetry 
         run: pip install poetry
       - name: Run Robot Framework
-        run: poetry run invoke robot-test
+        run: poetry run invoke robot
 
 
