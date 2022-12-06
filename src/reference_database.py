@@ -116,7 +116,7 @@ def get_books():
     return result
 
 def get_book(id):
-    sql = "SELECT identifier, author, title, publisher, address, year FROM books WHERE id=:id"
+    sql = "SELECT identifier, author, editor, title, publisher, year FROM books WHERE id=:id"
     result = db.session.execute(sql, {'id':id})
     result = result.fetchone()
     return result
@@ -139,3 +139,9 @@ def books_size():
 def empty_books():
     sql = "DELETE FROM books"
     db.session.execute(sql)
+
+def get_website(id):
+    sql = "SELECT identifier, title, editor, how_published, year, note FROM misc WHERE"
+    result = db.session.execute(sql)
+    result = result.fetchall()
+    return result
