@@ -3,7 +3,7 @@ import requests
 
 class AppLibrary:
     def __init__(self):
-        self._base_url = "https://green-water-3233.fly.dev/"
+        self._base_url = "http://localhost:5000"
 
         self.reset_application()
 
