@@ -42,7 +42,7 @@ jobs:
     - name: Run tests
       run: python3 -m pytest
       env:
-        DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
+        DATABASE_URL: postgresql://postgres:postgres@localhost/nicolaskivimaki
     - name: Setup chromedriver
       uses: nanasess/setup-chromedriver@master
     - name: Configure chromedriver
@@ -53,6 +53,6 @@ jobs:
     - name: Run Robot Framework
       run: poetry run invoke robot
       env:
-        DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
+        DATABASE_URL: postgresql://postgres:postgres@localhost/nicolaskivimaki
         FLASK_ENV: development
         
