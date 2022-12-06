@@ -7,9 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres
-        env:
-          POSTGRES_PASSWORD: nicolaskivimaki
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -31,14 +28,14 @@ jobs:
       run: pip install poetry
     - name: Install dependencies
       run: poetry install
+    - name: Install Robot Framework
+      run: pip install robotframework-seleniumlibrary
     - name: Install flask_sql_alchemy
       run: pip install flask_sqlalchemy
     - name: Launch Flask App
       run: |
         cd src
         flask run
-    - name: Install Robot Framework
-      run: pip install robotframework-seleniumlibrary
     - name: Run tests
       run: python3 -m pytest
       env:
