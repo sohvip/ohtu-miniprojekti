@@ -1,9 +1,5 @@
 # ohtu-miniprojekti
 
-Avaa sovellus verkossa:
-
-[Sovellus](https://green-water-3233.fly.dev/)
-
 ![testikattavuus](https://user-images.githubusercontent.com/101889891/205911396-ad56f078-fe7d-46e5-bf43-9902841cbcd0.png)
 
 
