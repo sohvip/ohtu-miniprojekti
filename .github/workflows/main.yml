@@ -37,10 +37,6 @@ jobs:
       run: pip install flask_sqlalchemy
     - name: Database connection
       run: export DATABASE_URL=postgresql/mirelle
-    - name: Launch Flask App
-      run: |
-        cd src
-        flask run
     - name: Run tests
       run: python3 -m pytest
       env:
