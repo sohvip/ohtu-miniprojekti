@@ -12,5 +12,5 @@ Avaa sovellus verkossa:
 
 - User storyille on määritelty hyväksymiskriteerit
 - Testikattavuus on noin 70% oleellisen koodin osalta
-- Asiakas näkee GitHubista ja CI-palvelusta koodin ja testien tilanteen
+- Asiakas näkee GitHubista koodin testikattavuuden.
 - Koodin ylläpidettävyys on hyvä
