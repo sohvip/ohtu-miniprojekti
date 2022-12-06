@@ -3,8 +3,6 @@ from app import app
 from flask_sqlalchemy import SQLAlchemy
 import getpass
 
-username = getpass.getuser()
-
-app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql:///{username}" #getenv("DATABASE_URL")
+app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
