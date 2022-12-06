@@ -32,7 +32,7 @@ def add_site():
         year = request.form['year']
         note = request.form['note']
 
-        if year.isnumeric():
+        if identifier and title and editor and how_published and note and year.isnumeric():
             reference_database.create_misc(identifier, title, editor, how_published, year, note)
 
         return redirect('/addSite')
