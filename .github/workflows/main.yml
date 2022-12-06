@@ -9,7 +9,7 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_PASSWORD: nicolaskivimaki
+          POSTGRES_PASSWORD: postgres
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -35,10 +35,6 @@ jobs:
       run: pip install robotframework-seleniumlibrary
     - name: Install flask_sql_alchemy
       run: pip install flask_sqlalchemy
-    - name: Database connection
-      run: export DATABASE_URL=postgresql/mirelle
-    - name: Run tests
-      run: python3 -m pytest
     - name: Setup chromedriver
       uses: nanasess/setup-chromedriver@master
     - name: Configure chromedriver
@@ -48,4 +44,7 @@ jobs:
         sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 &
     - name: Run Robot Framework
       run: poetry run invoke robot
+      env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
+        FLASK_ENV: development
         
