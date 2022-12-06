@@ -35,8 +35,8 @@ jobs:
       run: pip install flask_sqlalchemy
     - name: Run tests
       run: poetry run invoke test
-        env:
-          DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
+      env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
     - name: Pylint Tests
       run: poetry run invoke lint
         
