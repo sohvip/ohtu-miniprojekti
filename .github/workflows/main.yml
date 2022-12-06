@@ -38,7 +38,7 @@ jobs:
     - name: Database connection
       run: export DATABASE_URL=postgresql/mirelle
     - name: Launch Flask App
-      run:
+      run: |
         cd src
         flask run
     - name: Run tests
