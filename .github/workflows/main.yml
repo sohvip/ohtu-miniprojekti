@@ -31,20 +31,12 @@ jobs:
       run: pip install poetry
     - name: Install dependencies
       run: poetry install
-    - name: Install Robot Framework
-      run: pip install robotframework-seleniumlibrary
     - name: Install flask_sql_alchemy
       run: pip install flask_sqlalchemy
-    - name: Setup chromedriver
-      uses: nanasess/setup-chromedriver@master
-    - name: Configure chromedriver
-      run: |
-        export DISPLAY=:99
-        chromedriver --url-base=/wd/hub &
-        sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 &
-    - name: Run Robot Tests
-      run: bash run_robot_tests.sh
-      env:
-        DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
-        FLASK_ENV: development
+    - name: Run tests
+        run: poetry run invoke test
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
+    - name: Pylint Tests
+        run: poetry run invoke lint
         
