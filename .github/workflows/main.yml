@@ -36,7 +36,7 @@ jobs:
     - name: Install flask_sql_alchemy
       run: pip install flask_sqlalchemy
     - name: Database connection
-      run: export DATABASE_URL=postgressql/mirelle
+      run: export DATABASE_URL=postgresql/mirelle
     - name: Launch Flask App
       run:
         cd src
