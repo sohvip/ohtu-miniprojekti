@@ -22,7 +22,7 @@ Register A Book
 
 Get Bibtex Format
     Main Page Should Be Open
-    Click Button  Get bibtex
+    Click Button  Muuta bibtex-muotoon
     Bibtex Page Should Be Open
 
 *** Keywords ***
