@@ -1,11 +1,7 @@
-from reference_database import get_book
+import reference_database
+
 
 def book_to_bibtex(id):
-    book = get_book(id)
-    bibtex = f'@book{{{book[0]}, author = \"{book[1]}\", editor = \"{book[2]}\", title = \"{book[3]}\", publisher = \"{book[4]}\", year = {book[5]}}}'
+    book = reference_database.get_book(id)
+    bibtex = f'@book{{{book[0]}, author = \"{book[1]}\", title = \"{book[2]}\", publisher = \"{book[3]}\", address = \"{book[4]}\", year = {book[5]}}}'
     return bibtex
-
-# def website_to_bibtex(id):
-#     website = get_website(id)
-#     bibtex = ''
-#     return bibtex

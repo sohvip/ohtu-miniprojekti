@@ -19,14 +19,13 @@ jobs:
           python-version: 3.8
       - name: Install Flask
         run: pip install flask
-      - name: Install dependencies
-        run: pip install -r requirements.txt
       - name: Install poetry 
         run: pip install poetry
-      - name: Install venv
-        run: python3 -m venv venv
-      - name: Go to venv
-        run: source venv/bin/activate
-      - name: Run tests
-        run: pytest tests
+      - name: Install dependencies
+        run: poetry install
+      - name: Install Robot Framework
+        run: pip install robotframework-seleniumlibrary
+      - name: Run Robot Framework
+        run: poetry run invoke robot
+
 
