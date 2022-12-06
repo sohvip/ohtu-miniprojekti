@@ -9,7 +9,7 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_PASSWORD: nicolaskivimaki
+          POSTGRES_PASSWORD: postgres
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -35,14 +35,10 @@ jobs:
       run: pip install robotframework-seleniumlibrary
     - name: Install flask_sql_alchemy
       run: pip install flask_sqlalchemy
-    - name: Launch Flask App
-      run: |
-        cd src
-        flask run
     - name: Run tests
       run: python3 -m pytest
       env:
-        DATABASE_URL: postgresql://postgres:postgres@localhost/nicolaskivimaki
+        DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
     - name: Setup chromedriver
       uses: nanasess/setup-chromedriver@master
     - name: Configure chromedriver
@@ -53,6 +49,6 @@ jobs:
     - name: Run Robot Framework
       run: poetry run invoke robot
       env:
-        DATABASE_URL: postgresql://postgres:postgres@localhost/nicolaskivimaki
+        DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
         FLASK_ENV: development
         
