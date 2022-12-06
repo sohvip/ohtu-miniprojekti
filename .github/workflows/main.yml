@@ -19,12 +19,14 @@ jobs:
           python-version: 3.8
       - name: Install Flask
         run: pip install flask
+      - name: install Flask dependencies
+        run: pip install -r requirements.txt
       - name: Install poetry 
         run: pip install poetry
       - name: Install dependencies
         run: poetry install
       - name: Install flask_sql_alchemy
-        run: pip install flask_sqlalchemy
+        run: pip install flask sqlalchemy
       - name: Run tests
         run: poetry run pytest src
         env:
