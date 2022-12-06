@@ -15,7 +15,7 @@ CREATE TABLE misc (
 	ref_type TEXT, -- no args for this, misc
 	identifier TEXT,
 	title TEXT,
-	editor TEXT,
+	editor TEXT, -- REALLY AUTHOR
 	how_published TEXT, -- no _ in bibtex
 	year INTEGER,
 	note TEXT
