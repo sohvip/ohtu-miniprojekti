@@ -1,6 +1,7 @@
 '''Handles database operations'''
 from db import db
 
+
 def create_misc(identifier, title, editor, how_published, year, note): # create website
     '''
     Inserts into misc table, checks that identifier is not already in use
@@ -8,7 +9,7 @@ def create_misc(identifier, title, editor, how_published, year, note): # create 
     '''
 
     if identifier_already_exists(identifier):
-       return "Identifier already in use for another work"
+        return "Identifier already in use for another work"
 
     sql = "INSERT INTO misc (ref_type, identifier, title, editor, how_published, year, note)"\
         " VALUES (:misc, :id, :title, :edit, :how_published, :year, :note)"
@@ -27,7 +28,7 @@ def create_book(identifier, author, editor, title, publisher, year):
     '''
 
     if identifier_already_exists(identifier):
-       return "Identifier already in use for another work"
+        return "Identifier already in use for another work"
 
     # book_exists = already_exists_book()
     # if book_exists is not None:
@@ -36,7 +37,7 @@ def create_book(identifier, author, editor, title, publisher, year):
 
     sql = "INSERT INTO books (ref_type, identifier, author, editor, title, publisher, year)"\
         " VALUES (:book, :id, :auth, :edit, :title, :publ, :year)"
-    db.session.execute(sql, {"book":"book", "id":identifier, "auth":author, "edit":editor, 
+    db.session.execute(sql, {"book":"book", "id":identifier, "auth":author, "edit":editor,
                              "title":title, "publ":publisher, "year":year})
     db.session.commit()
 
@@ -44,7 +45,7 @@ def create_book(identifier, author, editor, title, publisher, year):
 
 def identifier_already_exists(identifier):
     '''
-    Checks all tables for argumented identifier, 
+    Checks all tables for argumented identifier,
     RETURNS True if identifier exists in any table
     '''
 
@@ -60,7 +61,7 @@ def identifier_already_exists_books(identifier):
     Called by "parent" function identifier_already_exists(), checks table books
     RETURNS True if identifier is used in this table
     '''
-    
+
     sql = "SELECT * FROM books WHERE identifier=:id"
     result = db.session.execute(sql, {"id":identifier})
     result = result.fetchone()
@@ -138,4 +139,8 @@ def books_size():
 
 def empty_books():
     sql = "DELETE FROM books"
+    db.session.execute(sql)
+
+def empty_misc():
+    sql = "DELETE FROM misc"
     db.session.execute(sql)
