@@ -1,6 +1,6 @@
 from app import app
 import reference_database
-from bibtex_converter import book_to_bibtex
+import bibtex_converter
 from flask import request, render_template, redirect
 
 @app.route('/', methods=['get', 'post'])
@@ -36,8 +36,15 @@ def add_site():
             reference_database.create_misc(identifier, title, editor, how_published, year, note)
 
         return redirect('/addSite')
+
 @app.route('/book_bibtex/<int:id>', methods=['get'])
 def book_bibtex(id):
     if request.method == 'GET':
-        bibtex = book_to_bibtex(id)
+        bibtex = bibtex_converter.book_to_bibtex(id)
         return render_template('book_bibtex.html', bibtex=bibtex)
+
+@app.route('/website_bibtex/<int:id>', methods=['get'])
+def website_bibtex(id):
+    if request.method == 'GET':
+        bibtex = bibtex_converter.website_to_bibtex(id)
+        return render_template('website_bibtex.html', bibtex=bibtex)
