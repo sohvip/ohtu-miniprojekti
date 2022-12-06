@@ -142,10 +142,11 @@ def empty_books():
     db.session.execute(sql)
 
 def get_website(id):
-    sql = "SELECT identifier, title, editor, how_published, year, note FROM misc WHERE"
-    result = db.session.execute(sql)
-    result = result.fetchall()
+    sql = "SELECT identifier, title, editor, how_published, year, note FROM misc WHERE id=:id"
+    result = db.session.execute(sql, {'id':id})
+    result = result.fetchone()
     return result
+
 def empty_misc():
     sql = "DELETE FROM misc"
     db.session.execute(sql)
