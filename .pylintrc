@@ -73,6 +73,7 @@ disable=raw-checker-failed,
         missing-class-docstring,
         w0212,
         e1101,
+        w0622
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -359,7 +360,8 @@ good-names=i,x,y,
            _,
            id,
            db,
-           app
+           app,
+           AppLibrary
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted
