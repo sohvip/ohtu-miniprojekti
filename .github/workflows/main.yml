@@ -35,8 +35,10 @@ jobs:
       run: pip install robotframework-seleniumlibrary
     - name: Install flask_sql_alchemy
       run: pip install flask_sqlalchemy
+    - name: Database connection
+      run: export DATABASE_URL=postgressql/mirelle
     - name: Launch Flask App
-      run: |
+      run:
         cd src
         flask run
     - name: Run tests
