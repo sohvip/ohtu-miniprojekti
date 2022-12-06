@@ -9,3 +9,4 @@ def book_to_bibtex(id):
 def website_to_bibtex(id):
     website = reference_database.get_website(id)
     bibtex = f'@misc{{{website[0]}, title = \"{website[1]}\", author = \"{{{website[2]}}}\", howpublished = \"url{{{website[3]}}}\", year = {website[4]}, note = \"{website[5]}}}\"'
+    return bibtex
