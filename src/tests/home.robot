@@ -6,6 +6,9 @@ Test Setup  Go To Main Page
 
 *** Test Cases ***
 
+Page is Open
+    Main Page Should Be Open
+
 Register A Book
     Set Identifier  kalle
     Set Author  kalle
