@@ -86,29 +86,6 @@ def identifier_already_exists_misc(identifier):
 
     return False
 
-def already_exists_book(author, editor, title, publisher, year):
-    '''
-    Checks table books if a book with argumented attributes exists, if exists
-    RETURN identifier
-    '''
-
-    sql = "SELECT identifier FROM books WHERE author=:a, editor=:e, title=:t, publisher=:p, year=:y"
-    result = db.session.execute(sql, {"a":author, "e":editor, "t":title, "p":publisher, "y":year})
-    result = result.fetchone()[0]
-
-    if result is not None:
-        return result
-
-    return None
-
-def get_books_raw():
-    '''
-    RETRUNS table books as a raw version, parsing done elsewhere
-    '''
-
-    sql = "SELECT identifier, author, editor, title, publisher, year FROM books"
-    result = db.session.execute(sql)
-    return result.fetchall()
 
 def get_books():
     sql = "SELECT identifier, author, editor, title, publisher, year, id FROM books"
