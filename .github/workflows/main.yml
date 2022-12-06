@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: poetry install
       - name: Install flask_sql_alchemy
-        run: pip install flask sqlalchemy
+        run: pip install flask_sqlalchemy
       - name: Run tests
         run: poetry run pytest src
         env:
