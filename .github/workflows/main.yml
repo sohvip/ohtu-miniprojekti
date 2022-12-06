@@ -23,9 +23,8 @@ jobs:
         run: pip install poetry
       - name: Install dependencies
         run: poetry install
-      - name: Install Robot Framework
-        run: pip install robotframework-seleniumlibrary
-      - name: Run Robot Framework
-        run: poetry run invoke robot
-
+      - name: Run tests
+        run: poetry run pytest src
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
 

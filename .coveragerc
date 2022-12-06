@@ -1,2 +1,4 @@
 [run]
 source = src
+
+omit = src/tests/**,src/AppLibrary.py,src/app.py,src/db.py,src/routes.py
