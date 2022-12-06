@@ -10,6 +10,7 @@ Page is Open
     Main Page Should Be Open
 
 Register A Book
+    Main Page Should Be Open
     Set Identifier  kalle
     Set Author  kalle
     Set Editor  kalle
@@ -18,6 +19,11 @@ Register A Book
     Set Year  2002
     Submit Credentials
     Registering A Book Should Succeed
+
+Get Bibtex Format
+    Main Page Should Be Open
+    Click Button  Muuta bibtex-muotoon
+    Bibtex Page Should Be Open
 
 *** Keywords ***
 

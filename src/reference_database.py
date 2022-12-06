@@ -123,7 +123,7 @@ def get_book(id):
     return result
 
 def get_table_misc_raw():
-    sql = "SELECT identifier, title, editor, how_published, year, note FROM misc"
+    sql = "SELECT identifier, title, editor, how_published, year, note, id FROM misc"
     result = db.session.execute(sql)
     result = result.fetchall()
     return result

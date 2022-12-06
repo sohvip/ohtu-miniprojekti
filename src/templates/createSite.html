@@ -1,3 +1,5 @@
+<title>Nettisivun lisääminen</title>
+
 <a href="/">Lisää kirja</a><br><br>
 
 
@@ -36,6 +38,7 @@
         <p>Sivun URL: {{ misc[3] }}</p>
         <p>Julkaisuvuosi: {{ misc[4] }}</p>
         <p>Muuta tietoa: {{ misc[5] }}</p>
+        <button><a href="/website_bibtex/{{ misc[6] }}">Muuta bibtex-muotoon</a></button>
         <hr>
     {% endfor %}
 {% endif %}
