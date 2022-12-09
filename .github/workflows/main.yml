@@ -29,6 +29,8 @@ jobs:
       run: poetry install
     - name: Install pytest
       run: pip install pytest
+    - name: Install alchemy
+      run: pip install flask_sqlalchemy
     - name: Run tests
       run: pytest src
       env: 
