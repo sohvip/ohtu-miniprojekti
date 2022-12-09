@@ -4,4 +4,10 @@
 <h1>Bibtex-muunnin</h1>
 <button><a href="/add_book">Kirja</a></button>
 <button><a href="/addSite">Nettisivu</a></button>
+<br><br><br>
+<form action="/listByTag" method="POST">
+    Etsittävä tägi:<br>
+    <input type="text" name="tag_text" minlength="1">
+    <input type="submit" value="Listaa">
+</form>
 {% endblock %}
