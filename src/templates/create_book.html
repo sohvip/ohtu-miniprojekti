@@ -1,5 +1,6 @@
-<title>Kirjan lisääminen</title>
-
+{% extends 'layout.html' %}
+{% block title %}Kirjan lisääminen{% endblock %}
+{% block content %}
 <a href="/">Takaisin</a><br>
 <a href="/addSite">Lisää nettisivu</a><br><br>
 
@@ -42,7 +43,6 @@
         <hr>
     {% endfor %}
 {% endif %}
-
 
 <script>
     function check(form) {
@@ -91,3 +91,4 @@
 
     }
 </script>
+{% endblock %}
