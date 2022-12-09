@@ -23,7 +23,7 @@ class Testreference_database(unittest.TestCase):
             sites = reference_database.get_table_misc_raw()
             length = len(sites)
             reference_database.empty_misc()
-        self.assertEqual(length, 1)
+        self.assertEqual(length, 0)
 
     def test_identifier_exists_book(self):
         with app.app_context():
