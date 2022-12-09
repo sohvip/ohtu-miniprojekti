@@ -11,7 +11,8 @@ lazy-object-proxy = ">=1.4.0"
 typing-extensions = {version = ">=3.10", markers = "python_version < \"3.10\""}
 wrapt = [
     {version = ">=1.11,<2", markers = "python_version < \"3.11\""},
-    {version = ">=1.14,<2", markers = "python_version >= \"3.11\""}]
+    {version = ">=1.14,<2", markers = "python_version >= \"3.11\""},
+]
 
 [[package]]
 name = "async-generator"
@@ -653,7 +654,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "dfa9de2f97fc3a2db67b69373d627e30a934991cd0821758a6560ee48e0c2b09"
+content-hash = "0e3a90955e11025af48fcc4c2df621c531a3e0705f284cf94e26c9b4892766af"
 
 [metadata.files]
 astroid = [

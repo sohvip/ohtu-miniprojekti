@@ -20,6 +20,9 @@ Main Page Should Be Open
 Go To Main Page
     Go To  ${HOME URL}
 
+Book Page Should Be Open
+    Title Should Be  Kirjan lisääminen
+
 Website Page Should Be Open
     Title Should Be  Nettisivun lisääminen
 

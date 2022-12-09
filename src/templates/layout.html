@@ -1,3 +1,11 @@
 <!DOCTYPE html>
-    <title>{% block title %}{% endblock %}</title>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bibtex-muunnin - {% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+    </body>
 </html>
