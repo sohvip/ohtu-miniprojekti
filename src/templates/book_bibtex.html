@@ -1,7 +1,13 @@
 <title>BibTeX-muoto</title>
 {{ bibtex }}
 <br>
-<form action="/book_bibtex/{{ id }}" method="POST">
+<form action="/book_bibtex/{{ id }}" method="POST" onsubmit="return checkcopy(this)">
     <input type="submit" value="Kopioi">
 </form>
 <button><a href="/">Back</a></button>
+
+<script>
+    function checkcopy(form) {
+        alert("Viite kopioitu!")
+    }
+</script>
