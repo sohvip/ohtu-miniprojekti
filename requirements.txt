@@ -16,6 +16,7 @@ psycopg2==2.9.5
 psycopg2-binary==2.9.5
 pylint==2.15.8
 pyparsing==3.0.9
+pyperclip==1.8.2
 pytest==7.2.0
 invoke==1.7.3
 python-dotenv==0.21.0

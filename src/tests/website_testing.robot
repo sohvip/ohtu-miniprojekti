@@ -15,7 +15,7 @@ Register A Website
     Main Page Should Be Open
     Click Link  Lisää nettisivu
     Website Page Should Be Open
-	Set Identifier  kalle
+	Set Identifier  mikko
 	Set Title  kalle
 	Set Editor  kalle
 	Set How_published  https://github.com/sohvip/ohtu-miniprojekti
@@ -24,11 +24,27 @@ Register A Website
     Submit Credentials
     Registering A Website Should Succeed
 
+Register A Website In A Wrong Form
+    Main Page Should Be Open
+    Click Link  Lisää nettisivu
+    Website Page Should Be Open
+	Set Identifier  mikko
+	Set Title  kalle
+	Set Editor  kalle
+	Set How_published  j
+	Set Year  2002
+	Set Note  20.12.2012
+    Submit Credentials
+    Registering A Website Should Not Succeed
+
 
 *** Keywords ***
 
 Registering A Website Should Succeed
-    Website Page Should Be Open
+    Page Should Contain  kalle
+
+Registering A Website Should Not Succeed
+    Page Should Contain  Lisää tunniste.
 
 Submit Credentials
     Click Button  Tallenna sivu
