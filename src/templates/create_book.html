@@ -24,7 +24,7 @@
     <input type="text" name="publisher" minlength="1">
     <br> Julkaisuvuosi:
     <br>
-    <input name="year" minlength="1">
+    <input name="year" minlength="1" maxlength="4">
     <br>
     <input type="submit" value="Tallenna kirja">
 </form>
@@ -39,7 +39,13 @@
         <p>Kustantaja: {{ book[4] }}</p>
         <p>Julkaisuvuosi: {{ book[5] }}</p>
         <button><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button><br>
-        <button><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button>
+        <button><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button><br>
+        <form action="/addTagBook" method="POST">
+            Lisää tägi:<br>
+            <input type="text" name="tag_text" minlength="1">
+            <input type="hidden" name="identifier", value="{{ book[0] }}">
+            <input type="submit" value="Lisää tägi">
+        </form>
         <hr>
     {% endfor %}
 {% endif %}

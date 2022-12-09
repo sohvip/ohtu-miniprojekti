@@ -150,12 +150,13 @@ def empty_misc():
     sql = "DELETE FROM misc"
     db.session.execute(sql)
 
-def get_tag_id( tag_text):
+def get_tag_id(tag_text):
     sql = "SELECT id FROM tags WHERE tag_text=:text"
     result = db.session.execute(sql, {'text':tag_text})
 
-    if result.fetchone()[0] is None:
+    if result.fetchone() is None:
         tag_id = create_tag(tag_text)
+        return tag_id
 
 
-    return result.fetchone()[0] # hopefully this is allowed
+    return result.fetchone() # hopefully this is allowed
