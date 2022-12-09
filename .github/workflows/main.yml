@@ -27,10 +27,12 @@ jobs:
       run: pip install poetry
     - name: Install dependencies
       run: poetry install
+    - name: Install pytest
+      run: pip install pytest
     - name: Run pytest
       env:
         DATABASE_URL: postgresql+psycopg2:///nicolaskivimaki
-      run: pytest src
+      run: poetry run pytest src
     - name: Run tests
       run: poetry run invoke test
     - name: Run coverage
