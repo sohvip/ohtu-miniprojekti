@@ -78,7 +78,6 @@ def delete_misc(id):
 def add_tag_to_book():
     tag_text = request.form["tag_text"]
     identifier_text = request.form["identifier"]
-    print("Identifier,", identifier_text)
 
     tag_id = reference_database.get_tag_id(tag_text)
 
@@ -92,9 +91,19 @@ def add_tag_to_misc():
     identifier_text = request.form["identifier"]
 
     tag_id = reference_database.get_tag_id(tag_text)
+    
 
     reference_database.add_tag_to_work(identifier_text, tag_id)
     
     return redirect("/addSite")
+
+@app.route("/listByTag", methods=["POST"])
+def list_by_tag():
+    tag_text = request.form["tag_text"]
+    
+    book_list = reference_database.list_books_by_tag(tag_text)
+    misc_list = reference_database.list_misc_by_tag(tag_text)
+
+    return render_template("list.html", book_list=book_list, misc_list=misc_list)
 
 

@@ -6,4 +6,10 @@
     <button class="button_item"><a href="/add_book" style="color: black; margin-left: 25px;">Kirja</a></button>
     <button class="button_item"><a href="/addSite" style="color: black; margin-left: 9px;">Nettisivu</a></button>
 </div>
+<br><br><br>
+<form action="/listByTag" method="POST">
+    Etsittävä tägi:<br>
+    <input type="text" name="tag_text" minlength="1">
+    <input type="submit" value="Listaa">
+</form>
 {% endblock %}

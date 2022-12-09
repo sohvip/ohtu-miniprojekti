@@ -127,6 +127,20 @@ def add_tag_to_work(identifier, tag_id):
     db.session.execute(sql, {'id':identifier, 't_id':tag_id})
     db.session.commit()
 
+def list_books_by_tag(tag_text):
+    sql = "SELECT B.identifier, B.author, B.editor, B.title, B.publisher, B.year, B.id "\
+        "FROM books B, tags T, work_tag_pairs W WHERE B.identifier=W.citation_identifier"\
+        " AND W.tag_id=T.id AND T.tag_text=:text"
+    result = db.session.execute(sql, {'text':tag_text})
+    return result.fetchall()
+
+def list_misc_by_tag(tag_text):
+    sql = "SELECT M.identifier, M.title, M.editor, M.how_published, M.year, M.note, M.id "\
+        "FROM misc M, tags T, work_tag_pairs W WHERE M.identifier=W.citation_identifier"\
+        " AND W.tag_id=T.id AND T.tag_text=:text"
+    result = db.session.execute(sql, {'text':tag_text})
+    return result.fetchall()
+
 
 # aux
 
@@ -152,11 +166,12 @@ def empty_misc():
 
 def get_tag_id(tag_text):
     sql = "SELECT id FROM tags WHERE tag_text=:text"
-    result = db.session.execute(sql, {'text':tag_text})
+    result = db.session.execute(sql, {'text':tag_text}).fetchone()
+    
 
-    if result.fetchone() is None:
+    if result is None:
         tag_id = create_tag(tag_text)
         return tag_id
 
 
-    return result.fetchone() # hopefully this is allowed
+    return result[0]
