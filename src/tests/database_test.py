@@ -7,13 +7,12 @@ class Testreference_database(unittest.TestCase):
         pass
 
     def test_create_book(self):
-        with app.app_context():
-            reference_database.empty_books()
-            reference_database.create_book("test", "toka", 9, 9, 9, 9)
-            books = reference_database.get_books()
-            length = len(books)
-            reference_database.empty_books()
-            self.assertEqual(length, 1)
+        reference_database.empty_books()
+        reference_database.create_book("test", "toka", 9, 9, 9, 9)
+        books = reference_database.get_books()
+        length = len(books)
+        reference_database.empty_books()
+        self.assertEqual(length, 1)
 
     def test_create_misc(self):
         with app.app_context():
@@ -34,6 +33,7 @@ class Testreference_database(unittest.TestCase):
             self.assertEqual(identifier_does_not_exist, False)
 
     def test_does_not_create_book_if_identifier_exists(self):
+
         with app.app_context():
             reference_database.empty_books()
             reference_database.create_book("test", "toka", 9, 9, 9, 9)
