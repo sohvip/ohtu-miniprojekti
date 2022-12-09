@@ -22,7 +22,7 @@ Register A Website
 	Set Year  2003
 	Set Note  20.12.2012
     Submit Credentials
-    Registering A Website Should Succeed
+    Page Should Contain  mikko
 
 Register A Website With Wrong URL
     Main Page Should Be Open
@@ -50,10 +50,15 @@ Register A Website With Wrong Year
     Submit Credentials
     Registering A Website Should Fail With Message  Tarkista julkaisuvuosi.
 
+Delete Oldest Registered Book
+    Main Page Should Be Open
+    Click Link  Nettisivu
+    Website Page Should Be Open
+    Click Button  Poista viite
+    Page Should Not Contain  mikko
+
 *** Keywords ***
 
-Registering A Website Should Succeed
-    Page Should Contain  kalle
 
 Registering A Website Should Fail With Message
     [Arguments]  ${message}

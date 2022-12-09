@@ -22,7 +22,7 @@ Register A Book
     Set Publisher  kalle
     Set Year  2002
     Submit Credentials
-    Registering A Book Should Succeed
+    Page Should Contain  maija
 
 Get Bibtex Format
     Main Page Should Be Open
@@ -31,7 +31,7 @@ Get Bibtex Format
     Click Button  Muuta bibtex-muotoon
     Bibtex Page Should Be Open
 
-Register A Book In A Wrong Form
+Register A Book With A Wrong Year
     Main Page Should Be Open
     Click Button  Kirja
     Book Page Should Be Open
@@ -42,12 +42,18 @@ Register A Book In A Wrong Form
     Set Publisher  kalle
     Set Year  232040
     Submit Credentials
-    Registering A Book Should Fail With Message  Lisää tunniste.
+    Registering A Book Should Fail With Message  Lisää julkaisuvuosi.
+
+Delete Oldest Registered Book
+    Main Page Should Be Open
+    Click Link  Kirja
+    Book Page Should Be Open
+    Click Button  Poista viite
+    Page Should Not Contain  maija
+
 
 *** Keywords ***
 
-Registering A Book Should Succeed
-    Page Should Contain  kalle
 
 Registering A Book Should Fail With Message
     [Arguments]  ${message}
