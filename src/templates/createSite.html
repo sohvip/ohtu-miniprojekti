@@ -42,6 +42,12 @@
         <p>Muuta tietoa: {{ misc[5] }}</p>
         <button><a href="/website_bibtex/{{ misc[6] }}">Muuta bibtex-muotoon</a></button><br>
         <button><a href="/deleteMisc/{{ misc[6] }}">Poista viite</a></button>
+        <form action="/addTagMisc" method="POST">
+            Lisää tägi:<br>
+            <input type="text" name="tag_text" minlength="1">
+            <input type="hidden" name="identifier" value="{{ misc[0] }}">
+            <input type="submit" value="Lisää tägi">
+        </form>
         <hr>
     {% endfor %}
 {% endif %}

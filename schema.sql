@@ -28,7 +28,7 @@ CREATE TABLE tags (
 
 CREATE TABLE work_tag_pairs (
 	id SERIAL PRIMARY KEY,
-	citation_identifier TEXT UNIQUE,
+	citation_identifier TEXT,
 	tag_id INTEGER REFERENCES tags
 
 );
