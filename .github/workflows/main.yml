@@ -28,6 +28,8 @@ jobs:
     - name: Install dependencies
       run: poetry install
     - name: run tests
+      env:
+        DATABASE_URL: postgresql+psycopg2:///nicolaskivimaki
       run: pytest src
     - name: Coverage report
       run: poetry run coverage xml
