@@ -24,7 +24,7 @@ Register A Website
     Submit Credentials
     Registering A Website Should Succeed
 
-Register A Website In A Wrong Form
+Register A Website With Wrong URL
     Main Page Should Be Open
     Click Link  Lisää nettisivu
     Website Page Should Be Open
@@ -35,16 +35,31 @@ Register A Website In A Wrong Form
 	Set Year  2002
 	Set Note  20.12.2012
     Submit Credentials
-    Registering A Website Should Not Succeed
+    Registering A Website Should Fail With Message  Lisää tunniste.
 
+Register A Website With Wrong Year
+    Main Page Should Be Open
+    Click Link  Lisää nettisivu
+    Website Page Should Be Open
+	Set Identifier  mikko
+	Set Title  kalle
+	Set Editor  kalle
+	Set How_published  j
+	Set Year  0,5
+	Set Note  20.12.2012
+    Submit Credentials
+    Registering A Website Should Fail With Message  Lisää tunniste.
 
 *** Keywords ***
 
 Registering A Website Should Succeed
     Page Should Contain  kalle
 
-Registering A Website Should Not Succeed
-    Page Should Contain  Lisää tunniste.
+Registering A Website Should Fail With Message
+    [Arguments]  ${message}
+    Website Page Should Be Open
+    Page Should Contain  ${message}
+
 
 Submit Credentials
     Click Button  Tallenna sivu
