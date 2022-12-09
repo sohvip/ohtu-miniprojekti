@@ -38,7 +38,13 @@
         <p>Kustantaja: {{ book[4] }}</p>
         <p>Julkaisuvuosi: {{ book[5] }}</p>
         <button><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button><br>
-        <button><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button>
+        <button><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button><br>
+        <form action="/addTagBook" method="POST">
+            Tunniste:<br>
+            <input type="text" name="tag_text" minlength="1">
+            <input type="hidden" name="identifier">
+            <input type="submit" value="Lisää viite">
+        </form>
         <hr>
     {% endfor %}
 {% endif %}

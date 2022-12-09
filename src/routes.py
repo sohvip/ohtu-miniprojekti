@@ -83,7 +83,7 @@ def add_tag_to_book(id):
 
     reference_database.add_tag_to_work(identifier_text, tag_id)
     
-    return redirect("/")
+    return redirect("/add_book")
 
 @app.route("/addTagMisc", methods=["POST"])
 def add_tag_to_misc(id):
