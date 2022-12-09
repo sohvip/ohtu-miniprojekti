@@ -30,19 +30,21 @@ Register A Book In A Wrong Form
     Set Identifier  kalle
     Set Author  kalle
     Set Editor  kalle
-    Set Title  ""
+    Set Title  kalle
     Set Publisher  kalle
     Set Year  2002
     Submit Credentials
-    Registering A Book Should Not Succeed
+    Registering A Book Should Fail With Message  Lisää tunniste.
 
 *** Keywords ***
 
 Registering A Book Should Succeed
     Page Should Contain  kalle
 
-Registering A Book Should Not Succeed
-    Page Should Contain  says
+Registering A Book Should Fail With Message
+    [Arguments]  ${message}
+    Main Page Should Be Open
+    Page Should Contain  ${message}
 
 Submit Credentials
     Click Button  Tallenna kirja
