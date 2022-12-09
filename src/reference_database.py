@@ -152,11 +152,12 @@ def empty_misc():
 
 def get_tag_id(tag_text):
     sql = "SELECT id FROM tags WHERE tag_text=:text"
-    result = db.session.execute(sql, {'text':tag_text})
+    result = db.session.execute(sql, {'text':tag_text}).fetchone()
+    
 
-    if result.fetchone() is None:
+    if result is None:
         tag_id = create_tag(tag_text)
         return tag_id
 
 
-    return result.fetchone() # hopefully this is allowed
+    return result[0]

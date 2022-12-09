@@ -78,7 +78,6 @@ def delete_misc(id):
 def add_tag_to_book():
     tag_text = request.form["tag_text"]
     identifier_text = request.form["identifier"]
-    print("Identifier,", identifier_text)
 
     tag_id = reference_database.get_tag_id(tag_text)
 
