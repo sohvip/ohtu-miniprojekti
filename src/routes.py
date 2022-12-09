@@ -66,7 +66,7 @@ def website_bibtex(id):
 def delete_book(id):
     reference_database.delete_book(id)
 
-    return redirect("/")
+    return redirect("/add_book")
 
 @app.route("/deleteMisc/<int:id>")
 def delete_misc(id):
