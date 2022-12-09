@@ -58,14 +58,29 @@ def website_bibtex(id):
         return render_template("website_bibtex.html", bibtex=bibtex, id=id)
 
 @app.route("/deleteBook/<int:id>")
-def book_bibtex(id):
+def delete_book(id):
     reference_database.delete_book(id)
 
     return redirect("/")
 
 @app.route("/deleteMisc/<int:id>")
-def book_bibtex(id):
+def delete_misc(id):
     reference_database.delete_website(id)
+
+    return redirect("/addSite")
+
+@app.route("/addTagBook/<int:id>", methods=["POST"])
+def add_tag_to_book(id):
+    tag_text = request.form["tag_text"]
+
+    if reference_database.tag_exists() is False:
+        print()
+
+    return redirect("/")
+
+@app.route("/addTagMisc/<int:id>", methods=["POST"])
+def add_tag_to_misc(id):
+    tag_text = request.form["tag_text"]
 
     return redirect("/addSite")
 
