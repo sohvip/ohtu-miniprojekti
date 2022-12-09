@@ -1,9 +1,8 @@
-<title>Nettisivun lisääminen</title>
-
+{% extends 'layout.html' %}
+{% block title %}Nettisivun lisääminen{% endblock %}
+{% block content %}
 <a href="/">Takaisin</a><br>
 <a href="/add_book">Lisää kirja</a><br><br>
-
-
 
 <h1>Nettisivun lisääminen</h1>
 <hr>
@@ -19,10 +18,11 @@
     <input type="text" name="editor" minlength="1">
     <br> URL:
     <br>
-    <input type="text" name="how_published" minlength="1">
+    <input type="text" name="how_published" minlength="1" placeholder="https://example.com"
+    pattern="https://.*">
     <br> Julkaisuvuosi:
     <br>
-    <input type="text" name="year" minlength="1">
+    <input type="text" name="year" minlength="1" maxlength="4">
     <br> Luettu (milloin?):
     <br>
     <input type="text" name="note" minlength="1">
@@ -98,3 +98,4 @@
 
     }
 </script>
+{% endblock %}

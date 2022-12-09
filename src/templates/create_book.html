@@ -1,5 +1,6 @@
-<title>Kirjan lisääminen</title>
-
+{% extends 'layout.html' %}
+{% block title %}Kirjan lisääminen{% endblock %}
+{% block content %}
 <a href="/">Takaisin</a><br>
 <a href="/addSite">Lisää nettisivu</a><br><br>
 
@@ -23,7 +24,7 @@
     <input type="text" name="publisher" minlength="1">
     <br> Julkaisuvuosi:
     <br>
-    <input name="year" minlength="1">
+    <input name="year" minlength="1" maxlength="4">
     <br>
     <input type="submit" value="Tallenna kirja">
 </form>
@@ -48,7 +49,6 @@
         <hr>
     {% endfor %}
 {% endif %}
-
 
 <script>
     function check(form) {
@@ -97,3 +97,4 @@
 
     }
 </script>
+{% endblock %}
