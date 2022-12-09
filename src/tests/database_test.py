@@ -1,8 +1,6 @@
 import unittest
 import reference_database
-from flask import Flask
-
-app = Flask(__name__)
+from app import app
 
 class Testreference_database(unittest.TestCase):
     def setUp(self):
