@@ -115,6 +115,18 @@ def delete_website(misc_id):
     db.session.execute(sql, {'misc_id':misc_id})
     db.session.commit()
 
+def create_tag(tag_text):
+    sql = "INSERT INTO tags (tag_text) VALUES (:text) RETURNING id"
+    tag_id = db.session.execute(sql, {'text':tag_text})
+    db.session.commit()
+
+    return tag_id.fetchone()[0]
+
+def add_tag_to_work(identifier, tag_id):
+    sql = "INSERT INTO work_tag_pairs (citation_identifier, tag_id) VALUES (:id, :t_id)"
+    db.session.execute(sql, {'id':identifier, 't_id':tag_id})
+    db.session.commit()
+
 
 # aux
 
@@ -137,3 +149,13 @@ def get_website(id):
 def empty_misc():
     sql = "DELETE FROM misc"
     db.session.execute(sql)
+
+def get_tag_id( tag_text):
+    sql = "SELECT id FROM tags WHERE tag_text=:text"
+    result = db.session.execute(sql, {'text':tag_text})
+
+    if result.fetchone()[0] is None:
+        tag_id = create_tag(tag_text)
+
+
+    return result.fetchone()[0] # hopefully this is allowed
