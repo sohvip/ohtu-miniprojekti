@@ -40,10 +40,10 @@
         <button><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button><br>
         <button><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button><br>
         <form action="/addTagBook" method="POST">
-            Tunniste:<br>
+            Lisää tägi:<br>
             <input type="text" name="tag_text" minlength="1">
-            <input type="hidden" name="identifier">
-            <input type="submit" value="Lisää viite">
+            <input type="hidden" name="identifier", value="{{ book[0] }}">
+            <input type="submit" value="Lisää tägi">
         </form>
         <hr>
     {% endfor %}
