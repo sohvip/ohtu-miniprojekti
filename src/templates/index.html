@@ -2,14 +2,13 @@
 {% block title %}Etusivu{% endblock %}
 {% block content %}
 <h1 class="top_bar_container">Bibtex-muunnin</h1>
+<form action="/listByTag" method="POST" style="position: absolute; right: 0; margin-right: 25px;">
+    <p>Etsi tägin avulla:</p>
+    <input type="text" name="tag_text" minlength="1">
+    <input type="submit" value="Etsi" style="background-color: #B4CDE6;">
+</form>
 <div class="button_container">
     <button class="button_item"><a href="/add_book" style="color: black; margin-left: 25px;">Kirja</a></button>
     <button class="button_item"><a href="/addSite" style="color: black; margin-left: 9px;">Nettisivu</a></button>
 </div>
-<br><br><br>
-<form action="/listByTag" method="POST">
-    Etsittävä tägi:<br>
-    <input type="text" name="tag_text" minlength="1">
-    <input type="submit" value="Listaa">
-</form>
 {% endblock %}
