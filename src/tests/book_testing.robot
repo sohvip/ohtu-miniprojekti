@@ -8,10 +8,14 @@ Test Setup  Go To Main Page
 
 Page is Open
     Main Page Should Be Open
+    Click Button  Kirja
+    Book Page Should Be Open
 
 Register A Book
     Main Page Should Be Open
-    Set Identifier  kalle
+    Click Button  Kirja
+    Book Page Should Be Open
+    Set Identifier  maija
     Set Author  kalle
     Set Editor  kalle
     Set Title  kalle
@@ -22,17 +26,21 @@ Register A Book
 
 Get Bibtex Format
     Main Page Should Be Open
+    Click Button  Kirja
+    Book Page Should Be Open
     Click Button  Muuta bibtex-muotoon
     Bibtex Page Should Be Open
 
 Register A Book In A Wrong Form
     Main Page Should Be Open
-    Set Identifier  kalle
+    Click Button  Kirja
+    Book Page Should Be Open
+    Set Identifier  okokok
     Set Author  kalle
     Set Editor  kalle
     Set Title  kalle
     Set Publisher  kalle
-    Set Year  2002
+    Set Year  232040
     Submit Credentials
     Registering A Book Should Fail With Message  Lisää tunniste.
 
@@ -43,7 +51,7 @@ Registering A Book Should Succeed
 
 Registering A Book Should Fail With Message
     [Arguments]  ${message}
-    Main Page Should Be Open
+    Book Page Should Be Open
     Page Should Contain  ${message}
 
 Submit Credentials
