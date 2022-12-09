@@ -141,6 +141,18 @@ def list_misc_by_tag(tag_text):
     result = db.session.execute(sql, {'text':tag_text})
     return result.fetchall()
 
+def list_books_by_time_added():
+    sql = "SELECT identifier, author, editor, title, publisher, year, id FROM books ORDER BY ASC"
+    result = db.session.execute(sql)
+    result = result.fetchall()
+    return result
+
+def list_misc_by_time_added():
+    sql = "SELECT identifier, title, editor, how_published, year, note, id FROM misc ORDER BY id ASC"
+    result = db.session.execute(sql)
+    result = result.fetchall()
+    return result
+
 
 # aux
 
