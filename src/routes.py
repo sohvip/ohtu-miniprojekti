@@ -13,8 +13,9 @@ def index():
 @app.route("/add_book", methods=["GET", "POST"])
 def add_book():
     if request.method == "GET":
+        identifiers = reference_database.get_identifiers()
         book_list = reference_database.get_books()
-        return render_template("create_book.html", book_list=book_list)
+        return render_template("create_book.html", book_list=book_list, identifiers=identifiers)
     if request.method == "POST":
         identifier = request.form["identifier"]
         author = request.form["author"]
@@ -29,8 +30,9 @@ def add_book():
 @app.route("/addSite", methods=["GET", "POST"])
 def add_site():
     if request.method == "GET":
+        identifiers = reference_database.get_identifiers()
         misc_list = reference_database.get_table_misc_raw()
-        return render_template("createSite.html", misc_list=misc_list)
+        return render_template("createSite.html", misc_list=misc_list, identifiers=identifiers)
     if request.method == "POST":
         identifier = request.form["identifier"]
         title = request.form["title"]

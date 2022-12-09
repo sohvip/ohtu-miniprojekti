@@ -179,11 +179,18 @@ def empty_misc():
 def get_tag_id(tag_text):
     sql = "SELECT id FROM tags WHERE tag_text=:text"
     result = db.session.execute(sql, {'text':tag_text}).fetchone()
-    
-
     if result is None:
         tag_id = create_tag(tag_text)
         return tag_id
 
-
     return result[0]
+
+def get_identifiers():
+    sql = "SELECT identifier FROM books UNION SELECT identifier FROM misc"
+    result = db.session.execute(sql)
+    identifiers = result.fetchall()
+    identifier_list = []
+    for identifier in identifiers:
+        identifier_list.append(identifier[0])
+
+    return identifier_list

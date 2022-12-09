@@ -8,6 +8,7 @@
 <hr>
 <p>Lisää nettisivu lähteeksi tällä lomakkeella:</p>
 <form action="/addSite" method="POST" onsubmit="return check(this)">
+    <input type="hidden" name="identifiers" value="{{ identifiers }}">
     Tunniste:<br>
     <input type="text" name="identifier" minlength="1">
     <br> Otsikko:
@@ -57,6 +58,11 @@
             alert("Lisää tunniste.");
             return false;
         }
+        var identifiers = document.getElementsByName("identifiers")[0].value;
+        if (identifiers.indexOf(form.identifier.value) !== -1) {
+            alert("Tunniste on jo käytössä.");
+            return false;
+        }
         if (!form.title.value) {
             alert("Lisää otsikko.");
             return false;
@@ -86,13 +92,10 @@
         if (typeof str !== "string") {
             return false;
         }
-
         const num = Number(str);
-
         if (Number.isInteger(num) && num > 0) {
             return true;
         }
-
         return false;
     }
 
