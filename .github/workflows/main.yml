@@ -28,7 +28,9 @@ jobs:
     - name: Install dependencies
       run: poetry install
     - name: Run tests
-      run: poetry run invoke test
+      run: poetry run pytest src
+      env: 
+        DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
     - name: Run coverage
       run: poetry run invoke coverage
     - name: Coverage report
