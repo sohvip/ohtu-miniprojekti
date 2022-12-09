@@ -1,4 +1,6 @@
-<title>BibTeX-muoto</title>
+{% extends 'layout.html' %}
+{% block title %}Nettisivun Bibtex{% endblock %}
+{% block content %}
 {{ bibtex }}
 <br>
 <form action="/website_bibtex/{{ id }}" method="POST" onsubmit="return checkcopy(this)">
@@ -11,3 +13,4 @@
         alert("Viite kopioitu!")
     }
 </script>
+{% endblock %}

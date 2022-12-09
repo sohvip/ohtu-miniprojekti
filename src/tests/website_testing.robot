@@ -8,12 +8,12 @@ Test Setup  Go To Main Page
 
 Page is Open
     Main Page Should Be Open
-    Click Link  Lisää nettisivu
+    Click Link  Nettisivu
     Website Page Should Be Open
 
 Register A Website
     Main Page Should Be Open
-    Click Link  Lisää nettisivu
+    Click Link  Nettisivu
     Website Page Should Be Open
 	Set Identifier  mikko
 	Set Title  kalle
@@ -26,29 +26,29 @@ Register A Website
 
 Register A Website With Wrong URL
     Main Page Should Be Open
-    Click Link  Lisää nettisivu
+    Click Link  Nettisivu
     Website Page Should Be Open
-	Set Identifier  mikko
+	Set Identifier  miisa
 	Set Title  kalle
 	Set Editor  kalle
 	Set How_published  j
 	Set Year  2002
 	Set Note  20.12.2012
     Submit Credentials
-    Registering A Website Should Fail With Message  Lisää tunniste.
+    Registering A Website Should Fail With Message  Lisää URL.
 
 Register A Website With Wrong Year
     Main Page Should Be Open
-    Click Link  Lisää nettisivu
+    Click Link  Nettisivu
     Website Page Should Be Open
-	Set Identifier  mikko
+	Set Identifier  maija
 	Set Title  kalle
 	Set Editor  kalle
-	Set How_published  j
-	Set Year  0,5
+	Set How_published  https://github.com/sohvip/ohtu-miniprojekti
+	Set Year  202223
 	Set Note  20.12.2012
     Submit Credentials
-    Registering A Website Should Fail With Message  Lisää tunniste.
+    Registering A Website Should Fail With Message  Tarkista julkaisuvuosi.
 
 *** Keywords ***
 
