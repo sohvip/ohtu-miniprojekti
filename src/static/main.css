@@ -1,17 +1,30 @@
 body {
     margin: auto;
-    max-width: 45em;
+    /* max-width: 45em; */
     font-family: Arial, Helvetica, sans-serif;
     /* background-color: #F8EDE3; */
 }
 
+input, textarea {
+    border-radius: 6px;
+    padding: 8px;
+    border: 1px solid #3C2317;
+    font-size: 16px;
+    background-color: white;
+}
+
+/* h1 {
+    color: #3C2317;
+} */
+
 .top_bar_container {
     text-align: center;
-    background-color: #77DD77;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 6px;
-    border: 1px solid grey;
+    background-color: #B4CDE6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #3C2317;
+    width: 100%;
+    margin: 0;
 }
 
 .button_container {
@@ -21,10 +34,10 @@ body {
 }
 
 .button_item {
-    border: 1px solid grey;
+    border: 1px solid #3C2317;
     border-radius: 6px;
     margin: 50px 10px 0 10px;
-    background-color: #77DD77;
+    background-color: #B4CDE6;
     text-align: center;
     display: flex;
     align-items: center;
