@@ -5,11 +5,16 @@ from flask import request, render_template, redirect
 import pyperclip
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["GET"])
 def index():
     if request.method == "GET":
+        return render_template("index.html")
+
+@app.route("/add_book", methods=["GET", "POST"])
+def add_book():
+    if request.method == "GET":
         book_list = reference_database.get_books()
-        return render_template("index.html", book_list=book_list)
+        return render_template("create_book.html", book_list=book_list)
     if request.method == "POST":
         identifier = request.form["identifier"]
         author = request.form["author"]
@@ -19,7 +24,7 @@ def index():
         year = request.form["year"]
         if identifier and author and editor and title and publisher and year and year.isnumeric():
             reference_database.create_book(identifier, author, editor, title, publisher, year)
-        return redirect("/")
+        return redirect("/add_book")
 
 @app.route("/addSite", methods=["GET", "POST"])
 def add_site():
@@ -69,18 +74,26 @@ def delete_misc(id):
 
     return redirect("/addSite")
 
-@app.route("/addTagBook/<int:id>", methods=["POST"])
+@app.route("/addTagBook", methods=["POST"])
 def add_tag_to_book(id):
     tag_text = request.form["tag_text"]
+    identifier_text = request.form["identifier"]
 
-    if reference_database.tag_exists() is False:
-        print()
+    tag_id = reference_database.get_tag_id(tag_text)
 
+    reference_database.add_tag_to_work(identifier_text, tag_id)
+    
     return redirect("/")
 
-@app.route("/addTagMisc/<int:id>", methods=["POST"])
+@app.route("/addTagMisc", methods=["POST"])
 def add_tag_to_misc(id):
     tag_text = request.form["tag_text"]
+    identifier_text = request.form["identifier"]
 
+    tag_id = reference_database.get_tag_id(tag_text)
+
+    reference_database.add_tag_to_work(identifier_text, tag_id)
+    
     return redirect("/addSite")
+
 
