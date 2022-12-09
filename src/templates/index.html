@@ -1,9 +1,11 @@
 {% extends 'layout.html' %}
 {% block title %}Etusivu{% endblock %}
 {% block content %}
-<h1>Bibtex-muunnin</h1>
-<button><a href="/add_book">Kirja</a></button>
-<button><a href="/addSite">Nettisivu</a></button>
+<h1 class="top_bar_container">Bibtex-muunnin</h1>
+<div class="button_container">
+    <button class="button_item"><a href="/add_book" style="color: black; margin-left: 25px;">Kirja</a></button>
+    <button class="button_item"><a href="/addSite" style="color: black; margin-left: 9px;">Nettisivu</a></button>
+</div>
 <br><br><br>
 <form action="/listByTag" method="POST">
     Etsittävä tägi:<br>
