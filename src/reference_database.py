@@ -105,6 +105,16 @@ def get_table_misc_raw():
     result = result.fetchall()
     return result
 
+def delete_book(book_id):
+    sql = "DELETE FROM books WHERE id=:book_id"
+    db.session.execute(sql, {'book_id':book_id})
+    db.session.commit()
+
+def delete_website(misc_id):
+    sql = "DELETE FROM misc WHERE id=:misc_id"
+    db.session.execute(sql, {'misc_id':misc_id})
+    db.session.commit()
+
 
 # aux
 

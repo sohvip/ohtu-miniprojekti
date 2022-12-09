@@ -57,3 +57,15 @@ def website_bibtex(id):
         pyperclip.copy(bibtex)
         return render_template("website_bibtex.html", bibtex=bibtex, id=id)
 
+@app.route("/deleteBook/<int:id>")
+def book_bibtex(id):
+    reference_database.delete_book(id)
+
+    return redirect("/")
+
+@app.route("/deleteMisc/<int:id>")
+def book_bibtex(id):
+    reference_database.delete_website(id)
+
+    return redirect("/addSite")
+
