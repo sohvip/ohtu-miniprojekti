@@ -66,7 +66,7 @@ def website_bibtex(id):
 def delete_book(id):
     reference_database.delete_book(id)
 
-    return redirect("/")
+    return redirect("/add_book")
 
 @app.route("/deleteMisc/<int:id>")
 def delete_misc(id):
@@ -83,7 +83,7 @@ def add_tag_to_book(id):
 
     reference_database.add_tag_to_work(identifier_text, tag_id)
     
-    return redirect("/")
+    return redirect("/add_book")
 
 @app.route("/addTagMisc", methods=["POST"])
 def add_tag_to_misc(id):
