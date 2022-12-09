@@ -24,4 +24,4 @@ Website Page Should Be Open
     Title Should Be  Nettisivun lisääminen
 
 Bibtex Page Should Be Open
-    Title Should Be  Bibtex muoto
+    Title Should Be  BibTeX-muoto

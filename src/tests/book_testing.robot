@@ -25,10 +25,24 @@ Get Bibtex Format
     Click Button  Muuta bibtex-muotoon
     Bibtex Page Should Be Open
 
+Register A Book In A Wrong Form
+    Main Page Should Be Open
+    Set Identifier  kalle
+    Set Author  kalle
+    Set Editor  kalle
+    Set Title  ""
+    Set Publisher  kalle
+    Set Year  2002
+    Submit Credentials
+    Registering A Book Should Not Succeed
+
 *** Keywords ***
 
 Registering A Book Should Succeed
-    Main Page Should Be Open
+    Page Should Contain  kalle
+
+Registering A Book Should Not Succeed
+    Page Should Contain  says
 
 Submit Credentials
     Click Button  Tallenna kirja
