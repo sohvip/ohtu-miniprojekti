@@ -69,18 +69,26 @@ def delete_misc(id):
 
     return redirect("/addSite")
 
-@app.route("/addTagBook/<int:id>", methods=["POST"])
+@app.route("/addTagBook", methods=["POST"])
 def add_tag_to_book(id):
     tag_text = request.form["tag_text"]
+    identifier_text = request.form["identifier"]
 
-    if reference_database.tag_exists() is False:
-        print()
+    tag_id = reference_database.get_tag_id(tag_text)
 
+    reference_database.add_tag_to_work(identifier_text, tag_id)
+    
     return redirect("/")
 
-@app.route("/addTagMisc/<int:id>", methods=["POST"])
+@app.route("/addTagMisc", methods=["POST"])
 def add_tag_to_misc(id):
     tag_text = request.form["tag_text"]
+    identifier_text = request.form["identifier"]
 
+    tag_id = reference_database.get_tag_id(tag_text)
+
+    reference_database.add_tag_to_work(identifier_text, tag_id)
+    
     return redirect("/addSite")
+
 

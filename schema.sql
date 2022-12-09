@@ -21,3 +21,14 @@ CREATE TABLE misc (
 	note TEXT
 );
 
+CREATE TABLE tags (
+	id SERIAL PRIMARY KEY,
+	tag_text TEXT
+);
+
+CREATE TABLE work_tag_pairs (
+	id SERIAL PRIMARY KEY,
+	citation_identifier TEXT UNIQUE,
+	tag_id INTEGER REFERENCES tags
+
+);
