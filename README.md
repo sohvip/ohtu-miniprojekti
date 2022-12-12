@@ -12,3 +12,4 @@
 - Testikattavuus on noin 70% oleellisen koodin osalta
 - Asiakas näkee GitHubista koodin testikattavuuden.
 - Koodin ylläpidettävyys on hyvä 
+
