@@ -27,6 +27,14 @@ input, textarea {
     margin: 0;
 }
 
+.top_bar_container_2 {
+    background-color: #B4CDE6;
+    padding-left: 40px;
+    border: 1px solid #3C2317;
+    width: 100%;
+    margin: 0;
+}
+
 .button_container {
     display: flex;
     align-items: center;
@@ -51,7 +59,7 @@ input, textarea {
 }
 
 .top_button {
-    /* margin-top: 20px; */
+    margin-top: 20px;
     background-color: #B4CDE6;
     border: 1px solid #3C2317;
     border-radius: 6px;

@@ -1,11 +1,13 @@
 {% extends 'layout.html' %}
 {% block title %}Kirjan lisääminen{% endblock %}
 {% block content %}
+<div class="top_bar_container_2">
+    <h1>Kirjan lisääminen</h1>
+</div>
 <div class="margin">
-    <h1 class="top_bar_container">Kirjan lisääminen</h1>
     <button class="top_button"><a href="/" style="color: black;">Takaisin</a></button>
     <button class="top_button"><a href="/addSite" style="color: black;">Lisää nettisivu</a></button>
-    <a href="/sortByDateAddedBook">Järjestä lisäysajan mukaan</a>
+    <button class="top_button"><a href="/sortByDateAddedBook" style="color: black;">Järjestä lisäysajan mukaan</a></button>
     <p>Lisää kirja lähteeksi tällä lomakkeella:</p>
     <form action="/add_book" method="POST" onsubmit="return check(this)">
         Tunniste:<br>
@@ -28,7 +30,7 @@
         <br>
         <input type="submit" value="Tallenna kirja" style="background-color: #B4CDE6;">
     </form>
-
+    <hr>
     {% if book_list %}
     <p>Lisäämäsi lähteet:</p>
         {% for book in book_list %}
@@ -38,8 +40,8 @@
             <p>Editori: {{ book[2] }}</p>
             <p>Kustantaja: {{ book[4] }}</p>
             <p>Julkaisuvuosi: {{ book[5] }}</p>
-            <button><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button><br>
-            <button><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button><br>
+            <button class="top_button"><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button>
+            <button class="top_button"><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button><br>
             <form action="/addTagBook" method="POST" onsubmit="return checkTag(this)">
                 Lisää tägi:<br>
                 <input type="text" name="tag_text" minlength="1">
