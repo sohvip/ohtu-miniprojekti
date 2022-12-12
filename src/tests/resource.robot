@@ -28,3 +28,9 @@ Website Page Should Be Open
 
 Bibtex Page Should Be Open
     Title Should Be  Bibtex-muunnin - Kirjan Bibtex
+
+Tag Page Should Be Open
+    Title Should Be  Bibtex-muunnin - Tagit
+
+Empty Books
+    

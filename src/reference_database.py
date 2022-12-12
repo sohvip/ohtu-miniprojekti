@@ -176,6 +176,18 @@ def empty_misc():
     sql = "DELETE FROM misc"
     db.session.execute(sql)
 
+def empty_all_tables():
+    sql = "DELETE FROM misc"
+    db.session.execute(sql)
+    sql = "DELETE FROM books"
+    db.session.execute(sql)
+    sql = "DELETE FROM work_tag_pairs"
+    db.session.execute(sql)
+    sql = "DELETE FROM tags"
+    db.session.execute(sql)
+    db.session.commit()
+    return "All tables empty"
+
 def get_tag_id(tag_text):
     sql = "SELECT id FROM tags WHERE tag_text=:text"
     result = db.session.execute(sql, {'text':tag_text}).fetchone()
