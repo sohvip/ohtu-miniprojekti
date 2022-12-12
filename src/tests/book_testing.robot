@@ -29,7 +29,7 @@ Get Bibtex Format
     Click Button  Kirja
     Book Page Should Be Open
     Click Button  Muuta bibtex-muotoon
-    Bibtex Page Should Be Open
+    Book Bibtex Page Should Be Open
 
 Register A Book With A Wrong Year
     Main Page Should Be Open

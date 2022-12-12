@@ -26,8 +26,11 @@ Book Page Should Be Open
 Website Page Should Be Open
     Title Should Be  Bibtex-muunnin - Nettisivun lisääminen
 
-Bibtex Page Should Be Open
+Book Bibtex Page Should Be Open
     Title Should Be  Bibtex-muunnin - Kirjan Bibtex
+
+Website Bibtex Page Should Be Open
+    Title Should Be  Bibtex-muunnin - Nettisivun Bibtex
 
 Tag Page Should Be Open
     Title Should Be  Bibtex-muunnin - Tagit

@@ -24,6 +24,13 @@ Register A Website
     Submit Credentials
     Page Should Contain  Ohtu-miniprojekti
 
+Get Bibtex Format
+    Main Page Should Be Open
+    Click Button  Nettisivu
+    Website Page Should Be Open
+    Click Button  Muuta bibtex-muotoon
+    Website Bibtex Page Should Be Open
+
 Register A Website With Wrong URL
     Main Page Should Be Open
     Click Link  Nettisivu
