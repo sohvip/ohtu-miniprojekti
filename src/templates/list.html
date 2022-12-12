@@ -1,28 +1,34 @@
-<a href="/">Takaisin</a>
-{% if book_list %}
-<p>Lisäämäsi lähteet:</p>
-    {% for book in book_list %}
-        <p>Tunniste: {{ book[0] }}</p>
-        <p>Kirja: {{ book[3] }}</p>
-        <p>Kirjoittaja: {{ book[1] }}</p>
-        <p>Editori: {{ book[2] }}</p>
-        <p>Kustantaja: {{ book[4] }}</p>
-        <p>Julkaisuvuosi: {{ book[5] }}</p>
-        <button><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button><br>
-        <hr>
-    {% endfor %}
-{% endif %}
-<br>
-{% if misc_list %}
-<p>Lisäämäsi lähteet:</p>
-    {% for misc in misc_list %}
-        <p>Tunniste: {{ misc[0] }}</p>
-        <p>Sivun otsikko: {{ misc[1] }}</p>
-        <p>Editori: {{ misc[2] }}</p>
-        <p>Sivun URL: {{ misc[3] }}</p>
-        <p>Julkaisuvuosi: {{ misc[4] }}</p>
-        <p>Muuta tietoa: {{ misc[5] }}</p>
-        <button><a href="/website_bibtex/{{ misc[6] }}">Muuta bibtex-muotoon</a></button><br>
-        <hr>
-    {% endfor %}
-{% endif %}
+{% extends 'layout.html' %}
+{% block title %}Tägit{% endblock %}
+{% block content %}
+<div class="margin">
+    <button class="top_button"><a href="/">Takaisin</a></button>
+    {% if book_list %}
+    <h3>Lisäämäsi lähteet:</h3>
+        {% for book in book_list %}
+            <p>Tunniste: {{ book[0] }}</p>
+            <p>Kirja: {{ book[3] }}</p>
+            <p>Kirjoittaja: {{ book[1] }}</p>
+            <p>Editori: {{ book[2] }}</p>
+            <p>Kustantaja: {{ book[4] }}</p>
+            <p>Julkaisuvuosi: {{ book[5] }}</p>
+            <button class="sort_button"><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button><br>
+            <hr>
+        {% endfor %}
+    {% endif %}
+    <br>
+    {% if misc_list %}
+    <p>Lisäämäsi lähteet:</p>
+        {% for misc in misc_list %}
+            <p>Tunniste: {{ misc[0] }}</p>
+            <p>Sivun otsikko: {{ misc[1] }}</p>
+            <p>Editori: {{ misc[2] }}</p>
+            <p>Sivun URL: {{ misc[3] }}</p>
+            <p>Julkaisuvuosi: {{ misc[4] }}</p>
+            <p>Muuta tietoa: {{ misc[5] }}</p>
+            <button class="sort_button"><a href="/website_bibtex/{{ misc[6] }}">Muuta bibtex-muotoon</a></button><br>
+            <hr>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
