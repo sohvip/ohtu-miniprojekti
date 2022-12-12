@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block title %}Nettisivut lisäysajan mukaan{% endblock %}
+{% block content %}
+<div class="margin">
+    <button class="top_button"><a href="/addSite">Takaisin</a></button>
+    {% if misc_list %}
+    <h3>Lisäämäsi lähteet:</h3>
+        {% for misc in misc_list %}
+            <p>Tunniste: {{ misc[0] }}</p>
+            <p>Sivun otsikko: {{ misc[1] }}</p>
+            <p>Editori: {{ misc[2] }}</p>
+            <p>Sivun URL: {{ misc[3] }}</p>
+            <p>Julkaisuvuosi: {{ misc[4] }}</p>
+            <p>Muuta tietoa: {{ misc[5] }}</p>
+            <button class="sort_button"><a href="/website_bibtex/{{ misc[6] }}">Muuta bibtex-muotoon</a></button><br>
+            <button class="sort_button"><a href="/deleteMisc/{{ misc[6] }}">Poista viite</a></button>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

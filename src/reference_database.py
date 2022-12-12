@@ -142,13 +142,25 @@ def list_misc_by_tag(tag_text):
     return result.fetchall()
 
 def list_books_by_time_added():
-    sql = "SELECT identifier, author, editor, title, publisher, year, id FROM books ORDER BY ASC"
+    sql = "SELECT identifier, author, editor, title, publisher, year, id FROM books ORDER BY id ASC"
     result = db.session.execute(sql)
     result = result.fetchall()
     return result
 
 def list_misc_by_time_added():
     sql = "SELECT identifier, title, editor, how_published, year, note, id FROM misc ORDER BY id ASC"
+    result = db.session.execute(sql)
+    result = result.fetchall()
+    return result
+
+def list_books_by_author_name():
+    sql = "SELECT identifier, author, editor, title, publisher, year, id FROM books ORDER BY author ASC"
+    result = db.session.execute(sql)
+    result = result.fetchall()
+    return result
+
+def list_misc_by_author_name():
+    sql = "SELECT identifier, title, editor, how_published, year, note, id FROM misc ORDER BY editor ASC"
     result = db.session.execute(sql)
     result = result.fetchall()
     return result
@@ -175,6 +187,18 @@ def get_website(id):
 def empty_misc():
     sql = "DELETE FROM misc"
     db.session.execute(sql)
+
+def empty_all_tables():
+    sql = "DELETE FROM misc"
+    db.session.execute(sql)
+    sql = "DELETE FROM books"
+    db.session.execute(sql)
+    sql = "DELETE FROM work_tag_pairs"
+    db.session.execute(sql)
+    sql = "DELETE FROM tags"
+    db.session.execute(sql)
+    db.session.commit()
+    return "All tables empty"
 
 def get_tag_id(tag_text):
     sql = "SELECT id FROM tags WHERE tag_text=:text"

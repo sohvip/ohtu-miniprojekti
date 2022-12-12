@@ -1,10 +1,5 @@
 import unittest
 import reference_database
-from flask import Flask
-from app import app
-import os
-from flask_sqlalchemy import SQLAlchemy
-from dotenv import load_dotenv
 
 class Testreference_database(unittest.TestCase):
     def setUp(self):
@@ -40,18 +35,5 @@ class Testreference_database(unittest.TestCase):
         return_value = reference_database.create_book("test", "eka", 9, 9, 9, 9)
         self.assertEqual(return_value, "Identifier already in use for another work")
 
-    def test_add_book(self):
-
-        client = app.test_client()
-        book_data = {
-            "identifier": "123456",
-            "author": "John Doe",
-            "editor": "Jane Doe",
-            "title": "Test Book",
-            "publisher": "Test Publishers",
-            "year": "2022"
-        }
-
-        result = reference_database.create_book(book_data["identifier"], book_data["author"], book_data["editor"], book_data["title"], book_data["publisher"], book_data["year"])
-        assert result == "Book created successfully"
-        assert reference_database.get_book_by_identifier("123456") is not None
+    def tearDown(self):
+        reference_database.empty_all_tables()
