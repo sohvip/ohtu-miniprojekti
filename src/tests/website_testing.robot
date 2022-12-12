@@ -57,6 +57,41 @@ Delete Oldest Registered Website
     Click Button  Poista viite
     Page Should Not Contain  Ohtu-miniprojekti
 
+Add A Tagged Book
+    Main Page Should Be Open
+    Click Link  Nettisivu
+    Website Page Should Be Open
+	Set Identifier  z690
+	Set Title  Firefox kotisivu
+	Set Editor  Firefox
+	Set How_published  https://www.mozilla.org/en-GB/firefox/
+	Set Year  2001
+	Set Note  30.10.2022
+    Submit Credentials
+    Page Should Contain  Firefox kotisivu
+    Set Tag_text  nettisivu
+    Click Button  Lisää tägi
+
+Find A Tagged Book
+    Main Page Should Be Open
+    Click Link  Nettisivu
+    Website Page Should Be Open
+	Set Identifier  ww909
+	Set Title  Ohjelmistotuotanto viikko 3
+	Set Editor  Matti Luukkainen
+	Set How_published  https://ohjelmistotuotanto-hy.github.io/tehtavat3/
+	Set Year  2020
+	Set Note  3.12.2022
+    Submit Credentials
+    Page Should Contain  Ohjelmistotuotanto viikko 3
+    Set Tag_text  ohjelmistotuotanto
+    Click Button  Lisää tägi  
+    Click Link  Takaisin
+    Main Page Should Be Open
+	Set Tag_text  ohjelmistotuotanto
+    Click Button  Etsi
+    Tag Page Should Be Open
+
 *** Keywords ***
 
 
@@ -92,4 +127,8 @@ Set Year
 Set Note
     [Arguments]  ${note}
     Input Text  note  ${note}
+
+Set Tag_text
+    [Arguments]  ${tag_text}
+    Input Text  tag_text  ${tag_text}
 

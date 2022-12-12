@@ -127,7 +127,3 @@ Set Year
 Set Tag_text
     [Arguments]  ${tag_text}
     Input Text  tag_text  ${tag_text}
-
-Set Citation_identifier
-    [Arguments]  ${citation_identifier}
-    Input Text  citation_identifier  ${citation_identifier}
