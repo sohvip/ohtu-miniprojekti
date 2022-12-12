@@ -3,6 +3,7 @@
 {% block content %}
 <a href="/">Takaisin</a><br>
 <a href="/add_book">Lisää kirja</a><br><br>
+<a href="/sortByDateAddedMisc">Järjestä lisäysajan mukaan</a>
 
 <h1>Nettisivun lisääminen</h1>
 <hr>
@@ -42,7 +43,7 @@
         <p>Muuta tietoa: {{ misc[5] }}</p>
         <button><a href="/website_bibtex/{{ misc[6] }}">Muuta bibtex-muotoon</a></button><br>
         <button><a href="/deleteMisc/{{ misc[6] }}">Poista viite</a></button>
-        <form action="/addTagMisc" method="POST">
+        <form action="/addTagMisc" method="POST" onsubmit="return checkTag(this)">
             Lisää tägi:<br>
             <input type="text" name="tag_text" minlength="1">
             <input type="hidden" name="identifier" value="{{ misc[0] }}">
@@ -58,8 +59,9 @@
             alert("Lisää tunniste.");
             return false;
         }
-        var identifiers = document.getElementsByName("identifiers")[0].value;
-        if (identifiers.indexOf(form.identifier.value) !== -1) {
+        var data = JSON.parse('{{identifiers | tojson | safe}}');
+        var identifier_list = data.identifiers;
+        if (identifier_list.includes(form.identifier.value)) {
             alert("Tunniste on jo käytössä.");
             return false;
         }
@@ -87,6 +89,7 @@
             alert("Tarkista julkaisuvuosi.");
             return false;
         }
+    }
 
     function isPositiveInteger(str) {
         if (typeof str !== "string") {
@@ -99,6 +102,23 @@
         return false;
     }
 
+    function checkTag(form) {
+        if (!form.tag_text.value) {
+            alert("Tägi ei saa olla tyhjä.")
+            return false;
+        }
+        var data = JSON.parse('{{work_tag_pairs | tojson | safe}}');
+        for (let identifier_text in data) {
+            if (identifier_text === form.identifier.value) {
+                var identifier_list = data[identifier_text];
+                if (identifier_list.includes(form.tag_text.value)) {
+                    alert("Hups! Tägi " + form.tag_text.value + " on jo liitetty!");
+                    return false;
+                }
+            }
+        }
     }
+
+
 </script>
 {% endblock %}

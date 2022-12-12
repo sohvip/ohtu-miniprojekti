@@ -5,6 +5,7 @@
     <h1 class="top_bar_container">Kirjan lisääminen</h1>
     <button class="top_button"><a href="/" style="color: black;">Takaisin</a></button>
     <button class="top_button"><a href="/addSite" style="color: black;">Lisää nettisivu</a></button>
+    <a href="/sortByDateAddedBook">Järjestä lisäysajan mukaan</a>
     <p>Lisää kirja lähteeksi tällä lomakkeella:</p>
     <form action="/add_book" method="POST" onsubmit="return check(this)">
         Tunniste:<br>
@@ -58,7 +59,7 @@
             var data = JSON.parse('{{identifiers | tojson | safe}}');
             var identifier_list = data.identifiers;
             if (identifier_list.includes(form.identifier.value)) {
-                alert("Tunniste on jo käytössä");
+                alert("Tunniste on jo käytössä.");
                 return false;
             }
             if (!form.author.value) {
@@ -99,6 +100,10 @@
         }
 
         function checkTag(form) {
+            if (!form.tag_text.value) {
+                alert("Tägi ei saa olla tyhjä.")
+                return false;
+            }
             var data = JSON.parse('{{work_tag_pairs | tojson | safe}}');
             for (let identifier_text in data) {
                 if (identifier_text === form.identifier.value) {
@@ -109,13 +114,7 @@
                     }
                 }
             }
-
-            if (!form.tag_text.value) {
-                alert("Tunniste ei saa olla tyhjä.")
-                return false;
-            }
         }
     </script>
 </div>
-
 {% endblock %}

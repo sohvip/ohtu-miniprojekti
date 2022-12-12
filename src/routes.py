@@ -31,9 +31,10 @@ def add_book():
 @app.route("/addSite", methods=["GET", "POST"])
 def add_site():
     if request.method == "GET":
-#        identifiers = reference_database.get_identifiers_dict()
+        identifiers = reference_database.get_identifiers_dict()
+        work_tag_pairs = reference_database.get_work_tag_pairs_dict()
         misc_list = reference_database.get_table_misc_raw()
-        return render_template("createSite.html", misc_list=misc_list)#, identifiers=identifiers)
+        return render_template("createSite.html", misc_list=misc_list, identifiers=identifiers, work_tag_pairs=work_tag_pairs)
     if request.method == "POST":
         identifier = request.form["identifier"]
         title = request.form["title"]
@@ -107,5 +108,16 @@ def list_by_tag():
     misc_list = reference_database.list_misc_by_tag(tag_text)
 
     return render_template("list.html", book_list=book_list, misc_list=misc_list)
+
+@app.route("/sortByDateAddedBook")
+def sort_by_date_books():
+    book_list = reference_database.list_books_by_time_added()
+    return render_template("dateSortedBooks.html", book_list=book_list)
+
+@app.route("/sortByDateAddedMisc")
+def sort_by_date_miscs():
+    misc_list = reference_database.list_misc_by_time_added()
+    return render_template("dateSortedMiscs.html", misc_list=misc_list)
+
 
 
