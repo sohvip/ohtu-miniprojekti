@@ -104,7 +104,7 @@
 
     function checkTag(form) {
         if (!form.tag_text.value) {
-            alert("Tunniste ei saa olla tyhjä.")
+            alert("Tägi ei saa olla tyhjä.")
             return false;
         }
         var data = JSON.parse('{{work_tag_pairs | tojson | safe}}');
