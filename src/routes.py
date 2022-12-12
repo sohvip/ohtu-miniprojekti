@@ -119,5 +119,15 @@ def sort_by_date_miscs():
     misc_list = reference_database.list_misc_by_time_added()
     return render_template("dateSortedMiscs.html", misc_list=misc_list)
 
+@app.route("/sortByNameBook")
+def sort_by_name_books():
+    book_list = reference_database.list_books_by_author_name()
+    return render_template("nameSortedBooks.html", book_list=book_list)
+
+@app.route("/sortByNameMisc")
+def sort_by_name_miscs():
+    misc_list = reference_database.list_misc_by_author_name()
+    return render_template("nameSortedMiscs.html", misc_list=misc_list)
+
 
 

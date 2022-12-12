@@ -153,6 +153,18 @@ def list_misc_by_time_added():
     result = result.fetchall()
     return result
 
+def list_books_by_author_name():
+    sql = "SELECT identifier, author, editor, title, publisher, year, id FROM books ORDER BY author ASC"
+    result = db.session.execute(sql)
+    result = result.fetchall()
+    return result
+
+def list_misc_by_author_name():
+    sql = "SELECT identifier, title, editor, how_published, year, note, id FROM misc ORDER BY editor ASC"
+    result = db.session.execute(sql)
+    result = result.fetchall()
+    return result
+
 
 # aux
 

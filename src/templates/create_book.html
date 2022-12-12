@@ -7,7 +7,6 @@
 <div class="margin">
     <button class="top_button"><a href="/" style="color: black;">Takaisin</a></button>
     <button class="top_button"><a href="/addSite" style="color: black;">Lisää nettisivu</a></button>
-    <button class="top_button"><a href="/sortByDateAddedBook" style="color: black;">Järjestä lisäysajan mukaan</a></button>
     <p>Lisää kirja lähteeksi tällä lomakkeella:</p>
     <form action="/add_book" method="POST" onsubmit="return check(this)">
         Tunniste:<br>
@@ -32,26 +31,27 @@
     </form>
     <hr>
     {% if book_list %}
-    <p>Lisäämäsi lähteet:</p>
+    <button class="sort_button"><a href="/sortByDateAddedBook">Järjestä lisäysajan mukaan</a></button>
+    <button class="sort_button"><a href="/sortByNameBook">Järjestä sukunimen mukaan</a></button>
+    <h2>Lisäämäsi lähteet:</h2>
         {% for book in book_list %}
             <p>Tunniste: {{ book[0] }}</p>
             <p>Kirja: {{ book[3] }}</p>
             <p>Kirjoittaja: {{ book[1] }}</p>
             <p>Editori: {{ book[2] }}</p>
             <p>Kustantaja: {{ book[4] }}</p>
-            <p>Julkaisuvuosi: {{ book[5] }}</p>
-            <button class="top_button"><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button>
-            <button class="top_button"><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button><br>
+            Julkaisuvuosi: {{ book[5] }} <br><br>
+            <button class="sort_button"><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button>
+            <button class="sort_button"><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button><br><br>
             <form action="/addTagBook" method="POST" onsubmit="return checkTag(this)">
                 Lisää tägi:<br>
                 <input type="text" name="tag_text" minlength="1">
                 <input type="hidden" name="identifier", value="{{ book[0] }}">
-                <input type="submit" value="Lisää tägi">
+                <input type="submit" value="Lisää tägi" style="background-color: #B4CDE6;">
             </form>
             <hr>
         {% endfor %}
     {% endif %}
-
     <script>
         function check(form) {
             if (!form.identifier.value) {
