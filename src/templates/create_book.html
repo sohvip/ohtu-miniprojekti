@@ -30,10 +30,11 @@
         <input type="submit" value="Tallenna kirja" style="background-color: #B4CDE6;">
     </form>
     <hr>
+    <h2>Lisäämäsi lähteet:</h2>
     {% if book_list %}
     <button class="sort_button"><a href="/sortByDateAddedBook">Järjestä lisäysajan mukaan</a></button>
     <button class="sort_button"><a href="/sortByNameBook">Järjestä sukunimen mukaan</a></button>
-    <h2>Lisäämäsi lähteet:</h2>
+    <hr>
         {% for book in book_list %}
             <p>Tunniste: {{ book[0] }}</p>
             <p>Kirja: {{ book[3] }}</p>
