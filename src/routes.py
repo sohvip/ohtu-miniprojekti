@@ -85,7 +85,7 @@ def add_tag_to_book():
     tag_id = reference_database.get_tag_id(tag_text)
 
     reference_database.add_tag_to_work(identifier_text, tag_id)
-    
+
     return redirect("/add_book")
 
 @app.route("/addTagMisc", methods=["POST"])
@@ -94,16 +94,16 @@ def add_tag_to_misc():
     identifier_text = request.form["identifier"]
 
     tag_id = reference_database.get_tag_id(tag_text)
-    
+
 
     reference_database.add_tag_to_work(identifier_text, tag_id)
-    
+
     return redirect("/addSite")
 
 @app.route("/listByTag", methods=["POST"])
 def list_by_tag():
     tag_text = request.form["tag_text"]
-    
+
     book_list = reference_database.list_books_by_tag(tag_text)
     misc_list = reference_database.list_misc_by_tag(tag_text)
 
@@ -128,6 +128,3 @@ def sort_by_name_books():
 def sort_by_name_miscs():
     misc_list = reference_database.list_misc_by_author_name()
     return render_template("nameSortedMiscs.html", misc_list=misc_list)
-
-
-
