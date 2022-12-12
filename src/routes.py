@@ -31,9 +31,9 @@ def add_book():
 @app.route("/addSite", methods=["GET", "POST"])
 def add_site():
     if request.method == "GET":
-        identifiers = reference_database.get_identifiers()
+#        identifiers = reference_database.get_identifiers_dict()
         misc_list = reference_database.get_table_misc_raw()
-        return render_template("createSite.html", misc_list=misc_list, identifiers=identifiers)
+        return render_template("createSite.html", misc_list=misc_list)#, identifiers=identifiers)
     if request.method == "POST":
         identifier = request.form["identifier"]
         title = request.form["title"]
@@ -41,7 +41,6 @@ def add_site():
         how_published = request.form["how_published"]
         year = request.form["year"]
         note = request.form["note"]
-
         if identifier and title and editor and how_published and note and year.isnumeric():
             reference_database.create_misc(identifier, title, editor, how_published, year, note)
 
