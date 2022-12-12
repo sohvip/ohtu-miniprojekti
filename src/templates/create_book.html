@@ -1,121 +1,121 @@
 {% extends 'layout.html' %}
 {% block title %}Kirjan lisääminen{% endblock %}
 {% block content %}
-<a href="/">Takaisin</a><br>
-<a href="/addSite">Lisää nettisivu</a><br><br>
+<div class="margin">
+    <h1 class="top_bar_container">Kirjan lisääminen</h1>
+    <button class="top_button"><a href="/" style="color: black;">Takaisin</a></button>
+    <button class="top_button"><a href="/addSite" style="color: black;">Lisää nettisivu</a></button>
+    <p>Lisää kirja lähteeksi tällä lomakkeella:</p>
+    <form action="/add_book" method="POST" onsubmit="return check(this)">
+        Tunniste:<br>
+        <input type="text" name="identifier" minlength="1" class="form">
+        <br> Kirjoittaja:
+        <br>
+        <input type="text" name="author" minlength="1" class="form">
+        <br> Editori:
+        <br>
+        <input type="text" name="editor" minlength="1" class="form">
+        <br> Nimi:
+        <br>
+        <input type="text" name="title" minlength="1" class="form">
+        <br> Kustantaja:
+        <br>
+        <input type="text" name="publisher" minlength="1" class="form">
+        <br> Julkaisuvuosi:
+        <br>
+        <input name="year" minlength="1" maxlength="4" class="form">
+        <br>
+        <input type="submit" value="Tallenna kirja" style="background-color: #B4CDE6;">
+    </form>
 
-<h1>Kirjan lisääminen</h1>
-<hr>
-<p>Lisää kirja lähteeksi tällä lomakkeella:</p>
-<form action="/add_book" method="POST" onsubmit="return check(this)">
-    Tunniste:<br>
-    <input type="text" name="identifier" minlength="1">
-    <br> Kirjoittaja:
-    <br>
-    <input type="text" name="author" minlength="1">
-    <br> Editori:
-    <br>
-    <input type="text" name="editor" minlength="1">
-    <br> Nimi:
-    <br>
-    <input type="text" name="title" minlength="1">
-    <br> Kustantaja:
-    <br>
-    <input type="text" name="publisher" minlength="1">
-    <br> Julkaisuvuosi:
-    <br>
-    <input name="year" minlength="1" maxlength="4">
-    <br>
-    <input type="submit" value="Tallenna kirja">
-</form>
+    {% if book_list %}
+    <p>Lisäämäsi lähteet:</p>
+        {% for book in book_list %}
+            <p>Tunniste: {{ book[0] }}</p>
+            <p>Kirja: {{ book[3] }}</p>
+            <p>Kirjoittaja: {{ book[1] }}</p>
+            <p>Editori: {{ book[2] }}</p>
+            <p>Kustantaja: {{ book[4] }}</p>
+            <p>Julkaisuvuosi: {{ book[5] }}</p>
+            <button><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button><br>
+            <button><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button><br>
+            <form action="/addTagBook" method="POST" onsubmit="return checkTag(this)">
+                Lisää tägi:<br>
+                <input type="text" name="tag_text" minlength="1">
+                <input type="hidden" name="identifier", value="{{ book[0] }}">
+                <input type="submit" value="Lisää tägi">
+            </form>
+            <hr>
+        {% endfor %}
+    {% endif %}
 
-{% if book_list %}
-<p>Lisäämäsi lähteet:</p>
-    {% for book in book_list %}
-        <p>Tunniste: {{ book[0] }}</p>
-        <p>Kirja: {{ book[3] }}</p>
-        <p>Kirjoittaja: {{ book[1] }}</p>
-        <p>Editori: {{ book[2] }}</p>
-        <p>Kustantaja: {{ book[4] }}</p>
-        <p>Julkaisuvuosi: {{ book[5] }}</p>
-        <button><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button><br>
-        <button><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button><br>
-        <form action="/addTagBook" method="POST" onsubmit="return checkTag(this)">
-            Lisää tägi:<br>
-            <input type="text" name="tag_text" minlength="1">
-            <input type="hidden" name="identifier", value="{{ book[0] }}">
-            <input type="submit" value="Lisää tägi">
-        </form>
-        <hr>
-    {% endfor %}
-{% endif %}
-
-<script>
-    function check(form) {
-        if (!form.identifier.value) {
-            alert("Lisää tunniste.");
-            return false;
-        }
-        var data = JSON.parse('{{identifiers | tojson | safe}}');
-        var identifier_list = data.identifiers;
-        if (identifier_list.includes(form.identifier.value)) {
-            alert("Tunniste on jo käytössä");
-            return false;
-        }
-        if (!form.author.value) {
-            alert("Lisää kirjoittaja.");
-            return false;
-        }
-        if (!form.editor.value) {
-            alert("Lisää editori.");
-            return false;
-        }
-        if (!form.title.value) {
-            alert("Lisää teoksen nimi.");
-            return false;
-        }
-        if (!form.publisher.value) {
-            alert("Lisää kustantaja.");
-            return false;
-        }
-        if (!form.year.value) {
-            alert("Lisää julkaisuvuosi.")
-            return false;
-        }
-        if (!isPositiveInteger(form.year.value)) {
-            alert("Tarkista julkaisuvuosi.");
-            return false;
-        }
-    }
-
-    function isPositiveInteger(str) {
-        if (typeof str !== "string") {
-            return false;
-        }
-        const num = Number(str);
-        if (Number.isInteger(num) && num > 0) {
-            return true;
-        }
-        return false;
-    }
-
-    function checkTag(form) {
-        var data = JSON.parse('{{work_tag_pairs | tojson | safe}}');
-        for (let identifier_text in data) {
-            if (identifier_text === form.identifier.value) {
-                var identifier_list = data[identifier_text];
-                if (identifier_list.includes(form.tag_text.value)) {
-                    alert("Hups! Tägi " + form.tag_text.value + " on jo liitetty!");
-                    return false;
-                }
+    <script>
+        function check(form) {
+            if (!form.identifier.value) {
+                alert("Lisää tunniste.");
+                return false;
+            }
+            var data = JSON.parse('{{identifiers | tojson | safe}}');
+            var identifier_list = data.identifiers;
+            if (identifier_list.includes(form.identifier.value)) {
+                alert("Tunniste on jo käytössä");
+                return false;
+            }
+            if (!form.author.value) {
+                alert("Lisää kirjoittaja.");
+                return false;
+            }
+            if (!form.editor.value) {
+                alert("Lisää editori.");
+                return false;
+            }
+            if (!form.title.value) {
+                alert("Lisää teoksen nimi.");
+                return false;
+            }
+            if (!form.publisher.value) {
+                alert("Lisää kustantaja.");
+                return false;
+            }
+            if (!form.year.value) {
+                alert("Lisää julkaisuvuosi.")
+                return false;
+            }
+            if (!isPositiveInteger(form.year.value)) {
+                alert("Tarkista julkaisuvuosi.");
+                return false;
             }
         }
 
-        if (!form.tag_text.value) {
-            alert("Tunniste ei saa olla tyhjä.")
+        function isPositiveInteger(str) {
+            if (typeof str !== "string") {
+                return false;
+            }
+            const num = Number(str);
+            if (Number.isInteger(num) && num > 0) {
+                return true;
+            }
             return false;
         }
-    }
-</script>
+
+        function checkTag(form) {
+            var data = JSON.parse('{{work_tag_pairs | tojson | safe}}');
+            for (let identifier_text in data) {
+                if (identifier_text === form.identifier.value) {
+                    var identifier_list = data[identifier_text];
+                    if (identifier_list.includes(form.tag_text.value)) {
+                        alert("Hups! Tägi " + form.tag_text.value + " on jo liitetty!");
+                        return false;
+                    }
+                }
+            }
+
+            if (!form.tag_text.value) {
+                alert("Tunniste ei saa olla tyhjä.")
+                return false;
+            }
+        }
+    </script>
+</div>
 
 {% endblock %}
