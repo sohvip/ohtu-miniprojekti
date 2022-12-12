@@ -15,16 +15,16 @@ Open And Configure Browser
     Set Selenium Speed  ${DELAY}
 
 Main Page Should Be Open
-    Title Should Be  Etusivu
+    Title Should Be  Bibtex-muunnin - Etusivu
 
 Go To Main Page
     Go To  ${HOME URL}
 
 Book Page Should Be Open
-    Title Should Be  Kirjan lisääminen
+    Title Should Be  Bibtex-muunnin - Kirjan lisääminen
 
 Website Page Should Be Open
-    Title Should Be  Nettisivun lisääminen
+    Title Should Be  Bibtex-muunnin - Nettisivun lisääminen
 
 Bibtex Page Should Be Open
-    Title Should Be  BibTeX-muoto
+    Title Should Be  Bibtex-muunnin - Kirjan Bibtex

@@ -51,6 +51,22 @@ Delete Oldest Registered Book
     Click Button  Poista viite
     Page Should Not Contain  maija
 
+Add And Find A Tagged Book
+    Main Page Should Be Open
+    Click Button  Kirja
+    Book Page Should Be Open
+    Set Identifier  miika
+    Set Author  kalle
+    Set Editor  kalle
+    Set Title  kalle
+    Set Publisher  kalle
+    Set Year  2002
+    Submit Credentials
+    Page Should Contain  miika
+    Set Tag_text  kilpikonna
+    Click Button  Lisää tägi    
+
+
 
 *** Keywords ***
 
@@ -86,3 +102,7 @@ Set Publisher
 Set Year
     [Arguments]  ${year}
     Input Text  year  ${year}
+
+Set Tag_text
+    [Arguments]  ${tag_text}
+    Input Text  tag_text  ${tag_text}
