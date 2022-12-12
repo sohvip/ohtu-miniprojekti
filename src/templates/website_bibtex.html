@@ -1,16 +1,17 @@
 {% extends 'layout.html' %}
 {% block title %}Nettisivun Bibtex{% endblock %}
 {% block content %}
-{{ bibtex }}
-<br>
-<form action="/website_bibtex/{{ id }}" method="POST" onsubmit="return checkcopy(this)">
-    <input type="submit" value="Kopioi">
-</form>
-<button><a href="/addSite">Back</a></button>
+<div class="margin">
+    <button class="top_button"><a href="/addSite">Back</a></button>
+    <h4>{{ bibtex }}</h4>
+    <form action="/website_bibtex/{{ id }}" method="POST" onsubmit="return checkcopy(this)">
+        <input type="submit" value="Kopioi" style="background-color: #B4CDE6;">
+    </form>
 
-<script>
-    function checkcopy(form) {
-        alert("Viite kopioitu!")
-    }
-</script>
+    <script>
+        function checkcopy(form) {
+            alert("Viite kopioitu!")
+        }
+    </script>
+</div>
 {% endblock %}

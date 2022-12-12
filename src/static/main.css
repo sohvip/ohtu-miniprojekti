@@ -13,15 +13,23 @@ input, textarea {
     background-color: white;
 }
 
-/* h1 {
-    color: #3C2317;
-} */
+a {
+    color: black;
+}
 
 .top_bar_container {
     text-align: center;
     background-color: #B4CDE6;
     padding-top: 20px;
     padding-bottom: 20px;
+    border: 1px solid #3C2317;
+    width: 100%;
+    margin: 0;
+}
+
+.top_bar_container_2 {
+    background-color: #B4CDE6;
+    padding-left: 40px;
     border: 1px solid #3C2317;
     width: 100%;
     margin: 0;
@@ -44,4 +52,29 @@ input, textarea {
     width: 100px;
     height: 75px;
     font-size: large;
+}
+
+.margin {
+    margin-left: 40px;
+}
+
+.top_button {
+    margin-top: 20px;
+    background-color: #B4CDE6;
+    border: 1px solid #3C2317;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: medium;
+}
+
+.sort_button {
+    background-color: #B4CDE6;
+    border: 1px solid #3C2317;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: medium;
+}
+
+.form {
+    margin-bottom: 10px;
 }
