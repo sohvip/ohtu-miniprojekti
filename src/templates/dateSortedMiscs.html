@@ -12,8 +12,9 @@
             <p>Sivun URL: {{ misc[3] }}</p>
             <p>Julkaisuvuosi: {{ misc[4] }}</p>
             <p>Muuta tietoa: {{ misc[5] }}</p>
-            <button class="sort_button"><a href="/website_bibtex/{{ misc[6] }}">Muuta bibtex-muotoon</a></button><br>
+            <button class="sort_button"><a href="/website_bibtex/{{ misc[6] }}">Muuta bibtex-muotoon</a></button>
             <button class="sort_button"><a href="/deleteMisc/{{ misc[6] }}">Poista viite</a></button>
+            <hr>
         {% endfor %}
     {% endif %}
 </div>
