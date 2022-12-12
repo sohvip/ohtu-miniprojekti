@@ -31,9 +31,10 @@ def add_book():
 @app.route("/addSite", methods=["GET", "POST"])
 def add_site():
     if request.method == "GET":
-#        identifiers = reference_database.get_identifiers_dict()
+        identifiers = reference_database.get_identifiers_dict()
+        work_tag_pairs = reference_database.get_work_tag_pairs_dict()
         misc_list = reference_database.get_table_misc_raw()
-        return render_template("createSite.html", misc_list=misc_list)#, identifiers=identifiers)
+        return render_template("createSite.html", misc_list=misc_list, identifiers=identifiers, work_tag_pairs=work_tag_pairs)
     if request.method == "POST":
         identifier = request.form["identifier"]
         title = request.form["title"]
