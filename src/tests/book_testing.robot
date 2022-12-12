@@ -29,7 +29,7 @@ Get Bibtex Format
     Click Button  Kirja
     Book Page Should Be Open
     Click Button  Muuta bibtex-muotoon
-    Bibtex Page Should Be Open
+    Book Bibtex Page Should Be Open
 
 Register A Book With A Wrong Year
     Main Page Should Be Open
@@ -127,7 +127,3 @@ Set Year
 Set Tag_text
     [Arguments]  ${tag_text}
     Input Text  tag_text  ${tag_text}
-
-Set Citation_identifier
-    [Arguments]  ${citation_identifier}
-    Input Text  citation_identifier  ${citation_identifier}
