@@ -82,7 +82,7 @@ Find A Tagged Book
     Click Button  Lisää tägi  
     Click Link  Takaisin
     Main Page Should Be Open
-	Set Citation_identifier  lastenkirja
+	Set Tag_text  lastenkirja
     Click Button  Etsi
     Tag Page Should Be Open
 
