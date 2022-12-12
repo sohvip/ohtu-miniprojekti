@@ -8,7 +8,6 @@
 <hr>
 <p>Lisää kirja lähteeksi tällä lomakkeella:</p>
 <form action="/add_book" method="POST" onsubmit="return check(this)">
-    <input type="hidden" name="identifiers" value="{{ identifiers }}">
     Tunniste:<br>
     <input type="text" name="identifier" minlength="1">
     <br> Kirjoittaja:
@@ -41,7 +40,7 @@
         <p>Julkaisuvuosi: {{ book[5] }}</p>
         <button><a href="/book_bibtex/{{ book[6] }}">Muuta bibtex-muotoon</a></button><br>
         <button><a href="/deleteBook/{{ book[6] }}">Poista viite</a></button><br>
-        <form action="/addTagBook" method="POST">
+        <form action="/addTagBook" method="POST" onsubmit="return checkTag(this)">
             Lisää tägi:<br>
             <input type="text" name="tag_text" minlength="1">
             <input type="hidden" name="identifier", value="{{ book[0] }}">
@@ -57,9 +56,10 @@
             alert("Lisää tunniste.");
             return false;
         }
-        var identifiers = document.getElementsByName("identifiers")[0].value;
-        if (identifiers.indexOf(form.identifier.value) !== -1) {
-            alert("Tunniste on jo käytössä.");
+        var data = JSON.parse('{{identifiers | tojson | safe}}');
+        var identifier_list = data.identifiers;
+        if (identifier_list.includes(form.identifier.value)) {
+            alert("Tunniste on jo käytössä");
             return false;
         }
         if (!form.author.value) {
@@ -99,6 +99,23 @@
         return false;
     }
 
+    function checkTag(form) {
+        var data = JSON.parse('{{work_tag_pairs | tojson | safe}}');
+        for (let identifier_text in data) {
+            if (identifier_text === form.identifier.value) {
+                var identifier_list = data[identifier_text];
+                if (identifier_list.includes(form.tag_text.value)) {
+                    alert("Hups! Tägi " + form.tag_text.value + " on jo liitetty!");
+                    return false;
+                }
+            }
+        }
+
+        if (!form.tag_text.value) {
+            alert("Tunniste ei saa olla tyhjä.")
+            return false;
+        }
+    }
 </script>
 
 {% endblock %}

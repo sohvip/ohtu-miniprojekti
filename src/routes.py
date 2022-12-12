@@ -13,9 +13,10 @@ def index():
 @app.route("/add_book", methods=["GET", "POST"])
 def add_book():
     if request.method == "GET":
-        identifiers = reference_database.get_identifiers()
+        identifiers = reference_database.get_identifiers_dict()
+        work_tag_pairs = reference_database.get_work_tag_pairs_dict()
         book_list = reference_database.get_books()
-        return render_template("create_book.html", book_list=book_list, identifiers=identifiers)
+        return render_template("create_book.html", book_list=book_list, identifiers=identifiers, work_tag_pairs=work_tag_pairs)
     if request.method == "POST":
         identifier = request.form["identifier"]
         author = request.form["author"]

@@ -185,12 +185,28 @@ def get_tag_id(tag_text):
 
     return result[0]
 
-def get_identifiers():
+def get_identifiers_dict():
     sql = "SELECT identifier FROM books UNION SELECT identifier FROM misc"
     result = db.session.execute(sql)
     identifiers = result.fetchall()
     identifier_list = []
     for identifier in identifiers:
         identifier_list.append(identifier[0])
+    identifier_dict = {}
+    identifier_dict["identifiers"] = identifier_list
 
-    return identifier_list
+    return identifier_dict
+
+def get_work_tag_pairs_dict():
+    sql = "SELECT WT.citation_identifier, T.tag_text FROM tags T, work_tag_pairs WT WHERE WT.tag_id=T.id"
+    result = db.session.execute(sql)
+    data = result.fetchall()
+    work_tag_pairs_dict = {}
+    for pair in data:
+        if pair[0] not in work_tag_pairs_dict:
+            work_tag_pairs_dict[pair[0]] = []
+            work_tag_pairs_dict[pair[0]].append(pair[1])
+        else:
+            work_tag_pairs_dict[pair[0]].append(pair[1])
+
+    return work_tag_pairs_dict
