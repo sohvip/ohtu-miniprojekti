@@ -108,4 +108,15 @@ def list_by_tag():
 
     return render_template("list.html", book_list=book_list, misc_list=misc_list)
 
+@app.route("/sortByDateAddedBook")
+def sort_by_date_books():
+    book_list = reference_database.list_books_by_time_added()
+    return render_template("dateSortedBooks.html", book_list=book_list)
+
+@app.route("/sortByDateAddedMisc")
+def sort_by_date_miscs():
+    misc_list = reference_database.list_misc_by_time_added()
+    return render_template("dateSortedMiscs.html", misc_list=misc_list)
+
+
 
