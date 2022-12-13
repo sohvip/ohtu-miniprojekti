@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.8.10 on linux)" generated="20221212 16:00:10.983" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.1 (Python 3.8.10 on linux)" generated="20221212 16:20:57.734" rpa="false" schemaversion="3">
 <suite id="s1" name="Tests" source="/home/kivimani/ohtu-miniprojekti/src/tests">
 <suite id="s1-s1" name="Book Testing" source="/home/kivimani/ohtu-miniprojekti/src/tests/book_testing.robot">
 <kw name="Open And Configure Browser" library="resource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221212 16:00:11.084" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20221212 16:00:11.084" endtime="20221212 16:00:11.675"/>
+<msg timestamp="20221212 16:20:57.834" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221212 16:20:57.834" endtime="20221212 16:20:58.451"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221212 16:00:11.675" endtime="20221212 16:00:11.780"/>
+<status status="PASS" starttime="20221212 16:20:58.452" endtime="20221212 16:20:58.557"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221212 16:00:11.780" endtime="20221212 16:00:11.781"/>
+<status status="PASS" starttime="20221212 16:20:58.557" endtime="20221212 16:20:58.558"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:11.084" endtime="20221212 16:00:11.781"/>
+<status status="PASS" starttime="20221212 16:20:57.833" endtime="20221212 16:20:58.559"/>
 </kw>
 <test id="s1-s1-t1" name="Page is Open" line="9">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:11.784" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:11.783" endtime="20221212 16:00:11.833"/>
+<msg timestamp="20221212 16:20:58.561" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:20:58.561" endtime="20221212 16:20:58.613"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:11.783" endtime="20221212 16:00:11.833"/>
+<status status="PASS" starttime="20221212 16:20:58.560" endtime="20221212 16:20:58.614"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:11.836" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:11.834" endtime="20221212 16:00:11.837"/>
+<msg timestamp="20221212 16:20:58.617" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.614" endtime="20221212 16:20:58.617"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:11.834" endtime="20221212 16:00:11.837"/>
+<status status="PASS" starttime="20221212 16:20:58.614" endtime="20221212 16:20:58.617"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Kirja</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:11.837" level="INFO">Clicking button 'Kirja'.</msg>
-<status status="PASS" starttime="20221212 16:00:11.837" endtime="20221212 16:00:11.911"/>
+<msg timestamp="20221212 16:20:58.617" level="INFO">Clicking button 'Kirja'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.617" endtime="20221212 16:20:58.691"/>
 </kw>
 <kw name="Book Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Kirjan lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:11.914" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:11.912" endtime="20221212 16:00:11.914"/>
+<msg timestamp="20221212 16:20:58.694" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.692" endtime="20221212 16:20:58.694"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:11.912" endtime="20221212 16:00:11.915"/>
+<status status="PASS" starttime="20221212 16:20:58.692" endtime="20221212 16:20:58.695"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:11.781" endtime="20221212 16:00:11.915"/>
+<status status="PASS" starttime="20221212 16:20:58.559" endtime="20221212 16:20:58.695"/>
 </test>
 <test id="s1-s1-t2" name="Register A Book" line="14">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:11.915" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:11.915" endtime="20221212 16:00:11.924"/>
+<msg timestamp="20221212 16:20:58.696" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:20:58.695" endtime="20221212 16:20:58.704"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:11.915" endtime="20221212 16:00:11.924"/>
+<status status="PASS" starttime="20221212 16:20:58.695" endtime="20221212 16:20:58.704"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:11.926" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:11.924" endtime="20221212 16:00:11.926"/>
+<msg timestamp="20221212 16:20:58.706" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.704" endtime="20221212 16:20:58.706"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:11.924" endtime="20221212 16:00:11.926"/>
+<status status="PASS" starttime="20221212 16:20:58.704" endtime="20221212 16:20:58.706"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Kirja</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:11.927" level="INFO">Clicking button 'Kirja'.</msg>
-<status status="PASS" starttime="20221212 16:00:11.926" endtime="20221212 16:00:11.962"/>
+<msg timestamp="20221212 16:20:58.706" level="INFO">Clicking button 'Kirja'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.706" endtime="20221212 16:20:58.740"/>
 </kw>
 <kw name="Book Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Kirjan lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:11.964" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:11.963" endtime="20221212 16:00:11.964"/>
+<msg timestamp="20221212 16:20:58.744" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.741" endtime="20221212 16:20:58.744"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:11.962" endtime="20221212 16:00:11.964"/>
+<status status="PASS" starttime="20221212 16:20:58.741" endtime="20221212 16:20:58.744"/>
 </kw>
 <kw name="Set Identifier">
 <arg>w700</arg>
@@ -96,10 +96,10 @@
 <arg>identifier</arg>
 <arg>${identifier}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:11.965" level="INFO">Typing text 'w700' into text field 'identifier'.</msg>
-<status status="PASS" starttime="20221212 16:00:11.965" endtime="20221212 16:00:12.012"/>
+<msg timestamp="20221212 16:20:58.744" level="INFO">Typing text 'w700' into text field 'identifier'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.744" endtime="20221212 16:20:58.794"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:11.965" endtime="20221212 16:00:12.012"/>
+<status status="PASS" starttime="20221212 16:20:58.744" endtime="20221212 16:20:58.794"/>
 </kw>
 <kw name="Set Author">
 <arg>Collins Allan</arg>
@@ -107,10 +107,10 @@
 <arg>author</arg>
 <arg>${author}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.013" level="INFO">Typing text 'Collins Allan' into text field 'author'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.013" endtime="20221212 16:00:12.060"/>
+<msg timestamp="20221212 16:20:58.795" level="INFO">Typing text 'Collins Allan' into text field 'author'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.795" endtime="20221212 16:20:58.841"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.012" endtime="20221212 16:00:12.060"/>
+<status status="PASS" starttime="20221212 16:20:58.794" endtime="20221212 16:20:58.841"/>
 </kw>
 <kw name="Set Editor">
 <arg>Ann Holum</arg>
@@ -118,10 +118,10 @@
 <arg>editor</arg>
 <arg>${editor}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.061" level="INFO">Typing text 'Ann Holum' into text field 'editor'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.061" endtime="20221212 16:00:12.106"/>
+<msg timestamp="20221212 16:20:58.842" level="INFO">Typing text 'Ann Holum' into text field 'editor'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.841" endtime="20221212 16:20:58.887"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.061" endtime="20221212 16:00:12.106"/>
+<status status="PASS" starttime="20221212 16:20:58.841" endtime="20221212 16:20:58.887"/>
 </kw>
 <kw name="Set Title">
 <arg>Clean Code: A Handbook of Agile Software Craftmanship</arg>
@@ -129,10 +129,10 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.107" level="INFO">Typing text 'Clean Code: A Handbook of Agile Software Craftmanship' into text field 'title'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.107" endtime="20221212 16:00:12.162"/>
+<msg timestamp="20221212 16:20:58.888" level="INFO">Typing text 'Clean Code: A Handbook of Agile Software Craftmanship' into text field 'title'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.887" endtime="20221212 16:20:58.949"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.107" endtime="20221212 16:00:12.163"/>
+<status status="PASS" starttime="20221212 16:20:58.887" endtime="20221212 16:20:58.949"/>
 </kw>
 <kw name="Set Publisher">
 <arg>Prentice Hall</arg>
@@ -140,10 +140,10 @@
 <arg>publisher</arg>
 <arg>${publisher}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.163" level="INFO">Typing text 'Prentice Hall' into text field 'publisher'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.163" endtime="20221212 16:00:12.207"/>
+<msg timestamp="20221212 16:20:58.950" level="INFO">Typing text 'Prentice Hall' into text field 'publisher'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.949" endtime="20221212 16:20:58.994"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.163" endtime="20221212 16:00:12.208"/>
+<status status="PASS" starttime="20221212 16:20:58.949" endtime="20221212 16:20:58.994"/>
 </kw>
 <kw name="Set Year">
 <arg>2008</arg>
@@ -151,112 +151,112 @@
 <arg>year</arg>
 <arg>${year}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.208" level="INFO">Typing text '2008' into text field 'year'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.208" endtime="20221212 16:00:12.253"/>
+<msg timestamp="20221212 16:20:58.995" level="INFO">Typing text '2008' into text field 'year'.</msg>
+<status status="PASS" starttime="20221212 16:20:58.994" endtime="20221212 16:20:59.040"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.208" endtime="20221212 16:00:12.253"/>
+<status status="PASS" starttime="20221212 16:20:58.994" endtime="20221212 16:20:59.040"/>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Tallenna kirja</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.254" level="INFO">Clicking button 'Tallenna kirja'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.253" endtime="20221212 16:00:12.298"/>
+<msg timestamp="20221212 16:20:59.041" level="INFO">Clicking button 'Tallenna kirja'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.041" endtime="20221212 16:20:59.084"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.253" endtime="20221212 16:00:12.298"/>
+<status status="PASS" starttime="20221212 16:20:59.041" endtime="20221212 16:20:59.085"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Collins Allan</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221212 16:00:12.306" level="INFO">Current page contains text 'Collins Allan'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.298" endtime="20221212 16:00:12.306"/>
+<msg timestamp="20221212 16:20:59.093" level="INFO">Current page contains text 'Collins Allan'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.085" endtime="20221212 16:20:59.093"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:11.915" endtime="20221212 16:00:12.306"/>
+<status status="PASS" starttime="20221212 16:20:58.695" endtime="20221212 16:20:59.094"/>
 </test>
 <test id="s1-s1-t3" name="Get Bibtex Format" line="27">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:12.307" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:12.307" endtime="20221212 16:00:12.317"/>
+<msg timestamp="20221212 16:20:59.095" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:20:59.095" endtime="20221212 16:20:59.103"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.306" endtime="20221212 16:00:12.317"/>
+<status status="PASS" starttime="20221212 16:20:59.094" endtime="20221212 16:20:59.103"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:12.319" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.317" endtime="20221212 16:00:12.319"/>
+<msg timestamp="20221212 16:20:59.106" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.104" endtime="20221212 16:20:59.106"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.317" endtime="20221212 16:00:12.319"/>
+<status status="PASS" starttime="20221212 16:20:59.104" endtime="20221212 16:20:59.106"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Kirja</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.319" level="INFO">Clicking button 'Kirja'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.319" endtime="20221212 16:00:12.354"/>
+<msg timestamp="20221212 16:20:59.106" level="INFO">Clicking button 'Kirja'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.106" endtime="20221212 16:20:59.139"/>
 </kw>
 <kw name="Book Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Kirjan lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:12.356" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.355" endtime="20221212 16:00:12.356"/>
+<msg timestamp="20221212 16:20:59.142" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.140" endtime="20221212 16:20:59.142"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.354" endtime="20221212 16:00:12.357"/>
+<status status="PASS" starttime="20221212 16:20:59.140" endtime="20221212 16:20:59.142"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Muuta bibtex-muotoon</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.357" level="INFO">Clicking button 'Muuta bibtex-muotoon'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.357" endtime="20221212 16:00:12.399"/>
+<msg timestamp="20221212 16:20:59.142" level="INFO">Clicking button 'Muuta bibtex-muotoon'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.142" endtime="20221212 16:20:59.188"/>
 </kw>
-<kw name="Bibtex Page Should Be Open" library="resource">
+<kw name="Book Bibtex Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Kirjan Bibtex</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:12.401" level="INFO">Page title is 'Bibtex-muunnin - Kirjan Bibtex'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.399" endtime="20221212 16:00:12.401"/>
+<msg timestamp="20221212 16:20:59.190" level="INFO">Page title is 'Bibtex-muunnin - Kirjan Bibtex'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.188" endtime="20221212 16:20:59.190"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.399" endtime="20221212 16:00:12.401"/>
+<status status="PASS" starttime="20221212 16:20:59.188" endtime="20221212 16:20:59.190"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.306" endtime="20221212 16:00:12.401"/>
+<status status="PASS" starttime="20221212 16:20:59.094" endtime="20221212 16:20:59.190"/>
 </test>
 <test id="s1-s1-t4" name="Register A Book With A Wrong Year" line="34">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:12.402" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:12.402" endtime="20221212 16:00:12.411"/>
+<msg timestamp="20221212 16:20:59.191" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:20:59.191" endtime="20221212 16:20:59.200"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.402" endtime="20221212 16:00:12.411"/>
+<status status="PASS" starttime="20221212 16:20:59.191" endtime="20221212 16:20:59.200"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:12.414" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.412" endtime="20221212 16:00:12.414"/>
+<msg timestamp="20221212 16:20:59.202" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.200" endtime="20221212 16:20:59.202"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.412" endtime="20221212 16:00:12.414"/>
+<status status="PASS" starttime="20221212 16:20:59.200" endtime="20221212 16:20:59.202"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Kirja</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.414" level="INFO">Clicking button 'Kirja'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.414" endtime="20221212 16:00:12.448"/>
+<msg timestamp="20221212 16:20:59.202" level="INFO">Clicking button 'Kirja'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.202" endtime="20221212 16:20:59.235"/>
 </kw>
 <kw name="Book Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Kirjan lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:12.450" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.448" endtime="20221212 16:00:12.450"/>
+<msg timestamp="20221212 16:20:59.238" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.236" endtime="20221212 16:20:59.238"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.448" endtime="20221212 16:00:12.450"/>
+<status status="PASS" starttime="20221212 16:20:59.236" endtime="20221212 16:20:59.238"/>
 </kw>
 <kw name="Set Identifier">
 <arg>b708</arg>
@@ -264,10 +264,10 @@
 <arg>identifier</arg>
 <arg>${identifier}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.451" level="INFO">Typing text 'b708' into text field 'identifier'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.450" endtime="20221212 16:00:12.494"/>
+<msg timestamp="20221212 16:20:59.238" level="INFO">Typing text 'b708' into text field 'identifier'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.238" endtime="20221212 16:20:59.284"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.450" endtime="20221212 16:00:12.494"/>
+<status status="PASS" starttime="20221212 16:20:59.238" endtime="20221212 16:20:59.284"/>
 </kw>
 <kw name="Set Author">
 <arg>Austen Jane</arg>
@@ -275,10 +275,10 @@
 <arg>author</arg>
 <arg>${author}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.495" level="INFO">Typing text 'Austen Jane' into text field 'author'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.495" endtime="20221212 16:00:12.539"/>
+<msg timestamp="20221212 16:20:59.284" level="INFO">Typing text 'Austen Jane' into text field 'author'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.284" endtime="20221212 16:20:59.328"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.494" endtime="20221212 16:00:12.539"/>
+<status status="PASS" starttime="20221212 16:20:59.284" endtime="20221212 16:20:59.328"/>
 </kw>
 <kw name="Set Editor">
 <arg>Juva Kersti</arg>
@@ -286,10 +286,10 @@
 <arg>editor</arg>
 <arg>${editor}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.540" level="INFO">Typing text 'Juva Kersti' into text field 'editor'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.539" endtime="20221212 16:00:12.584"/>
+<msg timestamp="20221212 16:20:59.329" level="INFO">Typing text 'Juva Kersti' into text field 'editor'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.329" endtime="20221212 16:20:59.372"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.539" endtime="20221212 16:00:12.584"/>
+<status status="PASS" starttime="20221212 16:20:59.329" endtime="20221212 16:20:59.373"/>
 </kw>
 <kw name="Set Title">
 <arg>Ylpeys ja ennakkoluulo</arg>
@@ -297,10 +297,10 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.585" level="INFO">Typing text 'Ylpeys ja ennakkoluulo' into text field 'title'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.585" endtime="20221212 16:00:12.629"/>
+<msg timestamp="20221212 16:20:59.373" level="INFO">Typing text 'Ylpeys ja ennakkoluulo' into text field 'title'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.373" endtime="20221212 16:20:59.421"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.584" endtime="20221212 16:00:12.629"/>
+<status status="PASS" starttime="20221212 16:20:59.373" endtime="20221212 16:20:59.421"/>
 </kw>
 <kw name="Set Publisher">
 <arg>WSOY</arg>
@@ -308,10 +308,10 @@
 <arg>publisher</arg>
 <arg>${publisher}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.630" level="INFO">Typing text 'WSOY' into text field 'publisher'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.629" endtime="20221212 16:00:12.671"/>
+<msg timestamp="20221212 16:20:59.422" level="INFO">Typing text 'WSOY' into text field 'publisher'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.422" endtime="20221212 16:20:59.464"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.629" endtime="20221212 16:00:12.671"/>
+<status status="PASS" starttime="20221212 16:20:59.421" endtime="20221212 16:20:59.464"/>
 </kw>
 <kw name="Set Year">
 <arg>232040</arg>
@@ -319,19 +319,19 @@
 <arg>year</arg>
 <arg>${year}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.672" level="INFO">Typing text '232040' into text field 'year'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.672" endtime="20221212 16:00:12.715"/>
+<msg timestamp="20221212 16:20:59.464" level="INFO">Typing text '232040' into text field 'year'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.464" endtime="20221212 16:20:59.507"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.672" endtime="20221212 16:00:12.715"/>
+<status status="PASS" starttime="20221212 16:20:59.464" endtime="20221212 16:20:59.508"/>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Tallenna kirja</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.715" level="INFO">Clicking button 'Tallenna kirja'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.715" endtime="20221212 16:00:12.755"/>
+<msg timestamp="20221212 16:20:59.508" level="INFO">Clicking button 'Tallenna kirja'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.508" endtime="20221212 16:20:59.551"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.715" endtime="20221212 16:00:12.755"/>
+<status status="PASS" starttime="20221212 16:20:59.508" endtime="20221212 16:20:59.551"/>
 </kw>
 <kw name="Registering A Book Should Fail With Message">
 <arg>Lisää julkaisuvuosi.</arg>
@@ -339,102 +339,102 @@
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Kirjan lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:12.757" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.756" endtime="20221212 16:00:12.757"/>
+<msg timestamp="20221212 16:20:59.554" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.552" endtime="20221212 16:20:59.554"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.755" endtime="20221212 16:00:12.758"/>
+<status status="PASS" starttime="20221212 16:20:59.551" endtime="20221212 16:20:59.554"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${message}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221212 16:00:12.766" level="INFO">Current page contains text 'Lisää julkaisuvuosi.'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.758" endtime="20221212 16:00:12.766"/>
+<msg timestamp="20221212 16:20:59.562" level="INFO">Current page contains text 'Lisää julkaisuvuosi.'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.554" endtime="20221212 16:20:59.562"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.755" endtime="20221212 16:00:12.766"/>
+<status status="PASS" starttime="20221212 16:20:59.551" endtime="20221212 16:20:59.562"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.402" endtime="20221212 16:00:12.766"/>
+<status status="PASS" starttime="20221212 16:20:59.191" endtime="20221212 16:20:59.563"/>
 </test>
 <test id="s1-s1-t5" name="Delete Oldest Registered Book" line="47">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:12.767" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:12.767" endtime="20221212 16:00:12.776"/>
+<msg timestamp="20221212 16:20:59.563" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:20:59.563" endtime="20221212 16:20:59.572"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.767" endtime="20221212 16:00:12.776"/>
+<status status="PASS" starttime="20221212 16:20:59.563" endtime="20221212 16:20:59.572"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:12.779" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.777" endtime="20221212 16:00:12.779"/>
+<msg timestamp="20221212 16:20:59.574" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.572" endtime="20221212 16:20:59.574"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.777" endtime="20221212 16:00:12.779"/>
+<status status="PASS" starttime="20221212 16:20:59.572" endtime="20221212 16:20:59.574"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>Kirja</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.779" level="INFO">Clicking link 'Kirja'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.779" endtime="20221212 16:00:12.814"/>
+<msg timestamp="20221212 16:20:59.575" level="INFO">Clicking link 'Kirja'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.574" endtime="20221212 16:20:59.611"/>
 </kw>
 <kw name="Book Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Kirjan lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:12.816" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.814" endtime="20221212 16:00:12.816"/>
+<msg timestamp="20221212 16:20:59.614" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.612" endtime="20221212 16:20:59.614"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.814" endtime="20221212 16:00:12.816"/>
+<status status="PASS" starttime="20221212 16:20:59.611" endtime="20221212 16:20:59.614"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Poista viite</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.817" level="INFO">Clicking button 'Poista viite'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.816" endtime="20221212 16:00:12.860"/>
+<msg timestamp="20221212 16:20:59.614" level="INFO">Clicking button 'Poista viite'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.614" endtime="20221212 16:20:59.657"/>
 </kw>
 <kw name="Page Should Not Contain" library="SeleniumLibrary">
 <arg>Collins Allan</arg>
 <doc>Verifies the current page does not contain ``text``.</doc>
-<msg timestamp="20221212 16:00:12.871" level="INFO">Current page does not contain text 'Collins Allan'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.861" endtime="20221212 16:00:12.872"/>
+<msg timestamp="20221212 16:20:59.669" level="INFO">Current page does not contain text 'Collins Allan'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.657" endtime="20221212 16:20:59.669"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.766" endtime="20221212 16:00:12.872"/>
+<status status="PASS" starttime="20221212 16:20:59.563" endtime="20221212 16:20:59.669"/>
 </test>
 <test id="s1-s1-t6" name="Add A Tagged Book" line="54">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:12.872" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:12.872" endtime="20221212 16:00:12.881"/>
+<msg timestamp="20221212 16:20:59.670" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:20:59.670" endtime="20221212 16:20:59.679"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.872" endtime="20221212 16:00:12.881"/>
+<status status="PASS" starttime="20221212 16:20:59.670" endtime="20221212 16:20:59.679"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:12.883" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.881" endtime="20221212 16:00:12.883"/>
+<msg timestamp="20221212 16:20:59.681" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.680" endtime="20221212 16:20:59.681"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.881" endtime="20221212 16:00:12.883"/>
+<status status="PASS" starttime="20221212 16:20:59.679" endtime="20221212 16:20:59.682"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Kirja</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.884" level="INFO">Clicking button 'Kirja'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.883" endtime="20221212 16:00:12.917"/>
+<msg timestamp="20221212 16:20:59.682" level="INFO">Clicking button 'Kirja'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.682" endtime="20221212 16:20:59.715"/>
 </kw>
 <kw name="Book Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Kirjan lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:12.919" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.918" endtime="20221212 16:00:12.919"/>
+<msg timestamp="20221212 16:20:59.717" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.716" endtime="20221212 16:20:59.717"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.917" endtime="20221212 16:00:12.919"/>
+<status status="PASS" starttime="20221212 16:20:59.715" endtime="20221212 16:20:59.718"/>
 </kw>
 <kw name="Set Identifier">
 <arg>e606</arg>
@@ -442,10 +442,10 @@
 <arg>identifier</arg>
 <arg>${identifier}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.920" level="INFO">Typing text 'e606' into text field 'identifier'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.920" endtime="20221212 16:00:12.966"/>
+<msg timestamp="20221212 16:20:59.718" level="INFO">Typing text 'e606' into text field 'identifier'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.718" endtime="20221212 16:20:59.767"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.919" endtime="20221212 16:00:12.966"/>
+<status status="PASS" starttime="20221212 16:20:59.718" endtime="20221212 16:20:59.767"/>
 </kw>
 <kw name="Set Author">
 <arg>Hawking Stephen</arg>
@@ -453,10 +453,10 @@
 <arg>author</arg>
 <arg>${author}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:12.966" level="INFO">Typing text 'Hawking Stephen' into text field 'author'.</msg>
-<status status="PASS" starttime="20221212 16:00:12.966" endtime="20221212 16:00:13.013"/>
+<msg timestamp="20221212 16:20:59.767" level="INFO">Typing text 'Hawking Stephen' into text field 'author'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.767" endtime="20221212 16:20:59.815"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.966" endtime="20221212 16:00:13.013"/>
+<status status="PASS" starttime="20221212 16:20:59.767" endtime="20221212 16:20:59.815"/>
 </kw>
 <kw name="Set Editor">
 <arg>Murray John</arg>
@@ -464,10 +464,10 @@
 <arg>editor</arg>
 <arg>${editor}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.014" level="INFO">Typing text 'Murray John' into text field 'editor'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.013" endtime="20221212 16:00:13.057"/>
+<msg timestamp="20221212 16:20:59.815" level="INFO">Typing text 'Murray John' into text field 'editor'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.815" endtime="20221212 16:20:59.859"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.013" endtime="20221212 16:00:13.058"/>
+<status status="PASS" starttime="20221212 16:20:59.815" endtime="20221212 16:20:59.859"/>
 </kw>
 <kw name="Set Title">
 <arg>Brief Answers to the Big Questions</arg>
@@ -475,10 +475,10 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.058" level="INFO">Typing text 'Brief Answers to the Big Questions' into text field 'title'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.058" endtime="20221212 16:00:13.106"/>
+<msg timestamp="20221212 16:20:59.860" level="INFO">Typing text 'Brief Answers to the Big Questions' into text field 'title'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.859" endtime="20221212 16:20:59.910"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.058" endtime="20221212 16:00:13.106"/>
+<status status="PASS" starttime="20221212 16:20:59.859" endtime="20221212 16:20:59.910"/>
 </kw>
 <kw name="Set Publisher">
 <arg>Bantam Books</arg>
@@ -486,10 +486,10 @@
 <arg>publisher</arg>
 <arg>${publisher}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.107" level="INFO">Typing text 'Bantam Books' into text field 'publisher'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.107" endtime="20221212 16:00:13.152"/>
+<msg timestamp="20221212 16:20:59.911" level="INFO">Typing text 'Bantam Books' into text field 'publisher'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.910" endtime="20221212 16:20:59.956"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.106" endtime="20221212 16:00:13.152"/>
+<status status="PASS" starttime="20221212 16:20:59.910" endtime="20221212 16:20:59.956"/>
 </kw>
 <kw name="Set Year">
 <arg>2018</arg>
@@ -497,25 +497,25 @@
 <arg>year</arg>
 <arg>${year}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.153" level="INFO">Typing text '2018' into text field 'year'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.152" endtime="20221212 16:00:13.193"/>
+<msg timestamp="20221212 16:20:59.957" level="INFO">Typing text '2018' into text field 'year'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.957" endtime="20221212 16:20:59.999"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.152" endtime="20221212 16:00:13.193"/>
+<status status="PASS" starttime="20221212 16:20:59.957" endtime="20221212 16:20:59.999"/>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Tallenna kirja</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.194" level="INFO">Clicking button 'Tallenna kirja'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.194" endtime="20221212 16:00:13.237"/>
+<msg timestamp="20221212 16:20:59.999" level="INFO">Clicking button 'Tallenna kirja'.</msg>
+<status status="PASS" starttime="20221212 16:20:59.999" endtime="20221212 16:21:00.042"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.194" endtime="20221212 16:00:13.238"/>
+<status status="PASS" starttime="20221212 16:20:59.999" endtime="20221212 16:21:00.042"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Hawking Stephen</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221212 16:00:13.246" level="INFO">Current page contains text 'Hawking Stephen'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.238" endtime="20221212 16:00:13.246"/>
+<msg timestamp="20221212 16:21:00.050" level="INFO">Current page contains text 'Hawking Stephen'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.042" endtime="20221212 16:21:00.050"/>
 </kw>
 <kw name="Set Tag_text">
 <arg>tietotekniikka</arg>
@@ -523,52 +523,52 @@
 <arg>tag_text</arg>
 <arg>${tag_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.247" level="INFO">Typing text 'tietotekniikka' into text field 'tag_text'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.247" endtime="20221212 16:00:13.297"/>
+<msg timestamp="20221212 16:21:00.051" level="INFO">Typing text 'tietotekniikka' into text field 'tag_text'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.051" endtime="20221212 16:21:00.102"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.246" endtime="20221212 16:00:13.297"/>
+<status status="PASS" starttime="20221212 16:21:00.051" endtime="20221212 16:21:00.102"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Lisää tägi</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.298" level="INFO">Clicking button 'Lisää tägi'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.297" endtime="20221212 16:00:13.341"/>
+<msg timestamp="20221212 16:21:00.103" level="INFO">Clicking button 'Lisää tägi'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.102" endtime="20221212 16:21:00.148"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:12.872" endtime="20221212 16:00:13.341"/>
+<status status="PASS" starttime="20221212 16:20:59.669" endtime="20221212 16:21:00.148"/>
 </test>
 <test id="s1-s1-t7" name="Find A Tagged Book" line="69">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:13.342" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:13.342" endtime="20221212 16:00:13.351"/>
+<msg timestamp="20221212 16:21:00.149" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:21:00.149" endtime="20221212 16:21:00.158"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.342" endtime="20221212 16:00:13.351"/>
+<status status="PASS" starttime="20221212 16:21:00.149" endtime="20221212 16:21:00.158"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:13.353" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.351" endtime="20221212 16:00:13.353"/>
+<msg timestamp="20221212 16:21:00.160" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.158" endtime="20221212 16:21:00.160"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.351" endtime="20221212 16:00:13.353"/>
+<status status="PASS" starttime="20221212 16:21:00.158" endtime="20221212 16:21:00.161"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Kirja</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.353" level="INFO">Clicking button 'Kirja'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.353" endtime="20221212 16:00:13.388"/>
+<msg timestamp="20221212 16:21:00.161" level="INFO">Clicking button 'Kirja'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.161" endtime="20221212 16:21:00.195"/>
 </kw>
 <kw name="Book Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Kirjan lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:13.390" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.388" endtime="20221212 16:00:13.390"/>
+<msg timestamp="20221212 16:21:00.198" level="INFO">Page title is 'Bibtex-muunnin - Kirjan lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.196" endtime="20221212 16:21:00.198"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.388" endtime="20221212 16:00:13.390"/>
+<status status="PASS" starttime="20221212 16:21:00.195" endtime="20221212 16:21:00.198"/>
 </kw>
 <kw name="Set Identifier">
 <arg>s476</arg>
@@ -576,10 +576,10 @@
 <arg>identifier</arg>
 <arg>${identifier}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.391" level="INFO">Typing text 's476' into text field 'identifier'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.390" endtime="20221212 16:00:13.437"/>
+<msg timestamp="20221212 16:21:00.198" level="INFO">Typing text 's476' into text field 'identifier'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.198" endtime="20221212 16:21:00.245"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.390" endtime="20221212 16:00:13.437"/>
+<status status="PASS" starttime="20221212 16:21:00.198" endtime="20221212 16:21:00.245"/>
 </kw>
 <kw name="Set Author">
 <arg>Jansson Tove</arg>
@@ -587,10 +587,10 @@
 <arg>author</arg>
 <arg>${author}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.438" level="INFO">Typing text 'Jansson Tove' into text field 'author'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.438" endtime="20221212 16:00:13.482"/>
+<msg timestamp="20221212 16:21:00.245" level="INFO">Typing text 'Jansson Tove' into text field 'author'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.245" endtime="20221212 16:21:00.294"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.437" endtime="20221212 16:00:13.482"/>
+<status status="PASS" starttime="20221212 16:21:00.245" endtime="20221212 16:21:00.294"/>
 </kw>
 <kw name="Set Editor">
 <arg>Heilala Katariina</arg>
@@ -598,10 +598,10 @@
 <arg>editor</arg>
 <arg>${editor}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.483" level="INFO">Typing text 'Heilala Katariina' into text field 'editor'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.483" endtime="20221212 16:00:13.530"/>
+<msg timestamp="20221212 16:21:00.295" level="INFO">Typing text 'Heilala Katariina' into text field 'editor'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.295" endtime="20221212 16:21:00.345"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.482" endtime="20221212 16:00:13.530"/>
+<status status="PASS" starttime="20221212 16:21:00.294" endtime="20221212 16:21:00.345"/>
 </kw>
 <kw name="Set Title">
 <arg>Muumilaakson kertomuksia</arg>
@@ -609,10 +609,10 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.531" level="INFO">Typing text 'Muumilaakson kertomuksia' into text field 'title'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.531" endtime="20221212 16:00:13.582"/>
+<msg timestamp="20221212 16:21:00.346" level="INFO">Typing text 'Muumilaakson kertomuksia' into text field 'title'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.346" endtime="20221212 16:21:00.396"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.530" endtime="20221212 16:00:13.582"/>
+<status status="PASS" starttime="20221212 16:21:00.345" endtime="20221212 16:21:00.396"/>
 </kw>
 <kw name="Set Publisher">
 <arg>Tammi</arg>
@@ -620,10 +620,10 @@
 <arg>publisher</arg>
 <arg>${publisher}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.583" level="INFO">Typing text 'Tammi' into text field 'publisher'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.582" endtime="20221212 16:00:13.624"/>
+<msg timestamp="20221212 16:21:00.397" level="INFO">Typing text 'Tammi' into text field 'publisher'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.397" endtime="20221212 16:21:00.441"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.582" endtime="20221212 16:00:13.624"/>
+<status status="PASS" starttime="20221212 16:21:00.397" endtime="20221212 16:21:00.441"/>
 </kw>
 <kw name="Set Year">
 <arg>2019</arg>
@@ -631,25 +631,25 @@
 <arg>year</arg>
 <arg>${year}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.624" level="INFO">Typing text '2019' into text field 'year'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.624" endtime="20221212 16:00:13.669"/>
+<msg timestamp="20221212 16:21:00.442" level="INFO">Typing text '2019' into text field 'year'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.441" endtime="20221212 16:21:00.485"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.624" endtime="20221212 16:00:13.669"/>
+<status status="PASS" starttime="20221212 16:21:00.441" endtime="20221212 16:21:00.485"/>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Tallenna kirja</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.669" level="INFO">Clicking button 'Tallenna kirja'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.669" endtime="20221212 16:00:13.711"/>
+<msg timestamp="20221212 16:21:00.486" level="INFO">Clicking button 'Tallenna kirja'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.485" endtime="20221212 16:21:00.529"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.669" endtime="20221212 16:00:13.711"/>
+<status status="PASS" starttime="20221212 16:21:00.485" endtime="20221212 16:21:00.529"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Jansson Tove</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221212 16:00:13.719" level="INFO">Current page contains text 'Jansson Tove'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.711" endtime="20221212 16:00:13.720"/>
+<msg timestamp="20221212 16:21:00.537" level="INFO">Current page contains text 'Jansson Tove'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.529" endtime="20221212 16:21:00.537"/>
 </kw>
 <kw name="Set Tag_text">
 <arg>lastenkirja</arg>
@@ -657,31 +657,31 @@
 <arg>tag_text</arg>
 <arg>${tag_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.720" level="INFO">Typing text 'lastenkirja' into text field 'tag_text'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.720" endtime="20221212 16:00:13.766"/>
+<msg timestamp="20221212 16:21:00.538" level="INFO">Typing text 'lastenkirja' into text field 'tag_text'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.538" endtime="20221212 16:21:00.587"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.720" endtime="20221212 16:00:13.766"/>
+<status status="PASS" starttime="20221212 16:21:00.537" endtime="20221212 16:21:00.588"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Lisää tägi</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.767" level="INFO">Clicking button 'Lisää tägi'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.767" endtime="20221212 16:00:13.810"/>
+<msg timestamp="20221212 16:21:00.588" level="INFO">Clicking button 'Lisää tägi'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.588" endtime="20221212 16:21:00.633"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>Takaisin</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.811" level="INFO">Clicking link 'Takaisin'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.810" endtime="20221212 16:00:13.843"/>
+<msg timestamp="20221212 16:21:00.634" level="INFO">Clicking link 'Takaisin'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.633" endtime="20221212 16:21:00.667"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:13.845" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.844" endtime="20221212 16:00:13.846"/>
+<msg timestamp="20221212 16:21:00.669" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.667" endtime="20221212 16:21:00.669"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.843" endtime="20221212 16:00:13.846"/>
+<status status="PASS" starttime="20221212 16:21:00.667" endtime="20221212 16:21:00.669"/>
 </kw>
 <kw name="Set Tag_text">
 <arg>lastenkirja</arg>
@@ -689,123 +689,122 @@
 <arg>tag_text</arg>
 <arg>${tag_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.846" level="INFO">Typing text 'lastenkirja' into text field 'tag_text'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.846" endtime="20221212 16:00:13.893"/>
+<msg timestamp="20221212 16:21:00.670" level="INFO">Typing text 'lastenkirja' into text field 'tag_text'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.670" endtime="20221212 16:21:00.717"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:13.846" endtime="20221212 16:00:13.893"/>
+<status status="PASS" starttime="20221212 16:21:00.669" endtime="20221212 16:21:00.717"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Etsi</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:13.893" level="INFO">Clicking button 'Etsi'.</msg>
-<status status="PASS" starttime="20221212 16:00:13.893" endtime="20221212 16:00:13.946"/>
+<msg timestamp="20221212 16:21:00.717" level="INFO">Clicking button 'Etsi'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.717" endtime="20221212 16:21:00.759"/>
 </kw>
 <kw name="Tag Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Tagit</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:14.014" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20221212 16:00:14.014" level="FAIL">Title should have been 'Bibtex-muunnin - Tagit' but was ''.</msg>
-<status status="FAIL" starttime="20221212 16:00:13.946" endtime="20221212 16:00:14.015"/>
+<msg timestamp="20221212 16:21:00.761" level="INFO">Page title is 'Bibtex-muunnin - Tagit'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.759" endtime="20221212 16:21:00.761"/>
 </kw>
-<status status="FAIL" starttime="20221212 16:00:13.946" endtime="20221212 16:00:14.015"/>
+<status status="PASS" starttime="20221212 16:21:00.759" endtime="20221212 16:21:00.761"/>
 </kw>
-<status status="FAIL" starttime="20221212 16:00:13.341" endtime="20221212 16:00:14.015">Title should have been 'Bibtex-muunnin - Tagit' but was ''.</status>
+<status status="PASS" starttime="20221212 16:21:00.148" endtime="20221212 16:21:00.761"/>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221212 16:00:14.015" endtime="20221212 16:00:14.072"/>
+<status status="PASS" starttime="20221212 16:21:00.762" endtime="20221212 16:21:00.818"/>
 </kw>
-<status status="FAIL" starttime="20221212 16:00:10.994" endtime="20221212 16:00:14.072"/>
+<status status="PASS" starttime="20221212 16:20:57.745" endtime="20221212 16:21:00.818"/>
 </suite>
 <suite id="s1-s2" name="Website Testing" source="/home/kivimani/ohtu-miniprojekti/src/tests/website_testing.robot">
 <kw name="Open And Configure Browser" library="resource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221212 16:00:14.082" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20221212 16:00:14.081" endtime="20221212 16:00:14.700"/>
+<msg timestamp="20221212 16:21:00.827" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221212 16:21:00.827" endtime="20221212 16:21:01.419"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221212 16:00:14.701" endtime="20221212 16:00:14.805"/>
+<status status="PASS" starttime="20221212 16:21:01.419" endtime="20221212 16:21:01.524"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221212 16:00:14.805" endtime="20221212 16:00:14.806"/>
+<status status="PASS" starttime="20221212 16:21:01.524" endtime="20221212 16:21:01.525"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:14.081" endtime="20221212 16:00:14.807"/>
+<status status="PASS" starttime="20221212 16:21:00.826" endtime="20221212 16:21:01.525"/>
 </kw>
 <test id="s1-s2-t1" name="Page is Open" line="9">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:14.809" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:14.808" endtime="20221212 16:00:14.857"/>
+<msg timestamp="20221212 16:21:01.527" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:21:01.527" endtime="20221212 16:21:01.576"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:14.808" endtime="20221212 16:00:14.857"/>
+<status status="PASS" starttime="20221212 16:21:01.527" endtime="20221212 16:21:01.576"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:14.861" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:14.857" endtime="20221212 16:00:14.861"/>
+<msg timestamp="20221212 16:21:01.580" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.577" endtime="20221212 16:21:01.580"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:14.857" endtime="20221212 16:00:14.861"/>
+<status status="PASS" starttime="20221212 16:21:01.577" endtime="20221212 16:21:01.580"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>Nettisivu</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:14.861" level="INFO">Clicking link 'Nettisivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:14.861" endtime="20221212 16:00:14.901"/>
+<msg timestamp="20221212 16:21:01.581" level="INFO">Clicking link 'Nettisivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.580" endtime="20221212 16:21:01.622"/>
 </kw>
 <kw name="Website Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Nettisivun lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:14.904" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:14.902" endtime="20221212 16:00:14.904"/>
+<msg timestamp="20221212 16:21:01.624" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.622" endtime="20221212 16:21:01.624"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:14.901" endtime="20221212 16:00:14.904"/>
+<status status="PASS" starttime="20221212 16:21:01.622" endtime="20221212 16:21:01.624"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:14.807" endtime="20221212 16:00:14.904"/>
+<status status="PASS" starttime="20221212 16:21:01.526" endtime="20221212 16:21:01.624"/>
 </test>
 <test id="s1-s2-t2" name="Register A Website" line="14">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:14.905" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:14.905" endtime="20221212 16:00:14.915"/>
+<msg timestamp="20221212 16:21:01.625" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:21:01.625" endtime="20221212 16:21:01.634"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:14.905" endtime="20221212 16:00:14.915"/>
+<status status="PASS" starttime="20221212 16:21:01.625" endtime="20221212 16:21:01.634"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:14.917" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:14.916" endtime="20221212 16:00:14.917"/>
+<msg timestamp="20221212 16:21:01.636" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.634" endtime="20221212 16:21:01.636"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:14.915" endtime="20221212 16:00:14.918"/>
+<status status="PASS" starttime="20221212 16:21:01.634" endtime="20221212 16:21:01.636"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>Nettisivu</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:14.918" level="INFO">Clicking link 'Nettisivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:14.918" endtime="20221212 16:00:14.950"/>
+<msg timestamp="20221212 16:21:01.637" level="INFO">Clicking link 'Nettisivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.636" endtime="20221212 16:21:01.668"/>
 </kw>
 <kw name="Website Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Nettisivun lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:14.953" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:14.951" endtime="20221212 16:00:14.953"/>
+<msg timestamp="20221212 16:21:01.670" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.668" endtime="20221212 16:21:01.670"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:14.950" endtime="20221212 16:00:14.953"/>
+<status status="PASS" starttime="20221212 16:21:01.668" endtime="20221212 16:21:01.670"/>
 </kw>
 <kw name="Set Identifier">
 <arg>z690</arg>
@@ -813,10 +812,10 @@
 <arg>identifier</arg>
 <arg>${identifier}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:14.953" level="INFO">Typing text 'z690' into text field 'identifier'.</msg>
-<status status="PASS" starttime="20221212 16:00:14.953" endtime="20221212 16:00:15.008"/>
+<msg timestamp="20221212 16:21:01.671" level="INFO">Typing text 'z690' into text field 'identifier'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.670" endtime="20221212 16:21:01.722"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:14.953" endtime="20221212 16:00:15.008"/>
+<status status="PASS" starttime="20221212 16:21:01.670" endtime="20221212 16:21:01.722"/>
 </kw>
 <kw name="Set Title">
 <arg>Ohtu-miniprojekti</arg>
@@ -824,10 +823,10 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.008" level="INFO">Typing text 'Ohtu-miniprojekti' into text field 'title'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.008" endtime="20221212 16:00:15.056"/>
+<msg timestamp="20221212 16:21:01.722" level="INFO">Typing text 'Ohtu-miniprojekti' into text field 'title'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.722" endtime="20221212 16:21:01.771"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.008" endtime="20221212 16:00:15.056"/>
+<status status="PASS" starttime="20221212 16:21:01.722" endtime="20221212 16:21:01.771"/>
 </kw>
 <kw name="Set Editor">
 <arg>Sohvi</arg>
@@ -835,10 +834,10 @@
 <arg>editor</arg>
 <arg>${editor}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.057" level="INFO">Typing text 'Sohvi' into text field 'editor'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.057" endtime="20221212 16:00:15.106"/>
+<msg timestamp="20221212 16:21:01.772" level="INFO">Typing text 'Sohvi' into text field 'editor'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.772" endtime="20221212 16:21:01.817"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.056" endtime="20221212 16:00:15.106"/>
+<status status="PASS" starttime="20221212 16:21:01.771" endtime="20221212 16:21:01.817"/>
 </kw>
 <kw name="Set How_published">
 <arg>https://github.com/sohvip/ohtu-miniprojekti</arg>
@@ -846,10 +845,10 @@
 <arg>how_published</arg>
 <arg>${how_published}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.107" level="INFO">Typing text 'https://github.com/sohvip/ohtu-miniprojekti' into text field 'how_published'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.107" endtime="20221212 16:00:15.161"/>
+<msg timestamp="20221212 16:21:01.818" level="INFO">Typing text 'https://github.com/sohvip/ohtu-miniprojekti' into text field 'how_published'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.818" endtime="20221212 16:21:01.873"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.107" endtime="20221212 16:00:15.162"/>
+<status status="PASS" starttime="20221212 16:21:01.817" endtime="20221212 16:21:01.873"/>
 </kw>
 <kw name="Set Year">
 <arg>2022</arg>
@@ -857,10 +856,10 @@
 <arg>year</arg>
 <arg>${year}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.162" level="INFO">Typing text '2022' into text field 'year'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.162" endtime="20221212 16:00:15.207"/>
+<msg timestamp="20221212 16:21:01.874" level="INFO">Typing text '2022' into text field 'year'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.874" endtime="20221212 16:21:01.919"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.162" endtime="20221212 16:00:15.207"/>
+<status status="PASS" starttime="20221212 16:21:01.873" endtime="20221212 16:21:01.919"/>
 </kw>
 <kw name="Set Note">
 <arg>20.12.2022</arg>
@@ -868,61 +867,112 @@
 <arg>note</arg>
 <arg>${note}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.208" level="INFO">Typing text '20.12.2022' into text field 'note'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.208" endtime="20221212 16:00:15.255"/>
+<msg timestamp="20221212 16:21:01.920" level="INFO">Typing text '20.12.2022' into text field 'note'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.919" endtime="20221212 16:21:01.967"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.207" endtime="20221212 16:00:15.256"/>
+<status status="PASS" starttime="20221212 16:21:01.919" endtime="20221212 16:21:01.967"/>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Tallenna sivu</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.256" level="INFO">Clicking button 'Tallenna sivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.256" endtime="20221212 16:00:15.303"/>
+<msg timestamp="20221212 16:21:01.968" level="INFO">Clicking button 'Tallenna sivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:01.967" endtime="20221212 16:21:02.012"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.256" endtime="20221212 16:00:15.303"/>
+<status status="PASS" starttime="20221212 16:21:01.967" endtime="20221212 16:21:02.012"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Ohtu-miniprojekti</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221212 16:00:15.313" level="INFO">Current page contains text 'Ohtu-miniprojekti'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.303" endtime="20221212 16:00:15.313"/>
+<msg timestamp="20221212 16:21:02.021" level="INFO">Current page contains text 'Ohtu-miniprojekti'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.013" endtime="20221212 16:21:02.021"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:14.904" endtime="20221212 16:00:15.313"/>
+<status status="PASS" starttime="20221212 16:21:01.625" endtime="20221212 16:21:02.021"/>
 </test>
-<test id="s1-s2-t3" name="Register A Website With Wrong URL" line="27">
+<test id="s1-s2-t3" name="Get Bibtex Format" line="27">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:15.314" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:15.314" endtime="20221212 16:00:15.324"/>
+<msg timestamp="20221212 16:21:02.022" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:21:02.022" endtime="20221212 16:21:02.030"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.314" endtime="20221212 16:00:15.324"/>
+<status status="PASS" starttime="20221212 16:21:02.021" endtime="20221212 16:21:02.030"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:15.327" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.324" endtime="20221212 16:00:15.327"/>
+<msg timestamp="20221212 16:21:02.033" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.030" endtime="20221212 16:21:02.033"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.324" endtime="20221212 16:00:15.327"/>
+<status status="PASS" starttime="20221212 16:21:02.030" endtime="20221212 16:21:02.033"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
+<kw name="Click Button" library="SeleniumLibrary">
 <arg>Nettisivu</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.328" level="INFO">Clicking link 'Nettisivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.327" endtime="20221212 16:00:15.361"/>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:02.033" level="INFO">Clicking button 'Nettisivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.033" endtime="20221212 16:21:02.073"/>
 </kw>
 <kw name="Website Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Nettisivun lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:15.363" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.362" endtime="20221212 16:00:15.363"/>
+<msg timestamp="20221212 16:21:02.075" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.073" endtime="20221212 16:21:02.075"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.361" endtime="20221212 16:00:15.363"/>
+<status status="PASS" starttime="20221212 16:21:02.073" endtime="20221212 16:21:02.075"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Muuta bibtex-muotoon</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:02.075" level="INFO">Clicking button 'Muuta bibtex-muotoon'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.075" endtime="20221212 16:21:02.119"/>
+</kw>
+<kw name="Website Bibtex Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Bibtex-muunnin - Nettisivun Bibtex</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221212 16:21:02.121" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun Bibtex'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.119" endtime="20221212 16:21:02.121"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:02.119" endtime="20221212 16:21:02.121"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:02.021" endtime="20221212 16:21:02.121"/>
+</test>
+<test id="s1-s2-t4" name="Register A Website With Wrong URL" line="34">
+<kw name="Go To Main Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${HOME URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221212 16:21:02.122" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:21:02.122" endtime="20221212 16:21:02.130"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:02.122" endtime="20221212 16:21:02.131"/>
+</kw>
+<kw name="Main Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Bibtex-muunnin - Etusivu</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221212 16:21:02.133" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.131" endtime="20221212 16:21:02.133"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:02.131" endtime="20221212 16:21:02.133"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Nettisivu</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:02.134" level="INFO">Clicking link 'Nettisivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.133" endtime="20221212 16:21:02.165"/>
+</kw>
+<kw name="Website Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Bibtex-muunnin - Nettisivun lisääminen</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221212 16:21:02.167" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.165" endtime="20221212 16:21:02.167"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:02.165" endtime="20221212 16:21:02.167"/>
 </kw>
 <kw name="Set Identifier">
 <arg>v404</arg>
@@ -930,10 +980,10 @@
 <arg>identifier</arg>
 <arg>${identifier}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.364" level="INFO">Typing text 'v404' into text field 'identifier'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.364" endtime="20221212 16:00:15.412"/>
+<msg timestamp="20221212 16:21:02.168" level="INFO">Typing text 'v404' into text field 'identifier'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.167" endtime="20221212 16:21:02.211"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.364" endtime="20221212 16:00:15.412"/>
+<status status="PASS" starttime="20221212 16:21:02.167" endtime="20221212 16:21:02.211"/>
 </kw>
 <kw name="Set Title">
 <arg>Ohjelmistotuotanto</arg>
@@ -941,10 +991,10 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.413" level="INFO">Typing text 'Ohjelmistotuotanto' into text field 'title'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.412" endtime="20221212 16:00:15.460"/>
+<msg timestamp="20221212 16:21:02.212" level="INFO">Typing text 'Ohjelmistotuotanto' into text field 'title'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.211" endtime="20221212 16:21:02.258"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.412" endtime="20221212 16:00:15.460"/>
+<status status="PASS" starttime="20221212 16:21:02.211" endtime="20221212 16:21:02.258"/>
 </kw>
 <kw name="Set Editor">
 <arg>kalle</arg>
@@ -952,10 +1002,10 @@
 <arg>editor</arg>
 <arg>${editor}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.460" level="INFO">Typing text 'kalle' into text field 'editor'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.460" endtime="20221212 16:00:15.504"/>
+<msg timestamp="20221212 16:21:02.259" level="INFO">Typing text 'kalle' into text field 'editor'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.259" endtime="20221212 16:21:02.300"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.460" endtime="20221212 16:00:15.504"/>
+<status status="PASS" starttime="20221212 16:21:02.259" endtime="20221212 16:21:02.300"/>
 </kw>
 <kw name="Set How_published">
 <arg>ohjelmistotuotanto-hy.github</arg>
@@ -963,10 +1013,10 @@
 <arg>how_published</arg>
 <arg>${how_published}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.505" level="INFO">Typing text 'ohjelmistotuotanto-hy.github' into text field 'how_published'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.504" endtime="20221212 16:00:15.555"/>
+<msg timestamp="20221212 16:21:02.301" level="INFO">Typing text 'ohjelmistotuotanto-hy.github' into text field 'how_published'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.301" endtime="20221212 16:21:02.349"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.504" endtime="20221212 16:00:15.555"/>
+<status status="PASS" starttime="20221212 16:21:02.301" endtime="20221212 16:21:02.349"/>
 </kw>
 <kw name="Set Year">
 <arg>2020</arg>
@@ -974,10 +1024,10 @@
 <arg>year</arg>
 <arg>${year}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.555" level="INFO">Typing text '2020' into text field 'year'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.555" endtime="20221212 16:00:15.597"/>
+<msg timestamp="20221212 16:21:02.350" level="INFO">Typing text '2020' into text field 'year'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.349" endtime="20221212 16:21:02.394"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.555" endtime="20221212 16:00:15.597"/>
+<status status="PASS" starttime="20221212 16:21:02.349" endtime="20221212 16:21:02.394"/>
 </kw>
 <kw name="Set Note">
 <arg>10.12.2022</arg>
@@ -985,19 +1035,19 @@
 <arg>note</arg>
 <arg>${note}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.598" level="INFO">Typing text '10.12.2022' into text field 'note'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.598" endtime="20221212 16:00:15.641"/>
+<msg timestamp="20221212 16:21:02.395" level="INFO">Typing text '10.12.2022' into text field 'note'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.394" endtime="20221212 16:21:02.444"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.597" endtime="20221212 16:00:15.641"/>
+<status status="PASS" starttime="20221212 16:21:02.394" endtime="20221212 16:21:02.444"/>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Tallenna sivu</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.642" level="INFO">Clicking button 'Tallenna sivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.642" endtime="20221212 16:00:15.677"/>
+<msg timestamp="20221212 16:21:02.445" level="INFO">Clicking button 'Tallenna sivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.445" endtime="20221212 16:21:02.482"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.641" endtime="20221212 16:00:15.677"/>
+<status status="PASS" starttime="20221212 16:21:02.445" endtime="20221212 16:21:02.483"/>
 </kw>
 <kw name="Registering A Website Should Fail With Message">
 <arg>Lisää URL.</arg>
@@ -1005,54 +1055,54 @@
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Nettisivun lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:15.680" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.678" endtime="20221212 16:00:15.680"/>
+<msg timestamp="20221212 16:21:02.485" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.483" endtime="20221212 16:21:02.486"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.678" endtime="20221212 16:00:15.680"/>
+<status status="PASS" starttime="20221212 16:21:02.483" endtime="20221212 16:21:02.486"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${message}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221212 16:00:15.687" level="INFO">Current page contains text 'Lisää URL.'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.680" endtime="20221212 16:00:15.688"/>
+<msg timestamp="20221212 16:21:02.494" level="INFO">Current page contains text 'Lisää URL.'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.486" endtime="20221212 16:21:02.494"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.677" endtime="20221212 16:00:15.688"/>
+<status status="PASS" starttime="20221212 16:21:02.483" endtime="20221212 16:21:02.494"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.314" endtime="20221212 16:00:15.688"/>
+<status status="PASS" starttime="20221212 16:21:02.122" endtime="20221212 16:21:02.494"/>
 </test>
-<test id="s1-s2-t4" name="Register A Website With Wrong Year" line="40">
+<test id="s1-s2-t5" name="Register A Website With Wrong Year" line="47">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:15.689" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:15.688" endtime="20221212 16:00:15.698"/>
+<msg timestamp="20221212 16:21:02.495" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:21:02.495" endtime="20221212 16:21:02.504"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.688" endtime="20221212 16:00:15.698"/>
+<status status="PASS" starttime="20221212 16:21:02.495" endtime="20221212 16:21:02.504"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:15.700" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.698" endtime="20221212 16:00:15.700"/>
+<msg timestamp="20221212 16:21:02.506" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.504" endtime="20221212 16:21:02.506"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.698" endtime="20221212 16:00:15.700"/>
+<status status="PASS" starttime="20221212 16:21:02.504" endtime="20221212 16:21:02.507"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>Nettisivu</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.700" level="INFO">Clicking link 'Nettisivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.700" endtime="20221212 16:00:15.731"/>
+<msg timestamp="20221212 16:21:02.507" level="INFO">Clicking link 'Nettisivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.507" endtime="20221212 16:21:02.538"/>
 </kw>
 <kw name="Website Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Nettisivun lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:15.733" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.732" endtime="20221212 16:00:15.733"/>
+<msg timestamp="20221212 16:21:02.540" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.538" endtime="20221212 16:21:02.540"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.731" endtime="20221212 16:00:15.734"/>
+<status status="PASS" starttime="20221212 16:21:02.538" endtime="20221212 16:21:02.540"/>
 </kw>
 <kw name="Set Identifier">
 <arg>p234</arg>
@@ -1060,10 +1110,10 @@
 <arg>identifier</arg>
 <arg>${identifier}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.734" level="INFO">Typing text 'p234' into text field 'identifier'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.734" endtime="20221212 16:00:15.779"/>
+<msg timestamp="20221212 16:21:02.541" level="INFO">Typing text 'p234' into text field 'identifier'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.540" endtime="20221212 16:21:02.586"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.734" endtime="20221212 16:00:15.780"/>
+<status status="PASS" starttime="20221212 16:21:02.540" endtime="20221212 16:21:02.586"/>
 </kw>
 <kw name="Set Title">
 <arg>Helsingin yliopiston nettisivut</arg>
@@ -1071,10 +1121,10 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.780" level="INFO">Typing text 'Helsingin yliopiston nettisivut' into text field 'title'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.780" endtime="20221212 16:00:15.830"/>
+<msg timestamp="20221212 16:21:02.587" level="INFO">Typing text 'Helsingin yliopiston nettisivut' into text field 'title'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.587" endtime="20221212 16:21:02.636"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.780" endtime="20221212 16:00:15.830"/>
+<status status="PASS" starttime="20221212 16:21:02.586" endtime="20221212 16:21:02.637"/>
 </kw>
 <kw name="Set Editor">
 <arg>Helsingin yliopisto</arg>
@@ -1082,10 +1132,10 @@
 <arg>editor</arg>
 <arg>${editor}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.831" level="INFO">Typing text 'Helsingin yliopisto' into text field 'editor'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.830" endtime="20221212 16:00:15.874"/>
+<msg timestamp="20221212 16:21:02.637" level="INFO">Typing text 'Helsingin yliopisto' into text field 'editor'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.637" endtime="20221212 16:21:02.686"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.830" endtime="20221212 16:00:15.874"/>
+<status status="PASS" starttime="20221212 16:21:02.637" endtime="20221212 16:21:02.686"/>
 </kw>
 <kw name="Set How_published">
 <arg>https://www.helsinki.fi/fi</arg>
@@ -1093,10 +1143,10 @@
 <arg>how_published</arg>
 <arg>${how_published}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.875" level="INFO">Typing text 'https://www.helsinki.fi/fi' into text field 'how_published'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.874" endtime="20221212 16:00:15.922"/>
+<msg timestamp="20221212 16:21:02.686" level="INFO">Typing text 'https://www.helsinki.fi/fi' into text field 'how_published'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.686" endtime="20221212 16:21:02.734"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.874" endtime="20221212 16:00:15.922"/>
+<status status="PASS" starttime="20221212 16:21:02.686" endtime="20221212 16:21:02.734"/>
 </kw>
 <kw name="Set Year">
 <arg>202223</arg>
@@ -1104,10 +1154,10 @@
 <arg>year</arg>
 <arg>${year}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.923" level="INFO">Typing text '202223' into text field 'year'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.923" endtime="20221212 16:00:15.968"/>
+<msg timestamp="20221212 16:21:02.735" level="INFO">Typing text '202223' into text field 'year'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.734" endtime="20221212 16:21:02.780"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.923" endtime="20221212 16:00:15.968"/>
+<status status="PASS" starttime="20221212 16:21:02.734" endtime="20221212 16:21:02.780"/>
 </kw>
 <kw name="Set Note">
 <arg>9.11.2022</arg>
@@ -1115,19 +1165,19 @@
 <arg>note</arg>
 <arg>${note}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:15.969" level="INFO">Typing text '9.11.2022' into text field 'note'.</msg>
-<status status="PASS" starttime="20221212 16:00:15.969" endtime="20221212 16:00:16.019"/>
+<msg timestamp="20221212 16:21:02.781" level="INFO">Typing text '9.11.2022' into text field 'note'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.780" endtime="20221212 16:21:02.825"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.969" endtime="20221212 16:00:16.020"/>
+<status status="PASS" starttime="20221212 16:21:02.780" endtime="20221212 16:21:02.825"/>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Tallenna sivu</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:16.020" level="INFO">Clicking button 'Tallenna sivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:16.020" endtime="20221212 16:00:16.063"/>
+<msg timestamp="20221212 16:21:02.825" level="INFO">Clicking button 'Tallenna sivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.825" endtime="20221212 16:21:02.867"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:16.020" endtime="20221212 16:00:16.064"/>
+<status status="PASS" starttime="20221212 16:21:02.825" endtime="20221212 16:21:02.867"/>
 </kw>
 <kw name="Registering A Website Should Fail With Message">
 <arg>Tarkista julkaisuvuosi.</arg>
@@ -1135,87 +1185,396 @@
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Nettisivun lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:16.066" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:16.064" endtime="20221212 16:00:16.066"/>
+<msg timestamp="20221212 16:21:02.869" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.867" endtime="20221212 16:21:02.869"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:16.064" endtime="20221212 16:00:16.066"/>
+<status status="PASS" starttime="20221212 16:21:02.867" endtime="20221212 16:21:02.869"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${message}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221212 16:00:16.074" level="INFO">Current page contains text 'Tarkista julkaisuvuosi.'.</msg>
-<status status="PASS" starttime="20221212 16:00:16.066" endtime="20221212 16:00:16.074"/>
+<msg timestamp="20221212 16:21:02.878" level="INFO">Current page contains text 'Tarkista julkaisuvuosi.'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.869" endtime="20221212 16:21:02.878"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:16.064" endtime="20221212 16:00:16.074"/>
+<status status="PASS" starttime="20221212 16:21:02.867" endtime="20221212 16:21:02.878"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:15.688" endtime="20221212 16:00:16.074"/>
+<status status="PASS" starttime="20221212 16:21:02.494" endtime="20221212 16:21:02.878"/>
 </test>
-<test id="s1-s2-t5" name="Delete Oldest Registered Website" line="53">
+<test id="s1-s2-t6" name="Delete Oldest Registered Website" line="60">
 <kw name="Go To Main Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221212 16:00:16.075" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20221212 16:00:16.075" endtime="20221212 16:00:16.084"/>
+<msg timestamp="20221212 16:21:02.879" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:21:02.879" endtime="20221212 16:21:02.887"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:16.074" endtime="20221212 16:00:16.084"/>
+<status status="PASS" starttime="20221212 16:21:02.878" endtime="20221212 16:21:02.888"/>
 </kw>
 <kw name="Main Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Etusivu</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:16.087" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:16.085" endtime="20221212 16:00:16.087"/>
+<msg timestamp="20221212 16:21:02.890" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.888" endtime="20221212 16:21:02.890"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:16.084" endtime="20221212 16:00:16.087"/>
+<status status="PASS" starttime="20221212 16:21:02.888" endtime="20221212 16:21:02.890"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>Nettisivu</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:16.087" level="INFO">Clicking link 'Nettisivu'.</msg>
-<status status="PASS" starttime="20221212 16:00:16.087" endtime="20221212 16:00:16.119"/>
+<msg timestamp="20221212 16:21:02.890" level="INFO">Clicking link 'Nettisivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.890" endtime="20221212 16:21:02.921"/>
 </kw>
 <kw name="Website Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bibtex-muunnin - Nettisivun lisääminen</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221212 16:00:16.121" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
-<status status="PASS" starttime="20221212 16:00:16.119" endtime="20221212 16:00:16.122"/>
+<msg timestamp="20221212 16:21:02.924" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.922" endtime="20221212 16:21:02.924"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:16.119" endtime="20221212 16:00:16.122"/>
+<status status="PASS" starttime="20221212 16:21:02.922" endtime="20221212 16:21:02.924"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Poista viite</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:00:16.122" level="INFO">Clicking button 'Poista viite'.</msg>
-<status status="PASS" starttime="20221212 16:00:16.122" endtime="20221212 16:00:16.165"/>
+<msg timestamp="20221212 16:21:02.924" level="INFO">Clicking button 'Poista viite'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.924" endtime="20221212 16:21:02.967"/>
 </kw>
 <kw name="Page Should Not Contain" library="SeleniumLibrary">
 <arg>Ohtu-miniprojekti</arg>
 <doc>Verifies the current page does not contain ``text``.</doc>
-<msg timestamp="20221212 16:00:16.175" level="INFO">Current page does not contain text 'Ohtu-miniprojekti'.</msg>
-<status status="PASS" starttime="20221212 16:00:16.165" endtime="20221212 16:00:16.175"/>
+<msg timestamp="20221212 16:21:02.978" level="INFO">Current page does not contain text 'Ohtu-miniprojekti'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.967" endtime="20221212 16:21:02.978"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:16.074" endtime="20221212 16:00:16.175"/>
+<status status="PASS" starttime="20221212 16:21:02.878" endtime="20221212 16:21:02.979"/>
+</test>
+<test id="s1-s2-t7" name="Add A Tagged Book" line="67">
+<kw name="Go To Main Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${HOME URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221212 16:21:02.980" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:21:02.980" endtime="20221212 16:21:02.988"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:02.979" endtime="20221212 16:21:02.988"/>
+</kw>
+<kw name="Main Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Bibtex-muunnin - Etusivu</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221212 16:21:02.991" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.989" endtime="20221212 16:21:02.991"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:02.989" endtime="20221212 16:21:02.991"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Nettisivu</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:02.991" level="INFO">Clicking link 'Nettisivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:02.991" endtime="20221212 16:21:03.023"/>
+</kw>
+<kw name="Website Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Bibtex-muunnin - Nettisivun lisääminen</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221212 16:21:03.025" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.023" endtime="20221212 16:21:03.025"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.023" endtime="20221212 16:21:03.025"/>
+</kw>
+<kw name="Set Identifier">
+<arg>z690</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>identifier</arg>
+<arg>${identifier}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.026" level="INFO">Typing text 'z690' into text field 'identifier'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.025" endtime="20221212 16:21:03.072"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.025" endtime="20221212 16:21:03.072"/>
+</kw>
+<kw name="Set Title">
+<arg>Firefox kotisivu</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.072" level="INFO">Typing text 'Firefox kotisivu' into text field 'title'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.072" endtime="20221212 16:21:03.119"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.072" endtime="20221212 16:21:03.120"/>
+</kw>
+<kw name="Set Editor">
+<arg>Firefox</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>editor</arg>
+<arg>${editor}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.120" level="INFO">Typing text 'Firefox' into text field 'editor'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.120" endtime="20221212 16:21:03.166"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.120" endtime="20221212 16:21:03.166"/>
+</kw>
+<kw name="Set How_published">
+<arg>https://www.mozilla.org/en-GB/firefox/</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>how_published</arg>
+<arg>${how_published}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.167" level="INFO">Typing text 'https://www.mozilla.org/en-GB/firefox/' into text field 'how_published'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.167" endtime="20221212 16:21:03.218"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.167" endtime="20221212 16:21:03.218"/>
+</kw>
+<kw name="Set Year">
+<arg>2001</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>year</arg>
+<arg>${year}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.219" level="INFO">Typing text '2001' into text field 'year'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.219" endtime="20221212 16:21:03.262"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.219" endtime="20221212 16:21:03.262"/>
+</kw>
+<kw name="Set Note">
+<arg>30.10.2022</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>note</arg>
+<arg>${note}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.263" level="INFO">Typing text '30.10.2022' into text field 'note'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.262" endtime="20221212 16:21:03.306"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.262" endtime="20221212 16:21:03.307"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Tallenna sivu</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.307" level="INFO">Clicking button 'Tallenna sivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.307" endtime="20221212 16:21:03.351"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.307" endtime="20221212 16:21:03.351"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Firefox kotisivu</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221212 16:21:03.360" level="INFO">Current page contains text 'Firefox kotisivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.351" endtime="20221212 16:21:03.360"/>
+</kw>
+<kw name="Set Tag_text">
+<arg>nettisivu</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>tag_text</arg>
+<arg>${tag_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.361" level="INFO">Typing text 'nettisivu' into text field 'tag_text'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.360" endtime="20221212 16:21:03.413"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.360" endtime="20221212 16:21:03.413"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Lisää tägi</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.413" level="INFO">Clicking button 'Lisää tägi'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.413" endtime="20221212 16:21:03.462"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:02.979" endtime="20221212 16:21:03.462"/>
+</test>
+<test id="s1-s2-t8" name="Find A Tagged Book" line="82">
+<kw name="Go To Main Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${HOME URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221212 16:21:03.463" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20221212 16:21:03.463" endtime="20221212 16:21:03.472"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.463" endtime="20221212 16:21:03.472"/>
+</kw>
+<kw name="Main Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Bibtex-muunnin - Etusivu</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221212 16:21:03.474" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.472" endtime="20221212 16:21:03.474"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.472" endtime="20221212 16:21:03.474"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Nettisivu</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.475" level="INFO">Clicking link 'Nettisivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.474" endtime="20221212 16:21:03.507"/>
+</kw>
+<kw name="Website Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Bibtex-muunnin - Nettisivun lisääminen</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221212 16:21:03.510" level="INFO">Page title is 'Bibtex-muunnin - Nettisivun lisääminen'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.507" endtime="20221212 16:21:03.510"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.507" endtime="20221212 16:21:03.510"/>
+</kw>
+<kw name="Set Identifier">
+<arg>ww909</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>identifier</arg>
+<arg>${identifier}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.511" level="INFO">Typing text 'ww909' into text field 'identifier'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.511" endtime="20221212 16:21:03.558"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.510" endtime="20221212 16:21:03.558"/>
+</kw>
+<kw name="Set Title">
+<arg>Ohjelmistotuotanto viikko 3</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.559" level="INFO">Typing text 'Ohjelmistotuotanto viikko 3' into text field 'title'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.558" endtime="20221212 16:21:03.606"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.558" endtime="20221212 16:21:03.606"/>
+</kw>
+<kw name="Set Editor">
+<arg>Matti Luukkainen</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>editor</arg>
+<arg>${editor}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.607" level="INFO">Typing text 'Matti Luukkainen' into text field 'editor'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.607" endtime="20221212 16:21:03.650"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.606" endtime="20221212 16:21:03.650"/>
+</kw>
+<kw name="Set How_published">
+<arg>https://ohjelmistotuotanto-hy.github.io/tehtavat3/</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>how_published</arg>
+<arg>${how_published}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.651" level="INFO">Typing text 'https://ohjelmistotuotanto-hy.github.io/tehtavat3/' into text field 'how_published'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.651" endtime="20221212 16:21:03.705"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.650" endtime="20221212 16:21:03.705"/>
+</kw>
+<kw name="Set Year">
+<arg>2020</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>year</arg>
+<arg>${year}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.706" level="INFO">Typing text '2020' into text field 'year'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.706" endtime="20221212 16:21:03.747"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.705" endtime="20221212 16:21:03.747"/>
+</kw>
+<kw name="Set Note">
+<arg>3.12.2022</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>note</arg>
+<arg>${note}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.748" level="INFO">Typing text '3.12.2022' into text field 'note'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.748" endtime="20221212 16:21:03.796"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.748" endtime="20221212 16:21:03.796"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Tallenna sivu</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.797" level="INFO">Clicking button 'Tallenna sivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.796" endtime="20221212 16:21:03.837"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.796" endtime="20221212 16:21:03.837"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Ohjelmistotuotanto viikko 3</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221212 16:21:03.846" level="INFO">Current page contains text 'Ohjelmistotuotanto viikko 3'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.837" endtime="20221212 16:21:03.846"/>
+</kw>
+<kw name="Set Tag_text">
+<arg>ohjelmistotuotanto</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>tag_text</arg>
+<arg>${tag_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.847" level="INFO">Typing text 'ohjelmistotuotanto' into text field 'tag_text'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.846" endtime="20221212 16:21:03.895"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.846" endtime="20221212 16:21:03.895"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Lisää tägi</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.895" level="INFO">Clicking button 'Lisää tägi'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.895" endtime="20221212 16:21:03.938"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Takaisin</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.938" level="INFO">Clicking link 'Takaisin'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.938" endtime="20221212 16:21:03.972"/>
+</kw>
+<kw name="Main Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Bibtex-muunnin - Etusivu</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221212 16:21:03.974" level="INFO">Page title is 'Bibtex-muunnin - Etusivu'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.973" endtime="20221212 16:21:03.974"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.972" endtime="20221212 16:21:03.975"/>
+</kw>
+<kw name="Set Tag_text">
+<arg>ohjelmistotuotanto</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>tag_text</arg>
+<arg>${tag_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:03.975" level="INFO">Typing text 'ohjelmistotuotanto' into text field 'tag_text'.</msg>
+<status status="PASS" starttime="20221212 16:21:03.975" endtime="20221212 16:21:04.025"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.975" endtime="20221212 16:21:04.025"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Etsi</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221212 16:21:04.026" level="INFO">Clicking button 'Etsi'.</msg>
+<status status="PASS" starttime="20221212 16:21:04.025" endtime="20221212 16:21:04.068"/>
+</kw>
+<kw name="Tag Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Bibtex-muunnin - Tagit</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221212 16:21:04.070" level="INFO">Page title is 'Bibtex-muunnin - Tagit'.</msg>
+<status status="PASS" starttime="20221212 16:21:04.069" endtime="20221212 16:21:04.070"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:04.068" endtime="20221212 16:21:04.070"/>
+</kw>
+<status status="PASS" starttime="20221212 16:21:03.462" endtime="20221212 16:21:04.071"/>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221212 16:00:16.176" endtime="20221212 16:00:16.233"/>
+<status status="PASS" starttime="20221212 16:21:04.071" endtime="20221212 16:21:04.128"/>
 </kw>
-<status status="PASS" starttime="20221212 16:00:14.074" endtime="20221212 16:00:16.233"/>
+<status status="PASS" starttime="20221212 16:21:00.821" endtime="20221212 16:21:04.128"/>
 </suite>
-<status status="FAIL" starttime="20221212 16:00:10.984" endtime="20221212 16:00:16.235"/>
+<status status="PASS" starttime="20221212 16:20:57.735" endtime="20221212 16:21:04.130"/>
 </suite>
 <statistics>
 <total>
-<stat pass="11" fail="1" skip="0">All Tests</stat>
+<stat pass="15" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="11" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="6" fail="1" skip="0" id="s1-s1" name="Book Testing">Tests.Book Testing</stat>
-<stat pass="5" fail="0" skip="0" id="s1-s2" name="Website Testing">Tests.Website Testing</stat>
+<stat pass="15" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="7" fail="0" skip="0" id="s1-s1" name="Book Testing">Tests.Book Testing</stat>
+<stat pass="8" fail="0" skip="0" id="s1-s2" name="Website Testing">Tests.Website Testing</stat>
 </suite>
 </statistics>
 <errors>

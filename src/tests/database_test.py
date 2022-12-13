@@ -20,6 +20,38 @@ class Testreference_database(unittest.TestCase):
         length = len(sites)
         reference_database.empty_misc()
         self.assertEqual(length, 1)
+    
+    def test_book_can_be_found_with_tag(self):
+        reference_database.empty_books()
+        reference_database.create_book("testbook", "eka", 9, 9, 9, 9)
+        tag_id = reference_database.get_tag_id("testi")
+        reference_database.add_tag_to_work("testbook", tag_id)
+        book_list = reference_database.list_books_by_tag("testi")
+        identifier = book_list[0][0]
+        reference_database.empty_books()
+        self.assertEqual(identifier, "testbook")
+
+    def test_list_books_by_author_name_(self):
+        reference_database.empty_books()
+        reference_database.create_book("ekakirja01", "Jussi Nieminen", "Simo", "Jussin elämänkerta", "Simon julkaisut", 2009)
+        reference_database.create_book("tokakirja02", "Aapeli Koistinen", "Simo", "Aapelin elämänkerta", "Simon julkaisut", 2002)
+        book_list = reference_database.list_books_by_author_name()
+        first_book_author = book_list[0][1]
+        second_book_author = book_list[1][1]
+        reference_database.empty_books()
+        self.assertEqual(first_book_author, "Aapeli Koistinen")
+        self.assertEqual(second_book_author, "Jussi Nieminen")
+    
+    def test_list_miscs_by_author_name_(self):
+        reference_database.empty_books()
+        reference_database.create_misc("ekakirja01", "Jussi Nieminen", "Simo", "Jussin elämänkerta", 13, 2009)
+        reference_database.create_misc("tokakirja02", "Aapeli Koistinen", "Simo", "Aapelin elämänkerta", 10, 2002)
+        misc_list = reference_database.list_misc_by_author_name()
+        first_book_author = misc_list[0][1]
+        second_book_author = misc_list[1][1]
+        reference_database.empty_books()
+        self.assertEqual(first_book_author, "Aapeli Koistinen")
+        self.assertEqual(second_book_author, "Jussi Nieminen")
 
     def test_identifier_exists_book(self):
         reference_database.empty_books()
