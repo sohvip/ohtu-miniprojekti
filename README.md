@@ -1,7 +1,6 @@
 # ohtu-miniprojekti
 
-![testikattavuus](https://user-images.githubusercontent.com/101889891/205911396-ad56f078-fe7d-46e5-bf43-9902841cbcd0.png)
-
+![Screenshot from 2022-12-14 11-19-17](https://user-images.githubusercontent.com/102189885/207556154-6e9a08bb-c273-41ce-879c-928139e43977.png)
 
 [Backlog](https://docs.google.com/spreadsheets/d/1Otvn0MgeJhJgBoKedaaNOIOoLDglO9RI1a-f7RCdokQ/edit?usp=sharing)
 
@@ -12,3 +11,4 @@
 - Testikattavuus on noin 70% oleellisen koodin osalta
 - Asiakas näkee GitHubista koodin testikattavuuden.
 - Koodin ylläpidettävyys on hyvä 
+
