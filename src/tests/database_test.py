@@ -8,7 +8,7 @@ class Testreference_database(unittest.TestCase):
 
     def test_create_book(self):
         reference_database.empty_books()
-        reference_database.create_book("test", "toka", 9, 9, 9, 9)
+        reference_database.create_book("munkirja1", "Esko Nieminen", "Timo", "Jussin elämänkerta", 1, 2019)
         books = reference_database.get_books()
         length = len(books)
         reference_database.empty_books()
@@ -16,7 +16,7 @@ class Testreference_database(unittest.TestCase):
 
     def test_create_misc(self):
         reference_database.empty_misc()
-        reference_database.create_misc("test", "toka", 9, 9, 9, 9)
+        reference_database.create_misc("identifier61", "My Life", "Jane Doe", "www.lifestory.com", 2007, 5)
         sites = reference_database.get_table_misc_raw()
         length = len(sites)
         reference_database.empty_misc()
@@ -24,13 +24,13 @@ class Testreference_database(unittest.TestCase):
     
     def test_book_can_be_found_with_tag(self):
         reference_database.empty_books()
-        reference_database.create_book("testbook", "eka", 9, 9, 9, 9)
+        reference_database.create_book("ekakirja10", "Jussi Nieminen", "Simo", "Jussin elämänkerta", 13, 2009)
         tag_id = reference_database.get_tag_id("testi")
-        reference_database.add_tag_to_work("testbook", tag_id)
+        reference_database.add_tag_to_work("ekakirja10", tag_id)
         book_list = reference_database.list_books_by_tag("testi")
         identifier = book_list[0][0]
         reference_database.empty_books()
-        self.assertEqual(identifier, "testbook")
+        self.assertEqual(identifier, "ekakirja10")
 
     def test_misc_can_be_found_with_tag(self):
         reference_database.empty_misc()
@@ -162,8 +162,8 @@ class Testreference_database(unittest.TestCase):
 
     def test_does_not_create_book_if_identifier_exists(self):
         reference_database.empty_books()
-        reference_database.create_book("test", "toka", 9, 9, 9, 9)
-        return_value = reference_database.create_book("test", "eka", 9, 9, 9, 9)
+        reference_database.create_book("tokakirja02", "Aapeli Koistinen", "Simo", "Aapelin elämänkerta", "Simon julkaisut", 2002)
+        return_value = reference_database.create_book("tokakirja02", "Aapeli Koistinen", "Simo", "Aapelin elämänkerta", "Simon julkaisut", 2002)
         reference_database.empty_books()
         self.assertEqual(return_value, "Identifier already in use for another work")
     
