@@ -13,13 +13,19 @@
 - Koodin ylläpidettävyys on hyvä 
 
 
-##Asennus- ja käyttöohje
+## Asennus- ja käyttöohje
 
 1. Lataa sovelluksen lähdekoodi githubista
 2. Varmista, että koneeltasi löytyy PostGreSQL ja tietokantayhteys on auki
 3. Siirry terminaalissa projektin sisältävään kansioon ja anna seuraavat käskyt
- - poetry install
- - export DATABASE_URL=postgresql:///{postgreaql_käyttäjänimesi}
- - psql<schema.sql
-4. Siirry projektin koodin kansioon src
+```bash
+poetry install
+```
+```bash
+ export DATABASE_URL=postgresql:///{postgresql_käyttäjänimesi}
+ ```
+ ```bash
+ psql<schema.sql
+ ```
+4. Siirry projektin kansioon src
 5. Anna komento Flask run ja seuraa linkkiä
